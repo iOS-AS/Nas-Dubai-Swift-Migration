@@ -10,6 +10,8 @@
 		669E305B2B3358E100003062 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 669E305A2B3358E100003062 /* Alamofire */; };
 		669E305E2B3358FA00003062 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 669E305D2B3358FA00003062 /* SDWebImage */; };
 		669E30612B33593500003062 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 669E30602B33593500003062 /* IQKeyboardManagerSwift */; };
+		669E30642B3386E700003062 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 669E30632B3386E700003062 /* FirebaseAnalytics */; };
+		669E30662B3386E700003062 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 669E30652B3386E700003062 /* FirebaseMessaging */; };
 		BA445E462AF8C88B00F3E824 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA445E452AF8C88B00F3E824 /* LoginViewController.swift */; };
 		BA445E492AF8C8D800F3E824 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA445E482AF8C8D800F3E824 /* LoginStoryboard.storyboard */; };
 		BA79E2ED2AFA6AE300DBFA65 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA79E2EC2AFA6AE300DBFA65 /* HomeStoryboard.storyboard */; };
@@ -70,6 +72,8 @@
 			files = (
 				669E305E2B3358FA00003062 /* SDWebImage in Frameworks */,
 				669E305B2B3358E100003062 /* Alamofire in Frameworks */,
+				669E30662B3386E700003062 /* FirebaseMessaging in Frameworks */,
+				669E30642B3386E700003062 /* FirebaseAnalytics in Frameworks */,
 				669E30612B33593500003062 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -904,6 +908,8 @@
 				669E305A2B3358E100003062 /* Alamofire */,
 				669E305D2B3358FA00003062 /* SDWebImage */,
 				669E30602B33593500003062 /* IQKeyboardManagerSwift */,
+				669E30632B3386E700003062 /* FirebaseAnalytics */,
+				669E30652B3386E700003062 /* FirebaseMessaging */,
 			);
 			productName = NASDUBAI;
 			productReference = BADA2EF62AF625F800C56025 /* NASDUBAI.app */;
@@ -937,6 +943,7 @@
 				669E30592B3358E100003062 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				669E305F2B33593500003062 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = BADA2EF72AF625F800C56025 /* Products */;
 			projectDirPath = "";
@@ -1233,6 +1240,14 @@
 				version = 6.5.16;
 			};
 		};
+		669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1250,6 +1265,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 669E305F2B33593500003062 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		669E30632B3386E700003062 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		669E30652B3386E700003062 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
