@@ -1,0 +1,1257 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		669E305B2B3358E100003062 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 669E305A2B3358E100003062 /* Alamofire */; };
+		669E305E2B3358FA00003062 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 669E305D2B3358FA00003062 /* SDWebImage */; };
+		669E30612B33593500003062 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 669E30602B33593500003062 /* IQKeyboardManagerSwift */; };
+		BA445E462AF8C88B00F3E824 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA445E452AF8C88B00F3E824 /* LoginViewController.swift */; };
+		BA445E492AF8C8D800F3E824 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA445E482AF8C8D800F3E824 /* LoginStoryboard.storyboard */; };
+		BA79E2ED2AFA6AE300DBFA65 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA79E2EC2AFA6AE300DBFA65 /* HomeStoryboard.storyboard */; };
+		BA79E2EF2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA79E2EE2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard */; };
+		BA85D6B12B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA85D6B02B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard */; };
+		BA97D0922B3081F700B7CC8E /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97D0912B3081F700B7CC8E /* LoginModel.swift */; };
+		BA97D0962B3084AB00B7CC8E /* DefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97D0952B3084AB00B7CC8E /* DefaultsWrapper.swift */; };
+		BADA2EFA2AF625F800C56025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2EF92AF625F800C56025 /* AppDelegate.swift */; };
+		BADA2EFC2AF625F800C56025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2EFB2AF625F800C56025 /* SceneDelegate.swift */; };
+		BADA2EFE2AF625F800C56025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2EFD2AF625F800C56025 /* ViewController.swift */; };
+		BADA2F012AF625F800C56025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA2EFF2AF625F800C56025 /* Main.storyboard */; };
+		BADA2F032AF625FC00C56025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADA2F022AF625FC00C56025 /* Assets.xcassets */; };
+		BADA2F062AF625FC00C56025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA2F042AF625FC00C56025 /* LaunchScreen.storyboard */; };
+		BADA2FA62AF638C400C56025 /* HardCodedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2FA52AF638C400C56025 /* HardCodedData.swift */; };
+		BADA2FA92AF63C3B00C56025 /* DummyClickStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA2FA82AF63C3B00C56025 /* DummyClickStoryBoard.storyboard */; };
+		BADA2FAC2AF63EE800C56025 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2FAB2AF63EE800C56025 /* DummyViewController.swift */; };
+		BAFA6BC72AFA06F700F895AA /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFA6BC52AFA06F600F895AA /* HeaderViewController.swift */; };
+		BAFA6BC82AFA06F700F895AA /* HeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFA6BC62AFA06F700F895AA /* HeaderViewController.xib */; };
+		BAFA6BCE2AFA16F300F895AA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFA6BCD2AFA16F300F895AA /* UIViewController+Extension.swift */; };
+		FF1A292A2B31BE7F009DE750 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A29292B31BE7F009DE750 /* Observable.swift */; };
+		FF1A292C2B31C04C009DE750 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A292B2B31C04C009DE750 /* Validation.swift */; };
+		FF1A292E2B31C06A009DE750 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A292D2B31C06A009DE750 /* K.swift */; };
+		FF1A29302B31C09C009DE750 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A292F2B31C09C009DE750 /* ApiServices.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA445E452AF8C88B00F3E824 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BA445E482AF8C8D800F3E824 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		BA79E2EC2AFA6AE300DBFA65 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		BA79E2EE2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationStoryboard.storyboard; sourceTree = "<group>"; };
+		BA85D6B02B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EarlyYearsStoryboard.storyboard; sourceTree = "<group>"; };
+		BA97D0912B3081F700B7CC8E /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		BA97D0952B3084AB00B7CC8E /* DefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsWrapper.swift; sourceTree = "<group>"; };
+		BADA2EF62AF625F800C56025 /* NASDUBAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASDUBAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADA2EF92AF625F800C56025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BADA2EFB2AF625F800C56025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BADA2EFD2AF625F800C56025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BADA2F002AF625F800C56025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BADA2F022AF625FC00C56025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BADA2F052AF625FC00C56025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BADA2F072AF625FC00C56025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADA2FA52AF638C400C56025 /* HardCodedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodedData.swift; sourceTree = "<group>"; };
+		BADA2FA82AF63C3B00C56025 /* DummyClickStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DummyClickStoryBoard.storyboard; sourceTree = "<group>"; };
+		BADA2FAB2AF63EE800C56025 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		BAFA6BC52AFA06F600F895AA /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		BAFA6BC62AFA06F700F895AA /* HeaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewController.xib; sourceTree = "<group>"; };
+		BAFA6BCD2AFA16F300F895AA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FF1A29292B31BE7F009DE750 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		FF1A292B2B31C04C009DE750 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		FF1A292D2B31C06A009DE750 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		FF1A292F2B31C09C009DE750 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BADA2EF32AF625F800C56025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669E305E2B3358FA00003062 /* SDWebImage in Frameworks */,
+				669E305B2B3358E100003062 /* Alamofire in Frameworks */,
+				669E30612B33593500003062 /* IQKeyboardManagerSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA445E472AF8C8C600F3E824 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BA445E482AF8C8D800F3E824 /* LoginStoryboard.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BA97D0902B3081E500B7CC8E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BA97D0912B3081F700B7CC8E /* LoginModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BADA2EED2AF625F800C56025 = {
+			isa = PBXGroup;
+			children = (
+				BADA2EF82AF625F800C56025 /* NASDUBAI */,
+				BADA2EF72AF625F800C56025 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BADA2EF72AF625F800C56025 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BADA2EF62AF625F800C56025 /* NASDUBAI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BADA2EF82AF625F800C56025 /* NASDUBAI */ = {
+			isa = PBXGroup;
+			children = (
+				BAFA6BC92AFA0E7E00F895AA /* Extensions */,
+				BADA2FA72AF63A8100C56025 /* Fonts */,
+				BADA2F692AF6348A00C56025 /* Model */,
+				BADA2F682AF6348200C56025 /* View */,
+				BADA2F672AF6335300C56025 /* Common */,
+				BADA2F0D2AF6291100C56025 /* Controllers */,
+				BADA2EF92AF625F800C56025 /* AppDelegate.swift */,
+				BADA2EFB2AF625F800C56025 /* SceneDelegate.swift */,
+				BADA2EFD2AF625F800C56025 /* ViewController.swift */,
+				BADA2EFF2AF625F800C56025 /* Main.storyboard */,
+				BADA2F022AF625FC00C56025 /* Assets.xcassets */,
+				BADA2F042AF625FC00C56025 /* LaunchScreen.storyboard */,
+				BADA2F072AF625FC00C56025 /* Info.plist */,
+			);
+			path = NASDUBAI;
+			sourceTree = "<group>";
+		};
+		BADA2F0D2AF6291100C56025 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BADA2F2B2AF62AA800C56025 /* Survey */,
+				BADA2F2A2AF62A9600C56025 /* Data Collection */,
+				BADA2F292AF62A8C00C56025 /* Settings */,
+				BADA2F282AF62A8200C56025 /* Contact Us */,
+				BADA2F272AF62A7800C56025 /* About Us */,
+				BADA2F262AF62A7000C56025 /* Gallery */,
+				BADA2F252AF62A6300C56025 /* Permission Forms */,
+				BADA2F242AF62A5D00C56025 /* Reports */,
+				BADA2F232AF62A5300C56025 /* NAE Programmes */,
+				BADA2F222AF62A4600C56025 /* Parent Meeting */,
+				BADA2F212AF62A3600C56025 /* Parents Association */,
+				BADA2F202AF62A2F00C56025 /* Enrichment */,
+				BADA2F1F2AF62A0900C56025 /* Performing Arts */,
+				BADA2F1E2AF62A0000C56025 /* Sports */,
+				BADA2F1D2AF629F400C56025 /* University Guidance */,
+				BADA2F1C2AF629EA00C56025 /* Sixth Form */,
+				BADA2F1B2AF629E200C56025 /* Secondary */,
+				BADA2F1A2AF629D600C56025 /* Primary */,
+				BADA2F192AF629C900C56025 /* Early Years */,
+				BADA2F182AF629B900C56025 /* Parents Essentials */,
+				BADA2F172AF629AB00C56025 /* MusicAcademy */,
+				BADA2F162AF629A100C56025 /* LunchBox */,
+				BADA2F152AF6299100C56025 /* ReEnrolment */,
+				BADA2F142AF6298A00C56025 /* Payments */,
+				BADA2F132AF6297F00C56025 /* Absence */,
+				BADA2F122AF6297000C56025 /* Communications */,
+				BADA2F112AF6296400C56025 /* Notifications */,
+				BADA2F102AF6295000C56025 /* Calendar */,
+				BADA2F0F2AF6292A00C56025 /* Home */,
+				BADA2F0E2AF6292200C56025 /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BADA2F0E2AF6292200C56025 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BA445E452AF8C88B00F3E824 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BADA2F0F2AF6292A00C56025 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BADA2F102AF6295000C56025 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		BADA2F112AF6296400C56025 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		BADA2F122AF6297000C56025 /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Communications;
+			sourceTree = "<group>";
+		};
+		BADA2F132AF6297F00C56025 /* Absence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Absence;
+			sourceTree = "<group>";
+		};
+		BADA2F142AF6298A00C56025 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		BADA2F152AF6299100C56025 /* ReEnrolment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReEnrolment;
+			sourceTree = "<group>";
+		};
+		BADA2F162AF629A100C56025 /* LunchBox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LunchBox;
+			sourceTree = "<group>";
+		};
+		BADA2F172AF629AB00C56025 /* MusicAcademy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MusicAcademy;
+			sourceTree = "<group>";
+		};
+		BADA2F182AF629B900C56025 /* Parents Essentials */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parents Essentials";
+			sourceTree = "<group>";
+		};
+		BADA2F192AF629C900C56025 /* Early Years */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Early Years";
+			sourceTree = "<group>";
+		};
+		BADA2F1A2AF629D600C56025 /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		BADA2F1B2AF629E200C56025 /* Secondary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Secondary;
+			sourceTree = "<group>";
+		};
+		BADA2F1C2AF629EA00C56025 /* Sixth Form */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sixth Form";
+			sourceTree = "<group>";
+		};
+		BADA2F1D2AF629F400C56025 /* University Guidance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "University Guidance";
+			sourceTree = "<group>";
+		};
+		BADA2F1E2AF62A0000C56025 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sports;
+			sourceTree = "<group>";
+		};
+		BADA2F1F2AF62A0900C56025 /* Performing Arts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Performing Arts";
+			sourceTree = "<group>";
+		};
+		BADA2F202AF62A2F00C56025 /* Enrichment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enrichment;
+			sourceTree = "<group>";
+		};
+		BADA2F212AF62A3600C56025 /* Parents Association */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parents Association";
+			sourceTree = "<group>";
+		};
+		BADA2F222AF62A4600C56025 /* Parent Meeting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parent Meeting";
+			sourceTree = "<group>";
+		};
+		BADA2F232AF62A5300C56025 /* NAE Programmes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "NAE Programmes";
+			sourceTree = "<group>";
+		};
+		BADA2F242AF62A5D00C56025 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		BADA2F252AF62A6300C56025 /* Permission Forms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Permission Forms";
+			sourceTree = "<group>";
+		};
+		BADA2F262AF62A7000C56025 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		BADA2F272AF62A7800C56025 /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "About Us";
+			sourceTree = "<group>";
+		};
+		BADA2F282AF62A8200C56025 /* Contact Us */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Contact Us";
+			sourceTree = "<group>";
+		};
+		BADA2F292AF62A8C00C56025 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BADA2F2A2AF62A9600C56025 /* Data Collection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Collection";
+			sourceTree = "<group>";
+		};
+		BADA2F2B2AF62AA800C56025 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		BADA2F672AF6335300C56025 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BADA2FA52AF638C400C56025 /* HardCodedData.swift */,
+				BADA2FA82AF63C3B00C56025 /* DummyClickStoryBoard.storyboard */,
+				BADA2FAB2AF63EE800C56025 /* DummyViewController.swift */,
+				BAFA6BC52AFA06F600F895AA /* HeaderViewController.swift */,
+				BAFA6BC62AFA06F700F895AA /* HeaderViewController.xib */,
+				BA97D0952B3084AB00B7CC8E /* DefaultsWrapper.swift */,
+				FF1A29292B31BE7F009DE750 /* Observable.swift */,
+				FF1A292B2B31C04C009DE750 /* Validation.swift */,
+				FF1A292D2B31C06A009DE750 /* K.swift */,
+				FF1A292F2B31C09C009DE750 /* ApiServices.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BADA2F682AF6348200C56025 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA445E472AF8C8C600F3E824 /* Login */,
+				BADA2FA42AF637CF00C56025 /* Home */,
+				BADA2FA32AF637C700C56025 /* Calendar */,
+				BADA2FA22AF637BD00C56025 /* Notifications */,
+				BADA2FA12AF637B400C56025 /* Communications */,
+				BADA2FA02AF637AC00C56025 /* Absence */,
+				BADA2F9F2AF637A100C56025 /* Payments */,
+				BADA2F9E2AF6379600C56025 /* Re-Enrolment */,
+				BADA2F9D2AF6378C00C56025 /* Lunch Box */,
+				BADA2F9C2AF6377E00C56025 /* Music Academy */,
+				BADA2F9B2AF6377500C56025 /* Parents Essentials */,
+				BADA2F9A2AF6376800C56025 /* Early Years */,
+				BADA2F992AF6376200C56025 /* Primary */,
+				BADA2F982AF6375700C56025 /* Secondary */,
+				BADA2F972AF6374B00C56025 /* Sixth Form */,
+				BADA2F962AF6373200C56025 /* University Guidance */,
+				BADA2F952AF6372200C56025 /* Sports */,
+				BADA2F942AF6371500C56025 /* Performing Arts */,
+				BADA2F932AF6370C00C56025 /* Enrichment */,
+				BADA2F922AF636FF00C56025 /* Parents Association */,
+				BADA2F912AF636DF00C56025 /* Parents Meeting */,
+				BADA2F902AF636CF00C56025 /* NAE Programmes */,
+				BADA2F8F2AF636A900C56025 /* Reports */,
+				BADA2F712AF6355E00C56025 /* Permission Forms */,
+				BADA2F702AF6355200C56025 /* Gallery */,
+				BADA2F6E2AF634E900C56025 /* About us */,
+				BADA2F6D2AF634DC00C56025 /* Contact Us */,
+				BADA2F6C2AF634CF00C56025 /* Settings */,
+				BADA2F6B2AF634C500C56025 /* Data Collection */,
+				BADA2F6A2AF634B000C56025 /* Survey */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BADA2F692AF6348A00C56025 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA97D0902B3081E500B7CC8E /* Login */,
+				BADA2F8E2AF6369A00C56025 /* Home */,
+				BADA2F8D2AF6369500C56025 /* Calendar */,
+				BADA2F8C2AF6368C00C56025 /* Communications */,
+				BADA2F8B2AF6367F00C56025 /* Absence */,
+				BADA2F8A2AF6367900C56025 /* Payments */,
+				BADA2F892AF6366E00C56025 /* Re-Enrolment */,
+				BADA2F882AF6366700C56025 /* Lunch Box */,
+				BADA2F872AF6365C00C56025 /* Music Academy */,
+				BADA2F862AF6364700C56025 /* Parents Essentials */,
+				BADA2F852AF6363F00C56025 /* Early Years */,
+				BADA2F842AF6363900C56025 /* Primary */,
+				BADA2F832AF6362F00C56025 /* Secondary */,
+				BADA2F812AF6360E00C56025 /* Sixth form */,
+				BADA2F802AF6360400C56025 /* University Guidance */,
+				BADA2F7F2AF635FE00C56025 /* Sports */,
+				BADA2F7E2AF635F300C56025 /* Performing Arts */,
+				BADA2F7D2AF635EA00C56025 /* Enrichment */,
+				BADA2F7C2AF635DE00C56025 /* Parents Association */,
+				BADA2F7B2AF635D100C56025 /* Parent Meetings */,
+				BADA2F7A2AF635C900C56025 /* NAE Programmes */,
+				BADA2F792AF635C200C56025 /* Reports */,
+				BADA2F782AF635A200C56025 /* Permission Forms */,
+				BADA2F772AF6359800C56025 /* Gallery */,
+				BADA2F762AF6358D00C56025 /* About Us */,
+				BADA2F752AF6358500C56025 /* Contact us */,
+				BADA2F742AF6357D00C56025 /* Settings */,
+				BADA2F732AF6357200C56025 /* Data Collection */,
+				BADA2F722AF6356A00C56025 /* Survey */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BADA2F6A2AF634B000C56025 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		BADA2F6B2AF634C500C56025 /* Data Collection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Collection";
+			sourceTree = "<group>";
+		};
+		BADA2F6C2AF634CF00C56025 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BADA2F6D2AF634DC00C56025 /* Contact Us */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Contact Us";
+			sourceTree = "<group>";
+		};
+		BADA2F6E2AF634E900C56025 /* About us */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "About us";
+			sourceTree = "<group>";
+		};
+		BADA2F702AF6355200C56025 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		BADA2F712AF6355E00C56025 /* Permission Forms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Permission Forms";
+			sourceTree = "<group>";
+		};
+		BADA2F722AF6356A00C56025 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		BADA2F732AF6357200C56025 /* Data Collection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Collection";
+			sourceTree = "<group>";
+		};
+		BADA2F742AF6357D00C56025 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BADA2F752AF6358500C56025 /* Contact us */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Contact us";
+			sourceTree = "<group>";
+		};
+		BADA2F762AF6358D00C56025 /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "About Us";
+			sourceTree = "<group>";
+		};
+		BADA2F772AF6359800C56025 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		BADA2F782AF635A200C56025 /* Permission Forms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Permission Forms";
+			sourceTree = "<group>";
+		};
+		BADA2F792AF635C200C56025 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		BADA2F7A2AF635C900C56025 /* NAE Programmes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "NAE Programmes";
+			sourceTree = "<group>";
+		};
+		BADA2F7B2AF635D100C56025 /* Parent Meetings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parent Meetings";
+			sourceTree = "<group>";
+		};
+		BADA2F7C2AF635DE00C56025 /* Parents Association */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parents Association";
+			sourceTree = "<group>";
+		};
+		BADA2F7D2AF635EA00C56025 /* Enrichment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enrichment;
+			sourceTree = "<group>";
+		};
+		BADA2F7E2AF635F300C56025 /* Performing Arts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Performing Arts";
+			sourceTree = "<group>";
+		};
+		BADA2F7F2AF635FE00C56025 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sports;
+			sourceTree = "<group>";
+		};
+		BADA2F802AF6360400C56025 /* University Guidance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "University Guidance";
+			sourceTree = "<group>";
+		};
+		BADA2F812AF6360E00C56025 /* Sixth form */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sixth form";
+			sourceTree = "<group>";
+		};
+		BADA2F832AF6362F00C56025 /* Secondary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Secondary;
+			sourceTree = "<group>";
+		};
+		BADA2F842AF6363900C56025 /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		BADA2F852AF6363F00C56025 /* Early Years */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Early Years";
+			sourceTree = "<group>";
+		};
+		BADA2F862AF6364700C56025 /* Parents Essentials */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parents Essentials";
+			sourceTree = "<group>";
+		};
+		BADA2F872AF6365C00C56025 /* Music Academy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Music Academy";
+			sourceTree = "<group>";
+		};
+		BADA2F882AF6366700C56025 /* Lunch Box */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Lunch Box";
+			sourceTree = "<group>";
+		};
+		BADA2F892AF6366E00C56025 /* Re-Enrolment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Re-Enrolment";
+			sourceTree = "<group>";
+		};
+		BADA2F8A2AF6367900C56025 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		BADA2F8B2AF6367F00C56025 /* Absence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Absence;
+			sourceTree = "<group>";
+		};
+		BADA2F8C2AF6368C00C56025 /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Communications;
+			sourceTree = "<group>";
+		};
+		BADA2F8D2AF6369500C56025 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		BADA2F8E2AF6369A00C56025 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BADA2F8F2AF636A900C56025 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		BADA2F902AF636CF00C56025 /* NAE Programmes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "NAE Programmes";
+			sourceTree = "<group>";
+		};
+		BADA2F912AF636DF00C56025 /* Parents Meeting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parents Meeting";
+			sourceTree = "<group>";
+		};
+		BADA2F922AF636FF00C56025 /* Parents Association */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parents Association";
+			sourceTree = "<group>";
+		};
+		BADA2F932AF6370C00C56025 /* Enrichment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enrichment;
+			sourceTree = "<group>";
+		};
+		BADA2F942AF6371500C56025 /* Performing Arts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Performing Arts";
+			sourceTree = "<group>";
+		};
+		BADA2F952AF6372200C56025 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sports;
+			sourceTree = "<group>";
+		};
+		BADA2F962AF6373200C56025 /* University Guidance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "University Guidance";
+			sourceTree = "<group>";
+		};
+		BADA2F972AF6374B00C56025 /* Sixth Form */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sixth Form";
+			sourceTree = "<group>";
+		};
+		BADA2F982AF6375700C56025 /* Secondary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Secondary;
+			sourceTree = "<group>";
+		};
+		BADA2F992AF6376200C56025 /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		BADA2F9A2AF6376800C56025 /* Early Years */ = {
+			isa = PBXGroup;
+			children = (
+				BA85D6B02B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard */,
+			);
+			path = "Early Years";
+			sourceTree = "<group>";
+		};
+		BADA2F9B2AF6377500C56025 /* Parents Essentials */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Parents Essentials";
+			sourceTree = "<group>";
+		};
+		BADA2F9C2AF6377E00C56025 /* Music Academy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Music Academy";
+			sourceTree = "<group>";
+		};
+		BADA2F9D2AF6378C00C56025 /* Lunch Box */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Lunch Box";
+			sourceTree = "<group>";
+		};
+		BADA2F9E2AF6379600C56025 /* Re-Enrolment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Re-Enrolment";
+			sourceTree = "<group>";
+		};
+		BADA2F9F2AF637A100C56025 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		BADA2FA02AF637AC00C56025 /* Absence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Absence;
+			sourceTree = "<group>";
+		};
+		BADA2FA12AF637B400C56025 /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Communications;
+			sourceTree = "<group>";
+		};
+		BADA2FA22AF637BD00C56025 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				BA79E2EE2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		BADA2FA32AF637C700C56025 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		BADA2FA42AF637CF00C56025 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BA79E2EC2AFA6AE300DBFA65 /* HomeStoryboard.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BADA2FA72AF63A8100C56025 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BAFA6BC92AFA0E7E00F895AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAFA6BCD2AFA16F300F895AA /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BADA2EF52AF625F800C56025 /* NASDUBAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADA2F0A2AF625FC00C56025 /* Build configuration list for PBXNativeTarget "NASDUBAI" */;
+			buildPhases = (
+				BADA2EF22AF625F800C56025 /* Sources */,
+				BADA2EF32AF625F800C56025 /* Frameworks */,
+				BADA2EF42AF625F800C56025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NASDUBAI;
+			packageProductDependencies = (
+				669E305A2B3358E100003062 /* Alamofire */,
+				669E305D2B3358FA00003062 /* SDWebImage */,
+				669E30602B33593500003062 /* IQKeyboardManagerSwift */,
+			);
+			productName = NASDUBAI;
+			productReference = BADA2EF62AF625F800C56025 /* NASDUBAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BADA2EEE2AF625F800C56025 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					BADA2EF52AF625F800C56025 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = BADA2EF12AF625F800C56025 /* Build configuration list for PBXProject "NASDUBAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BADA2EED2AF625F800C56025;
+			packageReferences = (
+				669E30592B3358E100003062 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				669E305F2B33593500003062 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
+			productRefGroup = BADA2EF72AF625F800C56025 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BADA2EF52AF625F800C56025 /* NASDUBAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BADA2EF42AF625F800C56025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA79E2EF2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard in Resources */,
+				BADA2F062AF625FC00C56025 /* LaunchScreen.storyboard in Resources */,
+				BAFA6BC82AFA06F700F895AA /* HeaderViewController.xib in Resources */,
+				BA445E492AF8C8D800F3E824 /* LoginStoryboard.storyboard in Resources */,
+				BADA2FA92AF63C3B00C56025 /* DummyClickStoryBoard.storyboard in Resources */,
+				BA79E2ED2AFA6AE300DBFA65 /* HomeStoryboard.storyboard in Resources */,
+				BA85D6B12B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard in Resources */,
+				BADA2F032AF625FC00C56025 /* Assets.xcassets in Resources */,
+				BADA2F012AF625F800C56025 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BADA2EF22AF625F800C56025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1A292A2B31BE7F009DE750 /* Observable.swift in Sources */,
+				BAFA6BCE2AFA16F300F895AA /* UIViewController+Extension.swift in Sources */,
+				BA445E462AF8C88B00F3E824 /* LoginViewController.swift in Sources */,
+				BAFA6BC72AFA06F700F895AA /* HeaderViewController.swift in Sources */,
+				BADA2EFE2AF625F800C56025 /* ViewController.swift in Sources */,
+				FF1A292E2B31C06A009DE750 /* K.swift in Sources */,
+				BA97D0922B3081F700B7CC8E /* LoginModel.swift in Sources */,
+				BADA2EFA2AF625F800C56025 /* AppDelegate.swift in Sources */,
+				FF1A29302B31C09C009DE750 /* ApiServices.swift in Sources */,
+				BADA2FA62AF638C400C56025 /* HardCodedData.swift in Sources */,
+				BA97D0962B3084AB00B7CC8E /* DefaultsWrapper.swift in Sources */,
+				BADA2FAC2AF63EE800C56025 /* DummyViewController.swift in Sources */,
+				FF1A292C2B31C04C009DE750 /* Validation.swift in Sources */,
+				BADA2EFC2AF625F800C56025 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BADA2EFF2AF625F800C56025 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADA2F002AF625F800C56025 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BADA2F042AF625FC00C56025 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADA2F052AF625FC00C56025 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BADA2F082AF625FC00C56025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BADA2F092AF625FC00C56025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BADA2F0B2AF625FC00C56025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NASDUBAI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mobatia.NASDUBAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BADA2F0C2AF625FC00C56025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NASDUBAI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mobatia.NASDUBAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BADA2EF12AF625F800C56025 /* Build configuration list for PBXProject "NASDUBAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADA2F082AF625FC00C56025 /* Debug */,
+				BADA2F092AF625FC00C56025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BADA2F0A2AF625FC00C56025 /* Build configuration list for PBXNativeTarget "NASDUBAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADA2F0B2AF625FC00C56025 /* Debug */,
+				BADA2F0C2AF625FC00C56025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		669E30592B3358E100003062 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.8.1;
+			};
+		};
+		669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.9.5;
+			};
+		};
+		669E305F2B33593500003062 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.16;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		669E305A2B3358E100003062 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 669E30592B3358E100003062 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		669E305D2B3358FA00003062 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		669E30602B33593500003062 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 669E305F2B33593500003062 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BADA2EEE2AF625F800C56025 /* Project object */;
+}

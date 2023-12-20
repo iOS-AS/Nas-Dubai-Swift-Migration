@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dummy View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DummyViewController" id="Y6W-OH-hqX" customClass="DummyViewController" customModule="NASDUBAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CFA-Pp-c1k">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAv-3f-b2A">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Notification"/>
+                                        <connections>
+                                            <action selector="notification:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PWi-cj-Ewr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR5-JG-slL">
+                                        <rect key="frame" x="0.0" y="38" width="393" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Calendar"/>
+                                        <connections>
+                                            <action selector="calendar:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0aC-fu-m5t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5E-NI-puW">
+                                        <rect key="frame" x="0.0" y="72.333333333333343" width="393" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Communication"/>
+                                        <connections>
+                                            <action selector="Communication:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZUa-81-iJU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVa-rL-FLz">
+                                        <rect key="frame" x="0.0" y="106.66666666666666" width="393" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Absence"/>
+                                        <connections>
+                                            <action selector="Absence:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="piU-J3-eK1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kys-hf-N9P">
+                                        <rect key="frame" x="0.0" y="141" width="393" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Payments"/>
+                                        <connections>
+                                            <action selector="Payments:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="H03-TJ-9d9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgn-cJ-pXK">
+                                        <rect key="frame" x="0.0" y="175.33333333333334" width="393" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Lunch Box"/>
+                                        <connections>
+                                            <action selector="LunchBox:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zRS-xY-JSb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-q8-NE9">
+                                        <rect key="frame" x="0.0" y="209.66666666666669" width="393" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Music Academy"/>
+                                        <connections>
+                                            <action selector="MusicAcademy:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1v6-tl-Eg1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6b-R2-Ihx">
+                                        <rect key="frame" x="0.0" y="244.00000000000003" width="393" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Parents Essentials"/>
+                                        <connections>
+                                            <action selector="ParentsEssentials:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Mqb-Bn-mak"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dd-81-xW2">
+                                        <rect key="frame" x="0.0" y="278.33333333333331" width="393" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Early Years"/>
+                                        <connections>
+                                            <action selector="EarlyYears:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jHx-Hw-khJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3E-N5-vnk">
+                                        <rect key="frame" x="0.0" y="312.66666666666669" width="393" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Primary"/>
+                                        <connections>
+                                            <action selector="Primary:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DGj-7F-PaS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vj2-pV-k5A">
+                                        <rect key="frame" x="0.0" y="347" width="393" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Secondary"/>
+                                        <connections>
+                                            <action selector="Secondary:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fQG-nc-6tZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-k1-WdC">
+                                        <rect key="frame" x="0.0" y="381.33333333333331" width="393" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sixth Form"/>
+                                        <connections>
+                                            <action selector="SixthForm:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="udG-sf-ryM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEe-bL-QqW">
+                                        <rect key="frame" x="0.0" y="415.66666666666669" width="393" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="University Guidance"/>
+                                        <connections>
+                                            <action selector="University:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NQU-Sb-PBe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bez-Fh-eaf">
+                                        <rect key="frame" x="0.0" y="450" width="393" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sports"/>
+                                        <connections>
+                                            <action selector="Sports:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oEr-Lq-ZpM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-IS-Jbm">
+                                        <rect key="frame" x="0.0" y="484.33333333333337" width="393" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Performing Arts"/>
+                                        <connections>
+                                            <action selector="PerformingArts:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zBX-Iy-f78"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeq-gQ-XgM">
+                                        <rect key="frame" x="0.0" y="518.66666666666663" width="393" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Enrichment"/>
+                                        <connections>
+                                            <action selector="Enrichment:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zSU-ft-AnI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF3-hm-1QH">
+                                        <rect key="frame" x="0.0" y="553" width="393" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Parent Association"/>
+                                        <connections>
+                                            <action selector="ParentAssociation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GcA-PA-lEz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPI-aW-HBf">
+                                        <rect key="frame" x="0.0" y="587.33333333333337" width="393" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Parents Meeting"/>
+                                        <connections>
+                                            <action selector="ParentsMeeting:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4Cx-ts-8rJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-q7-L56">
+                                        <rect key="frame" x="0.0" y="621.66666666666663" width="393" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="NAE Programmes"/>
+                                        <connections>
+                                            <action selector="NAEProgrames:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a19-r9-RKH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOP-9Y-Yvc">
+                                        <rect key="frame" x="0.0" y="656" width="393" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Reports"/>
+                                        <connections>
+                                            <action selector="Repors:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ziy-E8-ULa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SW-nA-yiP">
+                                        <rect key="frame" x="0.0" y="690.33333333333337" width="393" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Permission Forms"/>
+                                        <connections>
+                                            <action selector="PermissionForms:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1aq-eD-8mT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38z-pZ-nUf">
+                                        <rect key="frame" x="0.0" y="724.66666666666663" width="393" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Gallery"/>
+                                        <connections>
+                                            <action selector="Gallery:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ap9-0z-K3P"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CFA-Pp-c1k" secondAttribute="bottom" id="753-TQ-XXd"/>
+                            <constraint firstItem="CFA-Pp-c1k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FDO-zC-84J"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CFA-Pp-c1k" secondAttribute="trailing" id="GAs-Jj-dxh"/>
+                            <constraint firstItem="CFA-Pp-c1k" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Q1w-Ij-pQA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
