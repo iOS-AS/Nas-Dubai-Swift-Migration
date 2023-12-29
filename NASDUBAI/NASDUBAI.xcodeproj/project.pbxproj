@@ -34,6 +34,7 @@
 		FF1A292C2B31C04C009DE750 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A292B2B31C04C009DE750 /* Validation.swift */; };
 		FF1A292E2B31C06A009DE750 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A292D2B31C06A009DE750 /* K.swift */; };
 		FF1A29302B31C09C009DE750 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A292F2B31C09C009DE750 /* ApiServices.swift */; };
+		FFA5145F2B3E97A9009FA298 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA5145E2B3E97A9009FA298 /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		FF1A292B2B31C04C009DE750 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		FF1A292D2B31C06A009DE750 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		FF1A292F2B31C09C009DE750 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		FFA5145E2B3E97A9009FA298 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				FF1A292B2B31C04C009DE750 /* Validation.swift */,
 				FF1A292D2B31C06A009DE750 /* K.swift */,
 				FF1A292F2B31C09C009DE750 /* ApiServices.swift */,
+				FFA5145E2B3E97A9009FA298 /* AppRouter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				FF1A29302B31C09C009DE750 /* ApiServices.swift in Sources */,
 				BADA2FA62AF638C400C56025 /* HardCodedData.swift in Sources */,
 				BA97D0962B3084AB00B7CC8E /* DefaultsWrapper.swift in Sources */,
+				FFA5145F2B3E97A9009FA298 /* AppRouter.swift in Sources */,
 				BADA2FAC2AF63EE800C56025 /* DummyViewController.swift in Sources */,
 				FF1A292C2B31C04C009DE750 /* Validation.swift in Sources */,
 				BADA2EFC2AF625F800C56025 /* SceneDelegate.swift in Sources */,

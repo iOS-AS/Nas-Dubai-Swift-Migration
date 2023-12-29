@@ -29,9 +29,7 @@ class LoginVC: UIViewController {
     
     @IBAction func GuestPress(_ sender: UIButton) {
         print("GUEST PRESS TEST")
-        let storyBoard = UIStoryboard.init(name: "HomeStoryboard", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-        navigationController?.pushViewController(vc, animated: true)
+        pushToHome()
     }
     
     @IBAction func LoginPress(_ sender: UIButton) {
