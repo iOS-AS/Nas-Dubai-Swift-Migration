@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-NASDUBAI/Pods-NASDUBAI-frameworks.sh
+${BUILT_PRODUCTS_DIR}/NISdk/NISdk.framework
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

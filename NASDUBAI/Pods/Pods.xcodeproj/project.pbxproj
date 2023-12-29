@@ -1,0 +1,1469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		028EC97AAFDC8833BD16654C8AB60BE7 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F8CFDDDF1D350C0E68E66A61674B1 /* Amount.swift */; };
+		09AF52C93B771509EC137F0D75CAD31E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB57FD901BB5DEA831220D3502F9A7 /* Security.framework */; };
+		0C965FE1488BA6BE622B4E838ACA4FF3 /* NameInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09B7357A87563CC19ABE66981F8F80 /* NameInputVC.swift */; };
+		0E0DFFE66C0B2513028AFD77F7B705FE /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC82AABCF9E245262145D5AE9D9F745 /* PaymentViewController.swift */; };
+		11848449332C0E0E41AD3E3E17A0C43D /* FormattedOrderSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3752941DF710E72D26DF9480E1C7EE5 /* FormattedOrderSummary.swift */; };
+		1274DD72F4C4058D94E7FCFDA1631562 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D038DF9A99D83E2D333AF39CDDF7AF /* String+URLEncode.swift */; };
+		13738A2639B2C8517F2CF1C7BD3475EE /* OrderSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEC0130C35CE5AD1D5E3DF923A6CDE2 /* OrderSummary.swift */; };
+		172CAEA9325D220C14475E6A0BCC09F1 /* Collection+Pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA589154A55AAA86B8F69B282FF288CA /* Collection+Pairs.swift */; };
+		17E9283ADA107CC34D25395AB5F67212 /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121BD5B86AE078C7DBE6DD9660CB1CA /* ToJSON.swift */; };
+		1BE846B40834E0FFCC575388CCCBFC5C /* ColorCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A60E7A6A4E752AE236E5DDBAF99B5 /* ColorCompatibility.swift */; };
+		1C8C33626D4B515F7C3416A54BCD9B21 /* CustomDateFormatTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A817F594481197020F27DF6E54EB0F9 /* CustomDateFormatTransform.swift */; };
+		1EC72CC34E9C7801DC0E16928F1FE5E6 /* NISdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D00CD2265FCADA5040053E19850D8D4 /* NISdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20CCEE43CCC7613E3812B73214688D48 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA0FCD43E32E8D4488D96B58BA49404 /* TransformType.swift */; };
+		22DFF3D887D03A1870204F0FE912CFFB /* NISdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62748700226C2310BE23A0EC55DDC9C0 /* NISdk-dummy.m */; };
+		2381FE7CEA8265BBB8E76FC2B815F960 /* ExpiryInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC3D4E007320D4BAB24698CF7A605CF /* ExpiryInputVC.swift */; };
+		2628A4708E8512458E52BFD4B24A6A66 /* ExpiryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3533B23C7950D245D70FDAAB5D061799 /* ExpiryDate.swift */; };
+		29947018F55B8E45D3FA1E9FE24647A5 /* NISdk-NISdk in Resources */ = {isa = PBXBuildFile; fileRef = 404E62692AD96F9335C99DF766549F15 /* NISdk-NISdk */; };
+		2DBA3EBF9138795BF487751527499F20 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777FF490BE6FD4211CAB8C96B9A4DF7 /* DateFormatterTransform.swift */; };
+		325CCDB295FFA016638075B5D2CEDD5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFD92DDFC1F3C5AB352205A7F362955 /* Foundation.framework */; };
+		32EFECE9AEEE3129FD0031FFCF5235FF /* UIFont+RegisterFromBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10636216976E592E1FEEA04FF185A6F1 /* UIFont+RegisterFromBundle.swift */; };
+		39A4432E8C1DB203709C70DDD9C3D58A /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B54E2C47C276344272B9CB19998BAF /* DateTransform.swift */; };
+		3B123530BA80B5747E1C4D4AB273E68D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC86E3E7CBACD08EDAD8A97E88E42C8 /* Constants.swift */; };
+		3D8299FAD32F1FF239E8C6872FFF0C4F /* UIView+InterfaceLayoutDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F236AE049644BBEB5A70FA378641ECE /* UIView+InterfaceLayoutDirection.swift */; };
+		3E334140FBE5DFD4DDA5C3D3FCB54B9A /* HexColorTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF318081F890BD54CC8D91D4D9DEB0B4 /* HexColorTransform.swift */; };
+		3EA3D3809293130859481308A6E750F1 /* NSDecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A3ED8DF71AD01E0F406F19B6498611 /* NSDecimalNumberTransform.swift */; };
+		3EA90111B873797D79D1EE27EE90B901 /* URLResponse+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E63E95416C62409F63A5B1BDD05B4 /* URLResponse+Any.swift */; };
+		4023B7F0947706B873126A4C52C9911B /* BrowserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD0079EE29C4C20FF6B008558695F4 /* BrowserInfo.swift */; };
+		41A2A369B82B08764E44FF3E29E332F6 /* CardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6006A132A2428AE1703D93108C09D7 /* CardProvider.swift */; };
+		42309503D42BEED3B67F793204532845 /* String+Luhn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD00F586A35872613AB2BD689AC9CC55 /* String+Luhn.swift */; };
+		471FC0BF392F6EBEC37D36AFADBF9D07 /* EnumOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649F6EA7B9F179B3C16D7990E71CD04 /* EnumOperators.swift */; };
+		4990C571DE02BFFCC77DB6E47CB678C3 /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAF54E3A108810A1968E5F375648B2 /* URLTransform.swift */; };
+		4E04CDEDDC6C3D49728EF45F9BA32800 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E3C5C60478C40C37EB429631B8157 /* TransactionService.swift */; };
+		56437A90E72B34971174E333CA13CE04 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCE0561B3F05AD9AF7018E010EE4008 /* Mapper.swift */; };
+		56C5C81661BBE0D5E7B4567400FA3337 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4833ADBD56212CE0D1BA67FB31F8CAD3 /* PaymentResponse.swift */; };
+		588FF163843434D99DA1FF1D81E24039 /* CardDataNotificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BD2C1BBD1AF543CEAFA657F9740DB /* CardDataNotificationTypes.swift */; };
+		5FA526557719FDBE81B1974B113CF600 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA788D904B2417C3386EB5822624E8 /* SwiftyJSON-dummy.m */; };
+		60172A74CDB786B63D9BF8195669DBF5 /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C337801F96B9D6B13417972641F3EC /* EnumTransform.swift */; };
+		621D74548A8CABDE4A330FEDD6F4FD8E /* DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7881B8B5859B4CAC699A44546B2EDE /* DataTransform.swift */; };
+		62FA22CD1DC1FD9F4C7933F5BF9FF5C8 /* CardLogos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3D091137E03CFD920CC7A6CBE299FE /* CardLogos.xcassets */; };
+		64E2778E863694A67E91F1CE694E9D8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFD92DDFC1F3C5AB352205A7F362955 /* Foundation.framework */; };
+		683A1B9CDB6CB41D58333A845A9F6369 /* OCRA.otf in Resources */ = {isa = PBXBuildFile; fileRef = E072284097384F192971A8407B8ECF19 /* OCRA.otf */; };
+		6964E59428F6ECCEA845D1684AA20B39 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90275B587D4AFC82DCBE1D7F8691A48B /* Map.swift */; };
+		69F64952F31B918A1FE35BB27DAC18D8 /* ObjectMapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 785642498D8AC9763CE1C7A782DEE019 /* ObjectMapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A8FA91F03B6506273EE5C9F1126635C /* String+Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFE0AB106B4F31CE56C1C6F72172A5A /* String+Insert.swift */; };
+		6D766FD1A21278635E23AF9719383611 /* WalletProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62033777C648C1FF2182AB55F53C5172 /* WalletProvider.swift */; };
+		72D009BBD81C6473A536CA493E6E1916 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = C40EF16BEA75A292E136C2968FC37784 /* Fonts */; };
+		7467DD279F32906637EE8EEE0D962B75 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE00E305F713083D2E4F97832A42AB /* UIView+Border.swift */; };
+		746ED5670A200FEB54C1A172D7D067E2 /* UITextField+CharLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFABD03410673CC46C7253D354122B8 /* UITextField+CharLimit.swift */; };
+		77E0AE655C3F55BFD04F3F1812068715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFD92DDFC1F3C5AB352205A7F362955 /* Foundation.framework */; };
+		78287A6010A317B2F1635B9001A8CAC1 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD02E16158A50466A35604A2CF23447B /* PassKit.framework */; };
+		7ACD55E206620E68D4F624C538965EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFD92DDFC1F3C5AB352205A7F362955 /* Foundation.framework */; };
+		7D22E7225644A2D7F6BE9A09D435E494 /* Pods-NASDUBAI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F68406FA9D0834754A84E9D46CF25 /* Pods-NASDUBAI-dummy.m */; };
+		7E110AE4487248EA3BDBF4A7D945AB1D /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505E3F0EFDAEEF32F0837BB86053F80 /* String+Localized.swift */; };
+		7E56E0CD3D1D207EF5746C6CD4099F26 /* ChallengeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A324FC8EEC936A67220DD199B630D4 /* ChallengeConstants.swift */; };
+		804EB46FA9771C168842B731C7B0832F /* ThreeDSTwoAuthenticationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7056AB19CDCEA82D8F4665EB485889 /* ThreeDSTwoAuthenticationsResponse.swift */; };
+		80A3BCD349527B0E91C9725EA367B441 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83837F55BCE97C8F064242E9677AC08F /* WebKit.framework */; };
+		8CC7FDCA75B0FF479529070CF3264CA2 /* BillingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847853319ECB2C7F97289A8342BA8CAF /* BillingAddress.swift */; };
+		8F50AF62688DC53EC1B942773664A590 /* PaymentMediums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E405145E39F384B5BDB489355355D /* PaymentMediums.swift */; };
+		93511F72CC7C6E62206B09491C80DE95 /* ThreeDSTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BFD8542F7C5054397BD3B17CBD2FAA /* ThreeDSTwoViewController.swift */; };
+		9374C23021FD1266659BDA9EB4BB41FC /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBFB86C814E4856A284C5D693B92DD /* FromJSON.swift */; };
+		96017BC929FFDBD22711B1022DE4CE2D /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6514775B8B659ADD2B89C4A4055E0 /* ISO8601DateTransform.swift */; };
+		9B21284C44155995FA8C57F6F720DF91 /* ThreeDSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB53B4AD9A6538FD112B30EE12971C /* ThreeDSConfig.swift */; };
+		9BC8C9D2533388C17B9296654620CB79 /* String+RemoveWhitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B384ED8CD862F4EE38554F5BE290BF4 /* String+RemoveWhitespace.swift */; };
+		9CC9BA62B813ED120A122123C8F9133A /* ApplePayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A03F74425E87587264CB1FE6A43775 /* ApplePayDelegate.swift */; };
+		9CEFE8B4EA16F24C16A1411A29C906F0 /* Pods-NASDUBAI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C70C7686E456670A6C83A24E0EB09A0F /* Pods-NASDUBAI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E0DF5D64CCFD3C1BCAD117074EC0276 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB6F00CDD46801BAEE1BBEF303CF156 /* PaymentRequest.swift */; };
+		A09D102D1313F161D03255E85F40A5A5 /* Encodable+PrettyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A6E7F9FA265BD71C200FF20C27B4D /* Encodable+PrettyPrint.swift */; };
+		A115142039C23F91827E6961CC479F05 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A0A131286AF4D37895460421A83C9B /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A18F766C287B2D6257111A10AFD8DE41 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B3BF64E4944E75BED6F055A648E28 /* HTTPClient.swift */; };
+		A3CEE8324948497036C4E123B21CBC59 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE4F719DF1FEB17508207D9AA62F99 /* SwiftyJSON.swift */; };
+		A47F0EC4B5F187F4DC2415E0665A0613 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFFE2003F308E0771F050C0EB9A5D0 /* UIView+AutoLayout.swift */; };
+		A5EC1D69EB3379A48ABFB614DE32C2AB /* String+Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF30F27DEFE61848ACB08764EA0F625 /* String+Env.swift */; };
+		A65B02585C7AE6677B8E165D4476B0DA /* Localizations in Resources */ = {isa = PBXBuildFile; fileRef = 1B07FE9D1FD51A1805BD6D08E459580D /* Localizations */; };
+		AE7EE286FB093D485EFD7948A5F006EC /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87733C23DA09B3051CB3CBEE9C14AABA /* UIColor+Hex.swift */; };
+		B1129D841895B01B5729A06D8D5BFA2C /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB2FACC85D1EE93262DF1990394576 /* AuthorizationViewController.swift */; };
+		B43B118A2EBEA4974052F12F614C13C6 /* ObjectMapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E44EE189FC0799EDBEACBF1CB2E3DB /* ObjectMapper-dummy.m */; };
+		B449DA71AEEF878482A26399CA9568D3 /* CodableTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC72781D3ECBE87A3D7A0CEE96FC57 /* CodableTransform.swift */; };
+		B50A64F294B9198E7C72C654233A7BE1 /* PaymentLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0D43401DF1598BA21CBDD0DFF048A5 /* PaymentLinks.swift */; };
+		B5163791FFD31A429873C35256A73CF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D029526818092CD1E7D30438F7DC9A71 /* Localizable.strings */; };
+		B68943831E65DF01D2316E21D69A6A8A /* ApplePayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A972C558E43706973049441F57262F5C /* ApplePayController.swift */; };
+		B6B8D22CC7EF7F344C6720F68606D3B4 /* URL+QueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34E1DFC8493225D2046864F1672738 /* URL+QueryParams.swift */; };
+		B79BCCE423F986F732EE44CE4D966139 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F60EBBC516A0CEF2CD47C3733141D /* OrderResponse.swift */; };
+		BBA8182D2807129F3D09FF3890436EE8 /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0B30F4305511DE5878B5E52A775AEB /* UIViewController+Container.swift */; };
+		BBBA7A5ADB8CC50220CCC1F1C2CC3AA9 /* ThreeDSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40157FAC6FFA647A784A3ABFA84CB4EC /* ThreeDSViewController.swift */; };
+		BC37F5B21ACE828A5DD74A2FA4AFBAAD /* UIScreen+Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC719F969C96727B2DB85AC40B4FC02 /* UIScreen+Bounds.swift */; };
+		BD1B6084F9CCD752D6837B55ACB63017 /* ThreeDSTwoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA6BFFA8EC0010717F983DE78811D0 /* ThreeDSTwoConfig.swift */; };
+		BE051C0A87A66FF86681175E79BC3F75 /* OrderLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA67C3C4C4475E7BE54C8FB40F9507C /* OrderLinks.swift */; };
+		C11B458AF4537A1FCF7376DB46A190D7 /* PaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49182F9AC31EFE82C4B38E1C7E9D446A /* PaymentMethods.swift */; };
+		C14EAF94DFF6C99436052FDA9333FB2F /* ImmutableMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BB43CE9AF4427081737F28F0ADE9B1 /* ImmutableMappable.swift */; };
+		C30BDE88BE2CF3CFDA6DD2BC3D53F251 /* TransactionServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5E89F4CDF21004955994544F7B7F5 /* TransactionServiceAdapter.swift */; };
+		C7A75B95E04CA4ACE3C3F002E658409C /* DictionaryTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CEBCFCAABD65698DCDE2BEF36E666 /* DictionaryTransform.swift */; };
+		C847107A2B287A7445B831436CE131B0 /* CardHolderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9966B42D822D381B6EA6B1CB3C8E3A /* CardHolderName.swift */; };
+		CA00C3E3013A6E9050E16A6A6F43F804 /* Cvv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292E81C9B2AB526D8FE0B0BD36266F9B /* Cvv.swift */; };
+		D03BCA64F6EF108D352380E293696691 /* NISdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8261B3D9A06E59B264B997245953EBB /* NISdk.swift */; };
+		D48DE1E5756BD4111DC7163FCCAEBF01 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E10B7A2CCD56FFE92ED41EA14ED54E /* Operators.swift */; };
+		D541AAB4ADDF4C8579821100B1DD8003 /* TokenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019523A95096D690B58BA4924717B35 /* TokenUtils.swift */; };
+		D807E60A01D3F8F85224048BB7D2ABEA /* PanInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850A32ABA12D84FB767908CECE2A0971 /* PanInputVC.swift */; };
+		D84BACBC4F42A86472652CCD5205F1FA /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98400017A3F4181B6E8DA873FB81D76 /* Mappable.swift */; };
+		D8B07A2EEFB34461B3370879872CE817 /* CardPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDFAB1BFD8252A1071CA200B151F3C5 /* CardPreviewController.swift */; };
+		DA520E388C37F8F79F541C5F4A622213 /* ThreeDSAuthenticationsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F93622A3BD4871EE2A000D2B1D2A63 /* ThreeDSAuthenticationsRequest.swift */; };
+		DD5F9831BD57D404B314AE30D869AAD9 /* TransformOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5D43CB4DE090719219B03255301566 /* TransformOperators.swift */; };
+		DE85BA38A3979F1AC64F58221EFF1756 /* CardPaymentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711DE48394616FF4AE2253B91A0EA17 /* CardPaymentDelegate.swift */; };
+		DF24CE81C8CA841B807B63E1FED38259 /* TransformOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905266F7BD2C3BC0DE7CEC681293FDF5 /* TransformOf.swift */; };
+		DF45386D4E4B0179CE3664CE85BD960E /* CardPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC50A911275FA52BB4D1D7A7CC744F6 /* CardPaymentViewController.swift */; };
+		E288BDF41B3C287145911A343BB1F991 /* IntegerOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128CF83696D960C0D6FB186F8DFBB413 /* IntegerOperators.swift */; };
+		E5EC111C9EB089D63E72B9CDBE40D616 /* MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DF0EBF98C6CF46C46163D1BD734E53 /* MapError.swift */; };
+		EC880AC491B003B504E6F9451EA7109D /* EmbeddedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D76F9F6D14194A499DBFD4BCC682DE /* EmbeddedData.swift */; };
+		F87731094624A08759B62BE1E7BACA47 /* Pan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241926F6B5B08EA68149BE3E71982EA /* Pan.swift */; };
+		FB0E5E75967278370D0204BAE96CBFA7 /* CvvInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BA922DEBD7279DAEE723D59CE205E /* CvvInputVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FCCC0BBF88071AA4059E85A5F5761A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
+		5B1F17DD89BD3A6459281CA871510809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87FD5BA0B3874B7ACFCF4EA2CABC6D4D;
+			remoteInfo = "NISdk-NISdk";
+		};
+		9B4159BFA4B937E7EB98025629DD5F40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0A1A0A409F4332AA8B7DAD9EB34B200;
+			remoteInfo = NISdk;
+		};
+		E8267E3ECFAAA5189C6674BAF78E0F22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 162E649F50FEC62B61BDD87D1BD422B4;
+			remoteInfo = ObjectMapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		001FB2B7B860152E78A1C3EAB6DA8E9D /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
+		027A15000031B6425D9EFE10873AFDEC /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		03B54E2C47C276344272B9CB19998BAF /* DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = Sources/DateTransform.swift; sourceTree = "<group>"; };
+		0D0D43401DF1598BA21CBDD0DFF048A5 /* PaymentLinks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentLinks.swift; path = "NISdk/Source/Domain/Transaction Service Responses/PaymentLinks.swift"; sourceTree = "<group>"; };
+		10636216976E592E1FEEA04FF185A6F1 /* UIFont+RegisterFromBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+RegisterFromBundle.swift"; path = "NISdk/Source/Extensions/UIFont+RegisterFromBundle.swift"; sourceTree = "<group>"; };
+		1138E90B6D7519982BAC18B1708EE819 /* ObjectMapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ObjectMapper-Info.plist"; sourceTree = "<group>"; };
+		128CF83696D960C0D6FB186F8DFBB413 /* IntegerOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegerOperators.swift; path = Sources/IntegerOperators.swift; sourceTree = "<group>"; };
+		1505E3F0EFDAEEF32F0837BB86053F80 /* String+Localized.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Localized.swift"; path = "NISdk/Source/Extensions/String/String+Localized.swift"; sourceTree = "<group>"; };
+		1538A2856502CAE54026839B363E068B /* NISdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NISdk.release.xcconfig; sourceTree = "<group>"; };
+		15E10B7A2CCD56FFE92ED41EA14ED54E /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
+		1B07FE9D1FD51A1805BD6D08E459580D /* Localizations */ = {isa = PBXFileReference; includeInIndex = 1; name = Localizations; path = NISdk/Resources/Localizations; sourceTree = "<group>"; };
+		1B384ED8CD862F4EE38554F5BE290BF4 /* String+RemoveWhitespace.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+RemoveWhitespace.swift"; path = "NISdk/Source/Extensions/String/String+RemoveWhitespace.swift"; sourceTree = "<group>"; };
+		1ECD0079EE29C4C20FF6B008558695F4 /* BrowserInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrowserInfo.swift; path = NISdk/Source/Domain/ThreeDSTwo/BrowserInfo.swift; sourceTree = "<group>"; };
+		1F7056AB19CDCEA82D8F4665EB485889 /* ThreeDSTwoAuthenticationsResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSTwoAuthenticationsResponse.swift; path = NISdk/Source/Domain/ThreeDSTwo/ThreeDSTwoAuthenticationsResponse.swift; sourceTree = "<group>"; };
+		1F9966B42D822D381B6EA6B1CB3C8E3A /* CardHolderName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardHolderName.swift; path = "NISdk/Source/Domain/Payment Fields/CardHolderName.swift"; sourceTree = "<group>"; };
+		2121BD5B86AE078C7DBE6DD9660CB1CA /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = Sources/ToJSON.swift; sourceTree = "<group>"; };
+		22C337801F96B9D6B13417972641F3EC /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = Sources/EnumTransform.swift; sourceTree = "<group>"; };
+		24A0A131286AF4D37895460421A83C9B /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		2649F6EA7B9F179B3C16D7990E71CD04 /* EnumOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumOperators.swift; path = Sources/EnumOperators.swift; sourceTree = "<group>"; };
+		292E81C9B2AB526D8FE0B0BD36266F9B /* Cvv.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cvv.swift; path = "NISdk/Source/Domain/Payment Fields/Cvv.swift"; sourceTree = "<group>"; };
+		2AC86E3E7CBACD08EDAD8A97E88E42C8 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = NISdk/Source/Constants/Constants.swift; sourceTree = "<group>"; };
+		2E2A25020811764206ADB345192418AA /* NISdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NISdk-prefix.pch"; sourceTree = "<group>"; };
+		2EC50A911275FA52BB4D1D7A7CC744F6 /* CardPaymentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardPaymentViewController.swift; path = "NISdk/Source/UI Components/CardPaymentViewController.swift"; sourceTree = "<group>"; };
+		30A03F74425E87587264CB1FE6A43775 /* ApplePayDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApplePayDelegate.swift; path = NISdk/Source/ApplePayDelegate.swift; sourceTree = "<group>"; };
+		314A6E7F9FA265BD71C200FF20C27B4D /* Encodable+PrettyPrint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Encodable+PrettyPrint.swift"; path = "NISdk/Source/Extensions/Encodable+PrettyPrint.swift"; sourceTree = "<group>"; };
+		3533B23C7950D245D70FDAAB5D061799 /* ExpiryDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpiryDate.swift; path = "NISdk/Source/Domain/Payment Fields/ExpiryDate.swift"; sourceTree = "<group>"; };
+		367B25579CFC21B4A485180F9268D5DF /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
+		39AE2B757AA95E1AE14E9C442F4544CB /* Pods-NASDUBAI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NASDUBAI.modulemap"; sourceTree = "<group>"; };
+		3EC82AABCF9E245262145D5AE9D9F745 /* PaymentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentViewController.swift; path = "NISdk/Source/UI Components/PaymentViewController.swift"; sourceTree = "<group>"; };
+		3FEC72781D3ECBE87A3D7A0CEE96FC57 /* CodableTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableTransform.swift; path = Sources/CodableTransform.swift; sourceTree = "<group>"; };
+		40157FAC6FFA647A784A3ABFA84CB4EC /* ThreeDSViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSViewController.swift; path = "NISdk/Source/UI Components/ThreeDSViewController.swift"; sourceTree = "<group>"; };
+		4030EF87F4601B43384381CD5917F352 /* NISdk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NISdk-Info.plist"; sourceTree = "<group>"; };
+		404E62692AD96F9335C99DF766549F15 /* NISdk-NISdk */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "NISdk-NISdk"; path = NISdk.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		40CB57FD901BB5DEA831220D3502F9A7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		41F80C346DB8B98E487358E057FBC61C /* Pods-NASDUBAI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NASDUBAI-Info.plist"; sourceTree = "<group>"; };
+		458BA922DEBD7279DAEE723D59CE205E /* CvvInputVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CvvInputVC.swift; path = "NISdk/Source/UI Components/Card Input Components/CvvInputVC.swift"; sourceTree = "<group>"; };
+		4833ADBD56212CE0D1BA67FB31F8CAD3 /* PaymentResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentResponse.swift; path = "NISdk/Source/Domain/Transaction Service Responses/PaymentResponse.swift"; sourceTree = "<group>"; };
+		49182F9AC31EFE82C4B38E1C7E9D446A /* PaymentMethods.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentMethods.swift; path = "NISdk/Source/Domain/Transaction Service Responses/PaymentMethods.swift"; sourceTree = "<group>"; };
+		4A6006A132A2428AE1703D93108C09D7 /* CardProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardProvider.swift; path = "NISdk/Source/Domain/Transaction Service Responses/CardProvider.swift"; sourceTree = "<group>"; };
+		4C0B30F4305511DE5878B5E52A775AEB /* UIViewController+Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Container.swift"; path = "NISdk/Source/Extensions/UIViewController+Container.swift"; sourceTree = "<group>"; };
+		4C1F8CFDDDF1D350C0E68E66A61674B1 /* Amount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Amount.swift; path = "NISdk/Source/Domain/Transaction Service Responses/Amount.swift"; sourceTree = "<group>"; };
+		4CB773632FCB28A50E81F613B1198616 /* Pods-NASDUBAI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-NASDUBAI"; path = Pods_NASDUBAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CFABD03410673CC46C7253D354122B8 /* UITextField+CharLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+CharLimit.swift"; path = "NISdk/Source/Extensions/UITextField+CharLimit.swift"; sourceTree = "<group>"; };
+		4E6BD42630EBC32427118BB59627FADD /* NISdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NISdk.modulemap; sourceTree = "<group>"; };
+		4ECFC1A813F1CBF7992ECF4A1D9B6FF5 /* SwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.debug.xcconfig; sourceTree = "<group>"; };
+		50EFFE2003F308E0771F050C0EB9A5D0 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+AutoLayout.swift"; path = "NISdk/Source/Extensions/UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		528CEBCFCAABD65698DCDE2BEF36E666 /* DictionaryTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryTransform.swift; path = Sources/DictionaryTransform.swift; sourceTree = "<group>"; };
+		595B3BF64E4944E75BED6F055A648E28 /* HTTPClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = NISdk/Source/HTTPClient/HTTPClient.swift; sourceTree = "<group>"; };
+		5AEC0130C35CE5AD1D5E3DF923A6CDE2 /* OrderSummary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrderSummary.swift; path = "NISdk/Source/Domain/Transaction Service Responses/OrderSummary.swift"; sourceTree = "<group>"; };
+		5B5A60E7A6A4E752AE236E5DDBAF99B5 /* ColorCompatibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorCompatibility.swift; path = NISdk/Source/Utils/ColorCompatibility.swift; sourceTree = "<group>"; };
+		5D00CD2265FCADA5040053E19850D8D4 /* NISdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NISdk-umbrella.h"; sourceTree = "<group>"; };
+		62033777C648C1FF2182AB55F53C5172 /* WalletProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WalletProvider.swift; path = "NISdk/Source/Domain/Transaction Service Responses/WalletProvider.swift"; sourceTree = "<group>"; };
+		62748700226C2310BE23A0EC55DDC9C0 /* NISdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NISdk-dummy.m"; sourceTree = "<group>"; };
+		6777FF490BE6FD4211CAB8C96B9A4DF7 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Sources/DateFormatterTransform.swift; sourceTree = "<group>"; };
+		6D141A2CB94CEECF28709900E3DB3C0F /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
+		6DA45FA39B93590D340FC3A227C0044C /* Pods-NASDUBAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NASDUBAI.release.xcconfig"; sourceTree = "<group>"; };
+		7055E7C6DA242F8BFD72BBECF923B96E /* NISdk */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NISdk; path = NISdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7241926F6B5B08EA68149BE3E71982EA /* Pan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pan.swift; path = "NISdk/Source/Domain/Payment Fields/Pan.swift"; sourceTree = "<group>"; };
+		7369C7A9CA46C4A286E042BAF095E38A /* Pods-NASDUBAI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NASDUBAI-acknowledgements.plist"; sourceTree = "<group>"; };
+		73E44EE189FC0799EDBEACBF1CB2E3DB /* ObjectMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectMapper-dummy.m"; sourceTree = "<group>"; };
+		765B5C09CBFB9DC60A10BBBB4882041D /* ResourceBundle-NISdk-NISdk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-NISdk-NISdk-Info.plist"; sourceTree = "<group>"; };
+		76A3ED8DF71AD01E0F406F19B6498611 /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Sources/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
+		785642498D8AC9763CE1C7A782DEE019 /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
+		7BA0FCD43E32E8D4488D96B58BA49404 /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Sources/TransformType.swift; sourceTree = "<group>"; };
+		7DFD92DDFC1F3C5AB352205A7F362955 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7FAA788D904B2417C3386EB5822624E8 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		7FDFAB1BFD8252A1071CA200B151F3C5 /* CardPreviewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardPreviewController.swift; path = "NISdk/Source/UI Components/Card Preview Components/CardPreviewController.swift"; sourceTree = "<group>"; };
+		80D038DF9A99D83E2D333AF39CDDF7AF /* String+URLEncode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+URLEncode.swift"; path = "NISdk/Source/Extensions/String/String+URLEncode.swift"; sourceTree = "<group>"; };
+		82EAF54E3A108810A1968E5F375648B2 /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = Sources/URLTransform.swift; sourceTree = "<group>"; };
+		83837F55BCE97C8F064242E9677AC08F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		847853319ECB2C7F97289A8342BA8CAF /* BillingAddress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BillingAddress.swift; path = "NISdk/Source/Domain/Transaction Service Responses/BillingAddress.swift"; sourceTree = "<group>"; };
+		847E63E95416C62409F63A5B1BDD05B4 /* URLResponse+Any.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLResponse+Any.swift"; path = "NISdk/Source/Extensions/URLResponse+Any.swift"; sourceTree = "<group>"; };
+		850A32ABA12D84FB767908CECE2A0971 /* PanInputVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PanInputVC.swift; path = "NISdk/Source/UI Components/Card Input Components/PanInputVC.swift"; sourceTree = "<group>"; };
+		87733C23DA09B3051CB3CBEE9C14AABA /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "NISdk/Source/Extensions/UIColor+Hex.swift"; sourceTree = "<group>"; };
+		87EB53B4AD9A6538FD112B30EE12971C /* ThreeDSConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSConfig.swift; path = "NISdk/Source/Domain/Transaction Service Responses/ThreeDSConfig.swift"; sourceTree = "<group>"; };
+		88BFD8542F7C5054397BD3B17CBD2FAA /* ThreeDSTwoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSTwoViewController.swift; path = "NISdk/Source/UI Components/ThreeDSTwoViewController.swift"; sourceTree = "<group>"; };
+		8A3D091137E03CFD920CC7A6CBE299FE /* CardLogos.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = CardLogos.xcassets; path = NISdk/Resources/CardLogos.xcassets; sourceTree = "<group>"; };
+		8BCE0561B3F05AD9AF7018E010EE4008 /* Mapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = Sources/Mapper.swift; sourceTree = "<group>"; };
+		8EFBFB86C814E4856A284C5D693B92DD /* FromJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FromJSON.swift; path = Sources/FromJSON.swift; sourceTree = "<group>"; };
+		8F09B7357A87563CC19ABE66981F8F80 /* NameInputVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NameInputVC.swift; path = "NISdk/Source/UI Components/Card Input Components/NameInputVC.swift"; sourceTree = "<group>"; };
+		90275B587D4AFC82DCBE1D7F8691A48B /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Sources/Map.swift; sourceTree = "<group>"; };
+		905266F7BD2C3BC0DE7CEC681293FDF5 /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Sources/TransformOf.swift; sourceTree = "<group>"; };
+		96AE4F719DF1FEB17508207D9AA62F99 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
+		98A324FC8EEC936A67220DD199B630D4 /* ChallengeConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChallengeConstants.swift; path = NISdk/Source/Constants/ChallengeConstants.swift; sourceTree = "<group>"; };
+		9A817F594481197020F27DF6E54EB0F9 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
+		9CA67C3C4C4475E7BE54C8FB40F9507C /* OrderLinks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrderLinks.swift; path = "NISdk/Source/Domain/Transaction Service Responses/OrderLinks.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E1804B78C464AA0EB2B2980C66CBB4D /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		9F236AE049644BBEB5A70FA378641ECE /* UIView+InterfaceLayoutDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+InterfaceLayoutDirection.swift"; path = "NISdk/Source/Extensions/UIView+InterfaceLayoutDirection.swift"; sourceTree = "<group>"; };
+		A4BB43CE9AF4427081737F28F0ADE9B1 /* ImmutableMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmutableMappable.swift; path = Sources/ImmutableMappable.swift; sourceTree = "<group>"; };
+		A711DE48394616FF4AE2253B91A0EA17 /* CardPaymentDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardPaymentDelegate.swift; path = NISdk/Source/CardPaymentDelegate.swift; sourceTree = "<group>"; };
+		A972C558E43706973049441F57262F5C /* ApplePayController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApplePayController.swift; path = "NISdk/Source/UI Components/ApplePayController.swift"; sourceTree = "<group>"; };
+		ABF30F27DEFE61848ACB08764EA0F625 /* String+Env.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Env.swift"; path = "NISdk/Source/Extensions/String/String+Env.swift"; sourceTree = "<group>"; };
+		AE93DEB8D347CE31843A71D627233B5B /* ObjectMapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.release.xcconfig; sourceTree = "<group>"; };
+		AF285EDD8D70F93DD5EC81613FF82DDC /* Pods-NASDUBAI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NASDUBAI-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AF318081F890BD54CC8D91D4D9DEB0B4 /* HexColorTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HexColorTransform.swift; path = Sources/HexColorTransform.swift; sourceTree = "<group>"; };
+		B24BD2C1BBD1AF543CEAFA657F9740DB /* CardDataNotificationTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardDataNotificationTypes.swift; path = "NISdk/Source/Domain/Payment Fields/CardDataNotificationTypes.swift"; sourceTree = "<group>"; };
+		B2BA6BFFA8EC0010717F983DE78811D0 /* ThreeDSTwoConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSTwoConfig.swift; path = "NISdk/Source/Domain/Transaction Service Responses/ThreeDSTwoConfig.swift"; sourceTree = "<group>"; };
+		B5EB51078E7B217B74B2D962D8B81AEF /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		B749727BB5B358E8D79E35AB33AF2C54 /* Pods-NASDUBAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NASDUBAI.debug.xcconfig"; sourceTree = "<group>"; };
+		B8261B3D9A06E59B264B997245953EBB /* NISdk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NISdk.swift; path = NISdk/Source/NISdk.swift; sourceTree = "<group>"; };
+		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB34E1DFC8493225D2046864F1672738 /* URL+QueryParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+QueryParams.swift"; path = "NISdk/Source/Extensions/URL+QueryParams.swift"; sourceTree = "<group>"; };
+		BFFE0AB106B4F31CE56C1C6F72172A5A /* String+Insert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Insert.swift"; path = "NISdk/Source/Extensions/String/String+Insert.swift"; sourceTree = "<group>"; };
+		C023678804EAF7581DCBC101A379B3F6 /* Pods-NASDUBAI-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NASDUBAI-frameworks.sh"; sourceTree = "<group>"; };
+		C1DF0EBF98C6CF46C46163D1BD734E53 /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
+		C40EF16BEA75A292E136C2968FC37784 /* Fonts */ = {isa = PBXFileReference; includeInIndex = 1; name = Fonts; path = NISdk/Resources/Fonts; sourceTree = "<group>"; };
+		C70C7686E456670A6C83A24E0EB09A0F /* Pods-NASDUBAI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NASDUBAI-umbrella.h"; sourceTree = "<group>"; };
+		C9F93622A3BD4871EE2A000D2B1D2A63 /* ThreeDSAuthenticationsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSAuthenticationsRequest.swift; path = NISdk/Source/Domain/ThreeDSTwo/ThreeDSAuthenticationsRequest.swift; sourceTree = "<group>"; };
+		CC5D43CB4DE090719219B03255301566 /* TransformOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOperators.swift; path = Sources/TransformOperators.swift; sourceTree = "<group>"; };
+		CC6C15D23DDF1DB582358DFC002C737C /* NISdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NISdk.debug.xcconfig; sourceTree = "<group>"; };
+		CC7E405145E39F384B5BDB489355355D /* PaymentMediums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentMediums.swift; path = NISdk/Source/Constants/PaymentMediums.swift; sourceTree = "<group>"; };
+		CD02E16158A50466A35604A2CF23447B /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/PassKit.framework; sourceTree = DEVELOPER_DIR; };
+		CDEE00E305F713083D2E4F97832A42AB /* UIView+Border.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Border.swift"; path = "NISdk/Source/Extensions/UIView+Border.swift"; sourceTree = "<group>"; };
+		CE7881B8B5859B4CAC699A44546B2EDE /* DataTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransform.swift; path = Sources/DataTransform.swift; sourceTree = "<group>"; };
+		D24B064A6F5148243954D91D1E5AE0C4 /* ObjectMapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.debug.xcconfig; sourceTree = "<group>"; };
+		D3752941DF710E72D26DF9480E1C7EE5 /* FormattedOrderSummary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormattedOrderSummary.swift; path = "NISdk/Source/Domain/Transaction Service Responses/FormattedOrderSummary.swift"; sourceTree = "<group>"; };
+		D3A5E89F4CDF21004955994544F7B7F5 /* TransactionServiceAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransactionServiceAdapter.swift; path = NISdk/Source/TransactionServiceAdapter.swift; sourceTree = "<group>"; };
+		D8AFE83172E3914B0208CC46180AB585 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D98400017A3F4181B6E8DA873FB81D76 /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = Sources/Mappable.swift; sourceTree = "<group>"; };
+		DEEB2FACC85D1EE93262DF1990394576 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = "NISdk/Source/UI Components/AuthorizationViewController.swift"; sourceTree = "<group>"; };
+		E072284097384F192971A8407B8ECF19 /* OCRA.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = OCRA.otf; path = NISdk/Resources/Fonts/OCRA.otf; sourceTree = "<group>"; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA589154A55AAA86B8F69B282FF288CA /* Collection+Pairs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Pairs.swift"; path = "NISdk/Source/Extensions/Collection+Pairs.swift"; sourceTree = "<group>"; };
+		EAC719F969C96727B2DB85AC40B4FC02 /* UIScreen+Bounds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScreen+Bounds.swift"; path = "NISdk/Source/Extensions/UIScreen+Bounds.swift"; sourceTree = "<group>"; };
+		EBA6514775B8B659ADD2B89C4A4055E0 /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = Sources/ISO8601DateTransform.swift; sourceTree = "<group>"; };
+		ECC3D4E007320D4BAB24698CF7A605CF /* ExpiryInputVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpiryInputVC.swift; path = "NISdk/Source/UI Components/Card Input Components/ExpiryInputVC.swift"; sourceTree = "<group>"; };
+		EEB6F00CDD46801BAEE1BBEF303CF156 /* PaymentRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentRequest.swift; path = NISdk/Source/Domain/PaymentRequest.swift; sourceTree = "<group>"; };
+		F019523A95096D690B58BA4924717B35 /* TokenUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenUtils.swift; path = NISdk/Source/Utils/TokenUtils.swift; sourceTree = "<group>"; };
+		F33E3C5C60478C40C37EB429631B8157 /* TransactionService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransactionService.swift; path = NISdk/Source/Domain/TransactionService.swift; sourceTree = "<group>"; };
+		F8D76F9F6D14194A499DBFD4BCC682DE /* EmbeddedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmbeddedData.swift; path = "NISdk/Source/Domain/Transaction Service Responses/EmbeddedData.swift"; sourceTree = "<group>"; };
+		F941298B5B7A5428EB5B58BB20286CB9 /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
+		FD00F586A35872613AB2BD689AC9CC55 /* String+Luhn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Luhn.swift"; path = "NISdk/Source/Extensions/String/String+Luhn.swift"; sourceTree = "<group>"; };
+		FD1F60EBBC516A0CEF2CD47C3733141D /* OrderResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrderResponse.swift; path = "NISdk/Source/Domain/Transaction Service Responses/OrderResponse.swift"; sourceTree = "<group>"; };
+		FE0F68406FA9D0834754A84E9D46CF25 /* Pods-NASDUBAI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NASDUBAI-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1654D08902DF89E9B665DB6F46E08D3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E0AE655C3F55BFD04F3F1812068715 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3977393A21672F0FBC6F1193739E0D15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325CCDB295FFA016638075B5D2CEDD5C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438721FAFDB9F8442271EE741F0868DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACD55E206620E68D4F624C538965EC9 /* Foundation.framework in Frameworks */,
+				78287A6010A317B2F1635B9001A8CAC1 /* PassKit.framework in Frameworks */,
+				09AF52C93B771509EC137F0D75CAD31E /* Security.framework in Frameworks */,
+				80A3BCD349527B0E91C9725EA367B441 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		498193390082DFB93920C57D63DC9AAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF02D80FCEAE9AA5006E82B4455E6890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E2778E863694A67E91F1CE694E9D8F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		233C650605060E177A3CE3C55A11CD7D /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				3FEC72781D3ECBE87A3D7A0CEE96FC57 /* CodableTransform.swift */,
+				9A817F594481197020F27DF6E54EB0F9 /* CustomDateFormatTransform.swift */,
+				CE7881B8B5859B4CAC699A44546B2EDE /* DataTransform.swift */,
+				6777FF490BE6FD4211CAB8C96B9A4DF7 /* DateFormatterTransform.swift */,
+				03B54E2C47C276344272B9CB19998BAF /* DateTransform.swift */,
+				528CEBCFCAABD65698DCDE2BEF36E666 /* DictionaryTransform.swift */,
+				2649F6EA7B9F179B3C16D7990E71CD04 /* EnumOperators.swift */,
+				22C337801F96B9D6B13417972641F3EC /* EnumTransform.swift */,
+				8EFBFB86C814E4856A284C5D693B92DD /* FromJSON.swift */,
+				AF318081F890BD54CC8D91D4D9DEB0B4 /* HexColorTransform.swift */,
+				A4BB43CE9AF4427081737F28F0ADE9B1 /* ImmutableMappable.swift */,
+				128CF83696D960C0D6FB186F8DFBB413 /* IntegerOperators.swift */,
+				EBA6514775B8B659ADD2B89C4A4055E0 /* ISO8601DateTransform.swift */,
+				90275B587D4AFC82DCBE1D7F8691A48B /* Map.swift */,
+				C1DF0EBF98C6CF46C46163D1BD734E53 /* MapError.swift */,
+				D98400017A3F4181B6E8DA873FB81D76 /* Mappable.swift */,
+				8BCE0561B3F05AD9AF7018E010EE4008 /* Mapper.swift */,
+				76A3ED8DF71AD01E0F406F19B6498611 /* NSDecimalNumberTransform.swift */,
+				15E10B7A2CCD56FFE92ED41EA14ED54E /* Operators.swift */,
+				2121BD5B86AE078C7DBE6DD9660CB1CA /* ToJSON.swift */,
+				905266F7BD2C3BC0DE7CEC681293FDF5 /* TransformOf.swift */,
+				CC5D43CB4DE090719219B03255301566 /* TransformOperators.swift */,
+				7BA0FCD43E32E8D4488D96B58BA49404 /* TransformType.swift */,
+				82EAF54E3A108810A1968E5F375648B2 /* URLTransform.swift */,
+				AB681E16366107EF008E15E8D2F1AB6B /* Support Files */,
+			);
+			name = ObjectMapper;
+			path = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		49CB3612DFEC3854E6336D0416011E18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A3D091137E03CFD920CC7A6CBE299FE /* CardLogos.xcassets */,
+				C40EF16BEA75A292E136C2968FC37784 /* Fonts */,
+				D029526818092CD1E7D30438F7DC9A71 /* Localizable.strings */,
+				1B07FE9D1FD51A1805BD6D08E459580D /* Localizations */,
+				E072284097384F192971A8407B8ECF19 /* OCRA.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		66EDA537BBF4881AD822C8A60A5FE9BE /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				96AE4F719DF1FEB17508207D9AA62F99 /* SwiftyJSON.swift */,
+				C0BA820346A2429794BE649D8ADFC555 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		6CD36DB831686F976A6725705FBE31EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				866010AFCE58E5157675A0701BB950B4 /* NISdk */,
+				233C650605060E177A3CE3C55A11CD7D /* ObjectMapper */,
+				66EDA537BBF4881AD822C8A60A5FE9BE /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8608957B5467E6EEB76369C58BBC8174 /* Pods-NASDUBAI */ = {
+			isa = PBXGroup;
+			children = (
+				39AE2B757AA95E1AE14E9C442F4544CB /* Pods-NASDUBAI.modulemap */,
+				AF285EDD8D70F93DD5EC81613FF82DDC /* Pods-NASDUBAI-acknowledgements.markdown */,
+				7369C7A9CA46C4A286E042BAF095E38A /* Pods-NASDUBAI-acknowledgements.plist */,
+				FE0F68406FA9D0834754A84E9D46CF25 /* Pods-NASDUBAI-dummy.m */,
+				C023678804EAF7581DCBC101A379B3F6 /* Pods-NASDUBAI-frameworks.sh */,
+				41F80C346DB8B98E487358E057FBC61C /* Pods-NASDUBAI-Info.plist */,
+				C70C7686E456670A6C83A24E0EB09A0F /* Pods-NASDUBAI-umbrella.h */,
+				B749727BB5B358E8D79E35AB33AF2C54 /* Pods-NASDUBAI.debug.xcconfig */,
+				6DA45FA39B93590D340FC3A227C0044C /* Pods-NASDUBAI.release.xcconfig */,
+			);
+			name = "Pods-NASDUBAI";
+			path = "Target Support Files/Pods-NASDUBAI";
+			sourceTree = "<group>";
+		};
+		866010AFCE58E5157675A0701BB950B4 /* NISdk */ = {
+			isa = PBXGroup;
+			children = (
+				4C1F8CFDDDF1D350C0E68E66A61674B1 /* Amount.swift */,
+				A972C558E43706973049441F57262F5C /* ApplePayController.swift */,
+				30A03F74425E87587264CB1FE6A43775 /* ApplePayDelegate.swift */,
+				DEEB2FACC85D1EE93262DF1990394576 /* AuthorizationViewController.swift */,
+				847853319ECB2C7F97289A8342BA8CAF /* BillingAddress.swift */,
+				1ECD0079EE29C4C20FF6B008558695F4 /* BrowserInfo.swift */,
+				B24BD2C1BBD1AF543CEAFA657F9740DB /* CardDataNotificationTypes.swift */,
+				1F9966B42D822D381B6EA6B1CB3C8E3A /* CardHolderName.swift */,
+				A711DE48394616FF4AE2253B91A0EA17 /* CardPaymentDelegate.swift */,
+				2EC50A911275FA52BB4D1D7A7CC744F6 /* CardPaymentViewController.swift */,
+				7FDFAB1BFD8252A1071CA200B151F3C5 /* CardPreviewController.swift */,
+				4A6006A132A2428AE1703D93108C09D7 /* CardProvider.swift */,
+				98A324FC8EEC936A67220DD199B630D4 /* ChallengeConstants.swift */,
+				EA589154A55AAA86B8F69B282FF288CA /* Collection+Pairs.swift */,
+				5B5A60E7A6A4E752AE236E5DDBAF99B5 /* ColorCompatibility.swift */,
+				2AC86E3E7CBACD08EDAD8A97E88E42C8 /* Constants.swift */,
+				292E81C9B2AB526D8FE0B0BD36266F9B /* Cvv.swift */,
+				458BA922DEBD7279DAEE723D59CE205E /* CvvInputVC.swift */,
+				F8D76F9F6D14194A499DBFD4BCC682DE /* EmbeddedData.swift */,
+				314A6E7F9FA265BD71C200FF20C27B4D /* Encodable+PrettyPrint.swift */,
+				3533B23C7950D245D70FDAAB5D061799 /* ExpiryDate.swift */,
+				ECC3D4E007320D4BAB24698CF7A605CF /* ExpiryInputVC.swift */,
+				D3752941DF710E72D26DF9480E1C7EE5 /* FormattedOrderSummary.swift */,
+				595B3BF64E4944E75BED6F055A648E28 /* HTTPClient.swift */,
+				8F09B7357A87563CC19ABE66981F8F80 /* NameInputVC.swift */,
+				B8261B3D9A06E59B264B997245953EBB /* NISdk.swift */,
+				9CA67C3C4C4475E7BE54C8FB40F9507C /* OrderLinks.swift */,
+				FD1F60EBBC516A0CEF2CD47C3733141D /* OrderResponse.swift */,
+				5AEC0130C35CE5AD1D5E3DF923A6CDE2 /* OrderSummary.swift */,
+				7241926F6B5B08EA68149BE3E71982EA /* Pan.swift */,
+				850A32ABA12D84FB767908CECE2A0971 /* PanInputVC.swift */,
+				0D0D43401DF1598BA21CBDD0DFF048A5 /* PaymentLinks.swift */,
+				CC7E405145E39F384B5BDB489355355D /* PaymentMediums.swift */,
+				49182F9AC31EFE82C4B38E1C7E9D446A /* PaymentMethods.swift */,
+				EEB6F00CDD46801BAEE1BBEF303CF156 /* PaymentRequest.swift */,
+				4833ADBD56212CE0D1BA67FB31F8CAD3 /* PaymentResponse.swift */,
+				3EC82AABCF9E245262145D5AE9D9F745 /* PaymentViewController.swift */,
+				ABF30F27DEFE61848ACB08764EA0F625 /* String+Env.swift */,
+				BFFE0AB106B4F31CE56C1C6F72172A5A /* String+Insert.swift */,
+				1505E3F0EFDAEEF32F0837BB86053F80 /* String+Localized.swift */,
+				FD00F586A35872613AB2BD689AC9CC55 /* String+Luhn.swift */,
+				1B384ED8CD862F4EE38554F5BE290BF4 /* String+RemoveWhitespace.swift */,
+				80D038DF9A99D83E2D333AF39CDDF7AF /* String+URLEncode.swift */,
+				C9F93622A3BD4871EE2A000D2B1D2A63 /* ThreeDSAuthenticationsRequest.swift */,
+				87EB53B4AD9A6538FD112B30EE12971C /* ThreeDSConfig.swift */,
+				1F7056AB19CDCEA82D8F4665EB485889 /* ThreeDSTwoAuthenticationsResponse.swift */,
+				B2BA6BFFA8EC0010717F983DE78811D0 /* ThreeDSTwoConfig.swift */,
+				88BFD8542F7C5054397BD3B17CBD2FAA /* ThreeDSTwoViewController.swift */,
+				40157FAC6FFA647A784A3ABFA84CB4EC /* ThreeDSViewController.swift */,
+				F019523A95096D690B58BA4924717B35 /* TokenUtils.swift */,
+				F33E3C5C60478C40C37EB429631B8157 /* TransactionService.swift */,
+				D3A5E89F4CDF21004955994544F7B7F5 /* TransactionServiceAdapter.swift */,
+				87733C23DA09B3051CB3CBEE9C14AABA /* UIColor+Hex.swift */,
+				10636216976E592E1FEEA04FF185A6F1 /* UIFont+RegisterFromBundle.swift */,
+				EAC719F969C96727B2DB85AC40B4FC02 /* UIScreen+Bounds.swift */,
+				4CFABD03410673CC46C7253D354122B8 /* UITextField+CharLimit.swift */,
+				50EFFE2003F308E0771F050C0EB9A5D0 /* UIView+AutoLayout.swift */,
+				CDEE00E305F713083D2E4F97832A42AB /* UIView+Border.swift */,
+				9F236AE049644BBEB5A70FA378641ECE /* UIView+InterfaceLayoutDirection.swift */,
+				4C0B30F4305511DE5878B5E52A775AEB /* UIViewController+Container.swift */,
+				BB34E1DFC8493225D2046864F1672738 /* URL+QueryParams.swift */,
+				847E63E95416C62409F63A5B1BDD05B4 /* URLResponse+Any.swift */,
+				62033777C648C1FF2182AB55F53C5172 /* WalletProvider.swift */,
+				49CB3612DFEC3854E6336D0416011E18 /* Resources */,
+				EB22B45C46A02776D66582E9EEAC14F5 /* Support Files */,
+			);
+			name = NISdk;
+			path = NISdk;
+			sourceTree = "<group>";
+		};
+		8775E0BD6B490F3E387C7246D8ADD0B7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8608957B5467E6EEB76369C58BBC8174 /* Pods-NASDUBAI */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AB681E16366107EF008E15E8D2F1AB6B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				001FB2B7B860152E78A1C3EAB6DA8E9D /* ObjectMapper.modulemap */,
+				73E44EE189FC0799EDBEACBF1CB2E3DB /* ObjectMapper-dummy.m */,
+				1138E90B6D7519982BAC18B1708EE819 /* ObjectMapper-Info.plist */,
+				F941298B5B7A5428EB5B58BB20286CB9 /* ObjectMapper-prefix.pch */,
+				785642498D8AC9763CE1C7A782DEE019 /* ObjectMapper-umbrella.h */,
+				D24B064A6F5148243954D91D1E5AE0C4 /* ObjectMapper.debug.xcconfig */,
+				AE93DEB8D347CE31843A71D627233B5B /* ObjectMapper.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ObjectMapper";
+			sourceTree = "<group>";
+		};
+		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C06632AF76AC922C0CF25B5FDFC8E408 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C06632AF76AC922C0CF25B5FDFC8E408 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7DFD92DDFC1F3C5AB352205A7F362955 /* Foundation.framework */,
+				CD02E16158A50466A35604A2CF23447B /* PassKit.framework */,
+				40CB57FD901BB5DEA831220D3502F9A7 /* Security.framework */,
+				83837F55BCE97C8F064242E9677AC08F /* WebKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C0BA820346A2429794BE649D8ADFC555 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E1804B78C464AA0EB2B2980C66CBB4D /* SwiftyJSON.modulemap */,
+				7FAA788D904B2417C3386EB5822624E8 /* SwiftyJSON-dummy.m */,
+				367B25579CFC21B4A485180F9268D5DF /* SwiftyJSON-Info.plist */,
+				B5EB51078E7B217B74B2D962D8B81AEF /* SwiftyJSON-prefix.pch */,
+				24A0A131286AF4D37895460421A83C9B /* SwiftyJSON-umbrella.h */,
+				4ECFC1A813F1CBF7992ECF4A1D9B6FF5 /* SwiftyJSON.debug.xcconfig */,
+				6D141A2CB94CEECF28709900E3DB3C0F /* SwiftyJSON.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				6CD36DB831686F976A6725705FBE31EE /* Pods */,
+				E8CEB214B7807CBAFBA27B7C661AA655 /* Products */,
+				8775E0BD6B490F3E387C7246D8ADD0B7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E8CEB214B7807CBAFBA27B7C661AA655 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7055E7C6DA242F8BFD72BBECF923B96E /* NISdk */,
+				404E62692AD96F9335C99DF766549F15 /* NISdk-NISdk */,
+				B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper */,
+				4CB773632FCB28A50E81F613B1198616 /* Pods-NASDUBAI */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB22B45C46A02776D66582E9EEAC14F5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E6BD42630EBC32427118BB59627FADD /* NISdk.modulemap */,
+				62748700226C2310BE23A0EC55DDC9C0 /* NISdk-dummy.m */,
+				4030EF87F4601B43384381CD5917F352 /* NISdk-Info.plist */,
+				2E2A25020811764206ADB345192418AA /* NISdk-prefix.pch */,
+				5D00CD2265FCADA5040053E19850D8D4 /* NISdk-umbrella.h */,
+				CC6C15D23DDF1DB582358DFC002C737C /* NISdk.debug.xcconfig */,
+				1538A2856502CAE54026839B363E068B /* NISdk.release.xcconfig */,
+				765B5C09CBFB9DC60A10BBBB4882041D /* ResourceBundle-NISdk-NISdk-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NISdk";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41145698F7DF35B05606D01197454CFC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A115142039C23F91827E6961CC479F05 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDFE07C4F6305A19AD2787A41DDC2EBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CEFE8B4EA16F24C16A1411A29C906F0 /* Pods-NASDUBAI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38B70581E9A9DF148E676978E0FF22F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69F64952F31B918A1FE35BB27DAC18D8 /* ObjectMapper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F44B74B0E3B14BE33CD4B86F4A3791BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC72CC34E9C7801DC0E16928F1FE5E6 /* NISdk-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		162E649F50FEC62B61BDD87D1BD422B4 /* ObjectMapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E87BC112BC21907F81880D4606CE033 /* Build configuration list for PBXNativeTarget "ObjectMapper" */;
+			buildPhases = (
+				E38B70581E9A9DF148E676978E0FF22F /* Headers */,
+				A1726579A0112FB513977C3C22BC3C49 /* Sources */,
+				BF02D80FCEAE9AA5006E82B4455E6890 /* Frameworks */,
+				25791203AC3E635729D84FC9759B1777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjectMapper;
+			productName = ObjectMapper;
+			productReference = B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper */;
+			productType = "com.apple.product-type.framework";
+		};
+		3D3DD62DA3DDA62D7CB10BA130538C54 /* Pods-NASDUBAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E6286F2CFF55487D57F83DC62114B46 /* Build configuration list for PBXNativeTarget "Pods-NASDUBAI" */;
+			buildPhases = (
+				CDFE07C4F6305A19AD2787A41DDC2EBD /* Headers */,
+				DF23DF4E5D6D85D6374A14BD56C8EDF3 /* Sources */,
+				1654D08902DF89E9B665DB6F46E08D3A /* Frameworks */,
+				C75A10255C5A78BBD2EFB75961DB7BF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				737CAD7B5355404EF39283726C9CE881 /* PBXTargetDependency */,
+				AFE154676366EB519381CCF5ADA7EE6A /* PBXTargetDependency */,
+				AC0A297299412A945C09FC4F794C6549 /* PBXTargetDependency */,
+			);
+			name = "Pods-NASDUBAI";
+			productName = Pods_NASDUBAI;
+			productReference = 4CB773632FCB28A50E81F613B1198616 /* Pods-NASDUBAI */;
+			productType = "com.apple.product-type.framework";
+		};
+		87FD5BA0B3874B7ACFCF4EA2CABC6D4D /* NISdk-NISdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1648D228139BE7F9CE61CB0B1E553ABF /* Build configuration list for PBXNativeTarget "NISdk-NISdk" */;
+			buildPhases = (
+				843A5635AF880E1DEA1C3DBE5C7A1911 /* Sources */,
+				498193390082DFB93920C57D63DC9AAE /* Frameworks */,
+				FB70C01B36C97D7DC7CAAB4ED4FE9A59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NISdk-NISdk";
+			productName = NISdk;
+			productReference = 404E62692AD96F9335C99DF766549F15 /* NISdk-NISdk */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C0A1A0A409F4332AA8B7DAD9EB34B200 /* NISdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 359C86A4EC824653632B5DD9B8D75675 /* Build configuration list for PBXNativeTarget "NISdk" */;
+			buildPhases = (
+				F44B74B0E3B14BE33CD4B86F4A3791BC /* Headers */,
+				07C67042A65086AC2234E7E5D03684B7 /* Sources */,
+				438721FAFDB9F8442271EE741F0868DD /* Frameworks */,
+				32FB013EEB0D9C55A1CB9CB13128255F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0B0EF5EC3BAF70B47549B442BCA7832 /* PBXTargetDependency */,
+			);
+			name = NISdk;
+			productName = NISdk;
+			productReference = 7055E7C6DA242F8BFD72BBECF923B96E /* NISdk */;
+			productType = "com.apple.product-type.framework";
+		};
+		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2490E828D479276A7E0AFBA515DD77FA /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				41145698F7DF35B05606D01197454CFC /* Headers */,
+				7B5BEB32F210EFE38F7D58FF8A1CC2DE /* Sources */,
+				3977393A21672F0FBC6F1193739E0D15 /* Frameworks */,
+				B05597C458D738E12F170EAC515F8483 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ar,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E8CEB214B7807CBAFBA27B7C661AA655 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0A1A0A409F4332AA8B7DAD9EB34B200 /* NISdk */,
+				87FD5BA0B3874B7ACFCF4EA2CABC6D4D /* NISdk-NISdk */,
+				162E649F50FEC62B61BDD87D1BD422B4 /* ObjectMapper */,
+				3D3DD62DA3DDA62D7CB10BA130538C54 /* Pods-NASDUBAI */,
+				D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25791203AC3E635729D84FC9759B1777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32FB013EEB0D9C55A1CB9CB13128255F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29947018F55B8E45D3FA1E9FE24647A5 /* NISdk-NISdk in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B05597C458D738E12F170EAC515F8483 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C75A10255C5A78BBD2EFB75961DB7BF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB70C01B36C97D7DC7CAAB4ED4FE9A59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62FA22CD1DC1FD9F4C7933F5BF9FF5C8 /* CardLogos.xcassets in Resources */,
+				72D009BBD81C6473A536CA493E6E1916 /* Fonts in Resources */,
+				B5163791FFD31A429873C35256A73CF9 /* Localizable.strings in Resources */,
+				A65B02585C7AE6677B8E165D4476B0DA /* Localizations in Resources */,
+				683A1B9CDB6CB41D58333A845A9F6369 /* OCRA.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07C67042A65086AC2234E7E5D03684B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				028EC97AAFDC8833BD16654C8AB60BE7 /* Amount.swift in Sources */,
+				B68943831E65DF01D2316E21D69A6A8A /* ApplePayController.swift in Sources */,
+				9CC9BA62B813ED120A122123C8F9133A /* ApplePayDelegate.swift in Sources */,
+				B1129D841895B01B5729A06D8D5BFA2C /* AuthorizationViewController.swift in Sources */,
+				8CC7FDCA75B0FF479529070CF3264CA2 /* BillingAddress.swift in Sources */,
+				4023B7F0947706B873126A4C52C9911B /* BrowserInfo.swift in Sources */,
+				588FF163843434D99DA1FF1D81E24039 /* CardDataNotificationTypes.swift in Sources */,
+				C847107A2B287A7445B831436CE131B0 /* CardHolderName.swift in Sources */,
+				DE85BA38A3979F1AC64F58221EFF1756 /* CardPaymentDelegate.swift in Sources */,
+				DF45386D4E4B0179CE3664CE85BD960E /* CardPaymentViewController.swift in Sources */,
+				D8B07A2EEFB34461B3370879872CE817 /* CardPreviewController.swift in Sources */,
+				41A2A369B82B08764E44FF3E29E332F6 /* CardProvider.swift in Sources */,
+				7E56E0CD3D1D207EF5746C6CD4099F26 /* ChallengeConstants.swift in Sources */,
+				172CAEA9325D220C14475E6A0BCC09F1 /* Collection+Pairs.swift in Sources */,
+				1BE846B40834E0FFCC575388CCCBFC5C /* ColorCompatibility.swift in Sources */,
+				3B123530BA80B5747E1C4D4AB273E68D /* Constants.swift in Sources */,
+				CA00C3E3013A6E9050E16A6A6F43F804 /* Cvv.swift in Sources */,
+				FB0E5E75967278370D0204BAE96CBFA7 /* CvvInputVC.swift in Sources */,
+				EC880AC491B003B504E6F9451EA7109D /* EmbeddedData.swift in Sources */,
+				A09D102D1313F161D03255E85F40A5A5 /* Encodable+PrettyPrint.swift in Sources */,
+				2628A4708E8512458E52BFD4B24A6A66 /* ExpiryDate.swift in Sources */,
+				2381FE7CEA8265BBB8E76FC2B815F960 /* ExpiryInputVC.swift in Sources */,
+				11848449332C0E0E41AD3E3E17A0C43D /* FormattedOrderSummary.swift in Sources */,
+				A18F766C287B2D6257111A10AFD8DE41 /* HTTPClient.swift in Sources */,
+				0C965FE1488BA6BE622B4E838ACA4FF3 /* NameInputVC.swift in Sources */,
+				D03BCA64F6EF108D352380E293696691 /* NISdk.swift in Sources */,
+				22DFF3D887D03A1870204F0FE912CFFB /* NISdk-dummy.m in Sources */,
+				BE051C0A87A66FF86681175E79BC3F75 /* OrderLinks.swift in Sources */,
+				B79BCCE423F986F732EE44CE4D966139 /* OrderResponse.swift in Sources */,
+				13738A2639B2C8517F2CF1C7BD3475EE /* OrderSummary.swift in Sources */,
+				F87731094624A08759B62BE1E7BACA47 /* Pan.swift in Sources */,
+				D807E60A01D3F8F85224048BB7D2ABEA /* PanInputVC.swift in Sources */,
+				B50A64F294B9198E7C72C654233A7BE1 /* PaymentLinks.swift in Sources */,
+				8F50AF62688DC53EC1B942773664A590 /* PaymentMediums.swift in Sources */,
+				C11B458AF4537A1FCF7376DB46A190D7 /* PaymentMethods.swift in Sources */,
+				9E0DF5D64CCFD3C1BCAD117074EC0276 /* PaymentRequest.swift in Sources */,
+				56C5C81661BBE0D5E7B4567400FA3337 /* PaymentResponse.swift in Sources */,
+				0E0DFFE66C0B2513028AFD77F7B705FE /* PaymentViewController.swift in Sources */,
+				A5EC1D69EB3379A48ABFB614DE32C2AB /* String+Env.swift in Sources */,
+				6A8FA91F03B6506273EE5C9F1126635C /* String+Insert.swift in Sources */,
+				7E110AE4487248EA3BDBF4A7D945AB1D /* String+Localized.swift in Sources */,
+				42309503D42BEED3B67F793204532845 /* String+Luhn.swift in Sources */,
+				9BC8C9D2533388C17B9296654620CB79 /* String+RemoveWhitespace.swift in Sources */,
+				1274DD72F4C4058D94E7FCFDA1631562 /* String+URLEncode.swift in Sources */,
+				DA520E388C37F8F79F541C5F4A622213 /* ThreeDSAuthenticationsRequest.swift in Sources */,
+				9B21284C44155995FA8C57F6F720DF91 /* ThreeDSConfig.swift in Sources */,
+				804EB46FA9771C168842B731C7B0832F /* ThreeDSTwoAuthenticationsResponse.swift in Sources */,
+				BD1B6084F9CCD752D6837B55ACB63017 /* ThreeDSTwoConfig.swift in Sources */,
+				93511F72CC7C6E62206B09491C80DE95 /* ThreeDSTwoViewController.swift in Sources */,
+				BBBA7A5ADB8CC50220CCC1F1C2CC3AA9 /* ThreeDSViewController.swift in Sources */,
+				D541AAB4ADDF4C8579821100B1DD8003 /* TokenUtils.swift in Sources */,
+				4E04CDEDDC6C3D49728EF45F9BA32800 /* TransactionService.swift in Sources */,
+				C30BDE88BE2CF3CFDA6DD2BC3D53F251 /* TransactionServiceAdapter.swift in Sources */,
+				AE7EE286FB093D485EFD7948A5F006EC /* UIColor+Hex.swift in Sources */,
+				32EFECE9AEEE3129FD0031FFCF5235FF /* UIFont+RegisterFromBundle.swift in Sources */,
+				BC37F5B21ACE828A5DD74A2FA4AFBAAD /* UIScreen+Bounds.swift in Sources */,
+				746ED5670A200FEB54C1A172D7D067E2 /* UITextField+CharLimit.swift in Sources */,
+				A47F0EC4B5F187F4DC2415E0665A0613 /* UIView+AutoLayout.swift in Sources */,
+				7467DD279F32906637EE8EEE0D962B75 /* UIView+Border.swift in Sources */,
+				3D8299FAD32F1FF239E8C6872FFF0C4F /* UIView+InterfaceLayoutDirection.swift in Sources */,
+				BBA8182D2807129F3D09FF3890436EE8 /* UIViewController+Container.swift in Sources */,
+				B6B8D22CC7EF7F344C6720F68606D3B4 /* URL+QueryParams.swift in Sources */,
+				3EA90111B873797D79D1EE27EE90B901 /* URLResponse+Any.swift in Sources */,
+				6D766FD1A21278635E23AF9719383611 /* WalletProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5BEB32F210EFE38F7D58FF8A1CC2DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3CEE8324948497036C4E123B21CBC59 /* SwiftyJSON.swift in Sources */,
+				5FA526557719FDBE81B1974B113CF600 /* SwiftyJSON-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843A5635AF880E1DEA1C3DBE5C7A1911 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1726579A0112FB513977C3C22BC3C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B449DA71AEEF878482A26399CA9568D3 /* CodableTransform.swift in Sources */,
+				1C8C33626D4B515F7C3416A54BCD9B21 /* CustomDateFormatTransform.swift in Sources */,
+				621D74548A8CABDE4A330FEDD6F4FD8E /* DataTransform.swift in Sources */,
+				2DBA3EBF9138795BF487751527499F20 /* DateFormatterTransform.swift in Sources */,
+				39A4432E8C1DB203709C70DDD9C3D58A /* DateTransform.swift in Sources */,
+				C7A75B95E04CA4ACE3C3F002E658409C /* DictionaryTransform.swift in Sources */,
+				471FC0BF392F6EBEC37D36AFADBF9D07 /* EnumOperators.swift in Sources */,
+				60172A74CDB786B63D9BF8195669DBF5 /* EnumTransform.swift in Sources */,
+				9374C23021FD1266659BDA9EB4BB41FC /* FromJSON.swift in Sources */,
+				3E334140FBE5DFD4DDA5C3D3FCB54B9A /* HexColorTransform.swift in Sources */,
+				C14EAF94DFF6C99436052FDA9333FB2F /* ImmutableMappable.swift in Sources */,
+				E288BDF41B3C287145911A343BB1F991 /* IntegerOperators.swift in Sources */,
+				96017BC929FFDBD22711B1022DE4CE2D /* ISO8601DateTransform.swift in Sources */,
+				6964E59428F6ECCEA845D1684AA20B39 /* Map.swift in Sources */,
+				E5EC111C9EB089D63E72B9CDBE40D616 /* MapError.swift in Sources */,
+				D84BACBC4F42A86472652CCD5205F1FA /* Mappable.swift in Sources */,
+				56437A90E72B34971174E333CA13CE04 /* Mapper.swift in Sources */,
+				3EA3D3809293130859481308A6E750F1 /* NSDecimalNumberTransform.swift in Sources */,
+				B43B118A2EBEA4974052F12F614C13C6 /* ObjectMapper-dummy.m in Sources */,
+				D48DE1E5756BD4111DC7163FCCAEBF01 /* Operators.swift in Sources */,
+				17E9283ADA107CC34D25395AB5F67212 /* ToJSON.swift in Sources */,
+				DF24CE81C8CA841B807B63E1FED38259 /* TransformOf.swift in Sources */,
+				DD5F9831BD57D404B314AE30D869AAD9 /* TransformOperators.swift in Sources */,
+				20CCEE43CCC7613E3812B73214688D48 /* TransformType.swift in Sources */,
+				4990C571DE02BFFCC77DB6E47CB678C3 /* URLTransform.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF23DF4E5D6D85D6374A14BD56C8EDF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D22E7225644A2D7F6BE9A09D435E494 /* Pods-NASDUBAI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		737CAD7B5355404EF39283726C9CE881 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NISdk;
+			target = C0A1A0A409F4332AA8B7DAD9EB34B200 /* NISdk */;
+			targetProxy = 9B4159BFA4B937E7EB98025629DD5F40 /* PBXContainerItemProxy */;
+		};
+		AC0A297299412A945C09FC4F794C6549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 1FCCC0BBF88071AA4059E85A5F5761A6 /* PBXContainerItemProxy */;
+		};
+		AFE154676366EB519381CCF5ADA7EE6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectMapper;
+			target = 162E649F50FEC62B61BDD87D1BD422B4 /* ObjectMapper */;
+			targetProxy = E8267E3ECFAAA5189C6674BAF78E0F22 /* PBXContainerItemProxy */;
+		};
+		B0B0EF5EC3BAF70B47549B442BCA7832 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "NISdk-NISdk";
+			target = 87FD5BA0B3874B7ACFCF4EA2CABC6D4D /* NISdk-NISdk */;
+			targetProxy = 5B1F17DD89BD3A6459281CA871510809 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D029526818092CD1E7D30438F7DC9A71 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8AFE83172E3914B0208CC46180AB585 /* Localizable.strings */,
+				027A15000031B6425D9EFE10873AFDEC /* Localizable.strings */,
+			);
+			name = Localizable.strings;
+			path = NISdk/Resources/Localizations;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24CB875D5B25BF16969BE395662EAFD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D141A2CB94CEECF28709900E3DB3C0F /* SwiftyJSON.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		38834AE326F812A2EA686F854DDD1D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC6C15D23DDF1DB582358DFC002C737C /* NISdk.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/NISdk";
+				IBSC_MODULE = NISdk;
+				INFOPLIST_FILE = "Target Support Files/NISdk/ResourceBundle-NISdk-NISdk-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = NISdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5F71E0622E70A461D5DFE04B30A79EDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC6C15D23DDF1DB582358DFC002C737C /* NISdk.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NISdk/NISdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NISdk/NISdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NISdk/NISdk.modulemap";
+				PRODUCT_MODULE_NAME = NISdk;
+				PRODUCT_NAME = NISdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		73ADB05F5B02AEE33A9BDA404AD71FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D24B064A6F5148243954D91D1E5AE0C4 /* ObjectMapper.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/ObjectMapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				PRODUCT_MODULE_NAME = ObjectMapper;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8F3C3CC641E58A2E38665C0138561308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1538A2856502CAE54026839B363E068B /* NISdk.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/NISdk";
+				IBSC_MODULE = NISdk;
+				INFOPLIST_FILE = "Target Support Files/NISdk/ResourceBundle-NISdk-NISdk-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = NISdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		A6C06F26F3D6739F2C6E9775A4465B64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ECFC1A813F1CBF7992ECF4A1D9B6FF5 /* SwiftyJSON.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B190171B8735ED1929BF4A62AC9E147E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE93DEB8D347CE31843A71D627233B5B /* ObjectMapper.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/ObjectMapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				PRODUCT_MODULE_NAME = ObjectMapper;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C091AB5D0DA24E5F7C0A874C1D48F22C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1538A2856502CAE54026839B363E068B /* NISdk.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NISdk/NISdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NISdk/NISdk-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NISdk/NISdk.modulemap";
+				PRODUCT_MODULE_NAME = NISdk;
+				PRODUCT_NAME = NISdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA47D663D0E41C7AF6CB953ACAC74444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B749727BB5B358E8D79E35AB33AF2C54 /* Pods-NASDUBAI.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NASDUBAI/Pods-NASDUBAI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NASDUBAI/Pods-NASDUBAI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FA9925C1AF8178A6601B55F5A505D824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DA45FA39B93590D340FC3A227C0044C /* Pods-NASDUBAI.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NASDUBAI/Pods-NASDUBAI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NASDUBAI/Pods-NASDUBAI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1648D228139BE7F9CE61CB0B1E553ABF /* Build configuration list for PBXNativeTarget "NISdk-NISdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38834AE326F812A2EA686F854DDD1D34 /* Debug */,
+				8F3C3CC641E58A2E38665C0138561308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2490E828D479276A7E0AFBA515DD77FA /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C06F26F3D6739F2C6E9775A4465B64 /* Debug */,
+				24CB875D5B25BF16969BE395662EAFD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		359C86A4EC824653632B5DD9B8D75675 /* Build configuration list for PBXNativeTarget "NISdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F71E0622E70A461D5DFE04B30A79EDA /* Debug */,
+				C091AB5D0DA24E5F7C0A874C1D48F22C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E6286F2CFF55487D57F83DC62114B46 /* Build configuration list for PBXNativeTarget "Pods-NASDUBAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA47D663D0E41C7AF6CB953ACAC74444 /* Debug */,
+				FA9925C1AF8178A6601B55F5A505D824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
+				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E87BC112BC21907F81880D4606CE033 /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73ADB05F5B02AEE33A9BDA404AD71FDF /* Debug */,
+				B190171B8735ED1929BF4A62AC9E147E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

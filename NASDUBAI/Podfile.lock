@@ -1,0 +1,24 @@
+PODS:
+  - NISdk (5.0.1)
+  - ObjectMapper (3.5.3)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - NISdk (~> 5.0.1)
+  - ObjectMapper (~> 3.5)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - NISdk
+    - ObjectMapper
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  NISdk: 7c6ce51d1a70bd57e79ccd58c58e6d81d78f7ef5
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 7bb2872bb9c2d09c3fe285cdd9acd16442834d71
+
+COCOAPODS: 1.11.3
