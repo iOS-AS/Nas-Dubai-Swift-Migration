@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        sleep(UInt32(1.5))
         self.jumpTo()
         return true
     }
@@ -41,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     @objc func dismissSplashController() {
         let mainVC = UIStoryboard.init(name: "LoginStoryboard", bundle: nil)
-        let rootVC = mainVC.instantiateViewController(withIdentifier: "LoginViewController")
+        let rootVC = mainVC.instantiateViewController(withIdentifier: "LoginVC")
         self.window?.rootViewController = rootVC
         self.window?.makeKeyAndVisible()
     }

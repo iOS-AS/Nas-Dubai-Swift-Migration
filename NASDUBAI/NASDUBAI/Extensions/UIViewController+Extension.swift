@@ -17,8 +17,9 @@ extension UIViewController {
     }
     
     @objc func pushToHome() {
-        let mainVC = UIStoryboard.init(name: "DummyClickStoryBoard", bundle: nil)
-        let rootVC = mainVC.instantiateViewController(withIdentifier: "DummyViewController")
+        
+        let vc = UIStoryboard.init(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     func presentSingleBtnAlert<T: UIViewController>(_ parent: T? = nil, message: String) {

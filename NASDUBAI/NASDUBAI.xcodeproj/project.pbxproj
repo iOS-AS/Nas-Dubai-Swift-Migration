@@ -12,11 +12,10 @@
 		669E30612B33593500003062 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 669E30602B33593500003062 /* IQKeyboardManagerSwift */; };
 		669E30642B3386E700003062 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 669E30632B3386E700003062 /* FirebaseAnalytics */; };
 		669E30662B3386E700003062 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 669E30652B3386E700003062 /* FirebaseMessaging */; };
-		BA445E462AF8C88B00F3E824 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA445E452AF8C88B00F3E824 /* LoginViewController.swift */; };
 		BA445E492AF8C8D800F3E824 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA445E482AF8C8D800F3E824 /* LoginStoryboard.storyboard */; };
-		BA79E2ED2AFA6AE300DBFA65 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA79E2EC2AFA6AE300DBFA65 /* HomeStoryboard.storyboard */; };
-		BA79E2EF2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA79E2EE2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard */; };
-		BA85D6B12B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA85D6B02B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard */; };
+		BA8A4D912B3C16750084E00F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A4D902B3C16750084E00F /* LoginVC.swift */; };
+		BA8A4D942B3C1A5F0084E00F /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8A4D932B3C1A5F0084E00F /* HomeStoryboard.storyboard */; };
+		BA8A4D982B3C1AF50084E00F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A4D972B3C1AF50084E00F /* HomeVC.swift */; };
 		BA97D0922B3081F700B7CC8E /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97D0912B3081F700B7CC8E /* LoginModel.swift */; };
 		BA97D0962B3084AB00B7CC8E /* DefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97D0952B3084AB00B7CC8E /* DefaultsWrapper.swift */; };
 		BADA2EFA2AF625F800C56025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2EF92AF625F800C56025 /* AppDelegate.swift */; };
@@ -38,11 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA445E452AF8C88B00F3E824 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA445E482AF8C8D800F3E824 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
-		BA79E2EC2AFA6AE300DBFA65 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
-		BA79E2EE2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationStoryboard.storyboard; sourceTree = "<group>"; };
-		BA85D6B02B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EarlyYearsStoryboard.storyboard; sourceTree = "<group>"; };
+		BA8A4D902B3C16750084E00F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		BA8A4D932B3C1A5F0084E00F /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		BA8A4D972B3C1AF50084E00F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BA97D0912B3081F700B7CC8E /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		BA97D0952B3084AB00B7CC8E /* DefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsWrapper.swift; sourceTree = "<group>"; };
 		BADA2EF62AF625F800C56025 /* NASDUBAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASDUBAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,20 +79,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BA445E472AF8C8C600F3E824 /* Login */ = {
+		BA8A4D8D2B3BEA030084E00F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BA8A4D8F2B3C15F50084E00F /* Model */,
+				BA8A4D8E2B3C15DE0084E00F /* Controller */,
 				BA445E482AF8C8D800F3E824 /* LoginStoryboard.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		BA97D0902B3081E500B7CC8E /* Login */ = {
+		BA8A4D8E2B3C15DE0084E00F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA8A4D902B3C16750084E00F /* LoginVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA8A4D8F2B3C15F50084E00F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				BA97D0912B3081F700B7CC8E /* LoginModel.swift */,
 			);
-			path = Login;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA8A4D922B3C1A410084E00F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BA8A4D962B3C1ACF0084E00F /* Model */,
+				BA8A4D952B3C1AC40084E00F /* Controller */,
+				BA8A4D932B3C1A5F0084E00F /* HomeStoryboard.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BA8A4D952B3C1AC40084E00F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA8A4D972B3C1AF50084E00F /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA8A4D962B3C1ACF0084E00F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BADA2EED2AF625F800C56025 = {
@@ -116,12 +149,11 @@
 		BADA2EF82AF625F800C56025 /* NASDUBAI */ = {
 			isa = PBXGroup;
 			children = (
+				BA8A4D922B3C1A410084E00F /* Home */,
+				BA8A4D8D2B3BEA030084E00F /* Login */,
 				BAFA6BC92AFA0E7E00F895AA /* Extensions */,
 				BADA2FA72AF63A8100C56025 /* Fonts */,
-				BADA2F692AF6348A00C56025 /* Model */,
-				BADA2F682AF6348200C56025 /* View */,
 				BADA2F672AF6335300C56025 /* Common */,
-				BADA2F0D2AF6291100C56025 /* Controllers */,
 				BADA2EF92AF625F800C56025 /* AppDelegate.swift */,
 				BADA2EFB2AF625F800C56025 /* SceneDelegate.swift */,
 				BADA2EFD2AF625F800C56025 /* ViewController.swift */,
@@ -131,254 +163,6 @@
 				BADA2F072AF625FC00C56025 /* Info.plist */,
 			);
 			path = NASDUBAI;
-			sourceTree = "<group>";
-		};
-		BADA2F0D2AF6291100C56025 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BADA2F2B2AF62AA800C56025 /* Survey */,
-				BADA2F2A2AF62A9600C56025 /* Data Collection */,
-				BADA2F292AF62A8C00C56025 /* Settings */,
-				BADA2F282AF62A8200C56025 /* Contact Us */,
-				BADA2F272AF62A7800C56025 /* About Us */,
-				BADA2F262AF62A7000C56025 /* Gallery */,
-				BADA2F252AF62A6300C56025 /* Permission Forms */,
-				BADA2F242AF62A5D00C56025 /* Reports */,
-				BADA2F232AF62A5300C56025 /* NAE Programmes */,
-				BADA2F222AF62A4600C56025 /* Parent Meeting */,
-				BADA2F212AF62A3600C56025 /* Parents Association */,
-				BADA2F202AF62A2F00C56025 /* Enrichment */,
-				BADA2F1F2AF62A0900C56025 /* Performing Arts */,
-				BADA2F1E2AF62A0000C56025 /* Sports */,
-				BADA2F1D2AF629F400C56025 /* University Guidance */,
-				BADA2F1C2AF629EA00C56025 /* Sixth Form */,
-				BADA2F1B2AF629E200C56025 /* Secondary */,
-				BADA2F1A2AF629D600C56025 /* Primary */,
-				BADA2F192AF629C900C56025 /* Early Years */,
-				BADA2F182AF629B900C56025 /* Parents Essentials */,
-				BADA2F172AF629AB00C56025 /* MusicAcademy */,
-				BADA2F162AF629A100C56025 /* LunchBox */,
-				BADA2F152AF6299100C56025 /* ReEnrolment */,
-				BADA2F142AF6298A00C56025 /* Payments */,
-				BADA2F132AF6297F00C56025 /* Absence */,
-				BADA2F122AF6297000C56025 /* Communications */,
-				BADA2F112AF6296400C56025 /* Notifications */,
-				BADA2F102AF6295000C56025 /* Calendar */,
-				BADA2F0F2AF6292A00C56025 /* Home */,
-				BADA2F0E2AF6292200C56025 /* Login */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		BADA2F0E2AF6292200C56025 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				BA445E452AF8C88B00F3E824 /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		BADA2F0F2AF6292A00C56025 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		BADA2F102AF6295000C56025 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		BADA2F112AF6296400C56025 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Notifications;
-			sourceTree = "<group>";
-		};
-		BADA2F122AF6297000C56025 /* Communications */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Communications;
-			sourceTree = "<group>";
-		};
-		BADA2F132AF6297F00C56025 /* Absence */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Absence;
-			sourceTree = "<group>";
-		};
-		BADA2F142AF6298A00C56025 /* Payments */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Payments;
-			sourceTree = "<group>";
-		};
-		BADA2F152AF6299100C56025 /* ReEnrolment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReEnrolment;
-			sourceTree = "<group>";
-		};
-		BADA2F162AF629A100C56025 /* LunchBox */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LunchBox;
-			sourceTree = "<group>";
-		};
-		BADA2F172AF629AB00C56025 /* MusicAcademy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MusicAcademy;
-			sourceTree = "<group>";
-		};
-		BADA2F182AF629B900C56025 /* Parents Essentials */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parents Essentials";
-			sourceTree = "<group>";
-		};
-		BADA2F192AF629C900C56025 /* Early Years */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Early Years";
-			sourceTree = "<group>";
-		};
-		BADA2F1A2AF629D600C56025 /* Primary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Primary;
-			sourceTree = "<group>";
-		};
-		BADA2F1B2AF629E200C56025 /* Secondary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Secondary;
-			sourceTree = "<group>";
-		};
-		BADA2F1C2AF629EA00C56025 /* Sixth Form */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Sixth Form";
-			sourceTree = "<group>";
-		};
-		BADA2F1D2AF629F400C56025 /* University Guidance */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "University Guidance";
-			sourceTree = "<group>";
-		};
-		BADA2F1E2AF62A0000C56025 /* Sports */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sports;
-			sourceTree = "<group>";
-		};
-		BADA2F1F2AF62A0900C56025 /* Performing Arts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Performing Arts";
-			sourceTree = "<group>";
-		};
-		BADA2F202AF62A2F00C56025 /* Enrichment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enrichment;
-			sourceTree = "<group>";
-		};
-		BADA2F212AF62A3600C56025 /* Parents Association */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parents Association";
-			sourceTree = "<group>";
-		};
-		BADA2F222AF62A4600C56025 /* Parent Meeting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parent Meeting";
-			sourceTree = "<group>";
-		};
-		BADA2F232AF62A5300C56025 /* NAE Programmes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "NAE Programmes";
-			sourceTree = "<group>";
-		};
-		BADA2F242AF62A5D00C56025 /* Reports */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reports;
-			sourceTree = "<group>";
-		};
-		BADA2F252AF62A6300C56025 /* Permission Forms */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Permission Forms";
-			sourceTree = "<group>";
-		};
-		BADA2F262AF62A7000C56025 /* Gallery */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Gallery;
-			sourceTree = "<group>";
-		};
-		BADA2F272AF62A7800C56025 /* About Us */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "About Us";
-			sourceTree = "<group>";
-		};
-		BADA2F282AF62A8200C56025 /* Contact Us */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Contact Us";
-			sourceTree = "<group>";
-		};
-		BADA2F292AF62A8C00C56025 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		BADA2F2A2AF62A9600C56025 /* Data Collection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Data Collection";
-			sourceTree = "<group>";
-		};
-		BADA2F2B2AF62AA800C56025 /* Survey */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Survey;
 			sourceTree = "<group>";
 		};
 		BADA2F672AF6335300C56025 /* Common */ = {
@@ -396,481 +180,6 @@
 				FF1A292F2B31C09C009DE750 /* ApiServices.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		BADA2F682AF6348200C56025 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BA445E472AF8C8C600F3E824 /* Login */,
-				BADA2FA42AF637CF00C56025 /* Home */,
-				BADA2FA32AF637C700C56025 /* Calendar */,
-				BADA2FA22AF637BD00C56025 /* Notifications */,
-				BADA2FA12AF637B400C56025 /* Communications */,
-				BADA2FA02AF637AC00C56025 /* Absence */,
-				BADA2F9F2AF637A100C56025 /* Payments */,
-				BADA2F9E2AF6379600C56025 /* Re-Enrolment */,
-				BADA2F9D2AF6378C00C56025 /* Lunch Box */,
-				BADA2F9C2AF6377E00C56025 /* Music Academy */,
-				BADA2F9B2AF6377500C56025 /* Parents Essentials */,
-				BADA2F9A2AF6376800C56025 /* Early Years */,
-				BADA2F992AF6376200C56025 /* Primary */,
-				BADA2F982AF6375700C56025 /* Secondary */,
-				BADA2F972AF6374B00C56025 /* Sixth Form */,
-				BADA2F962AF6373200C56025 /* University Guidance */,
-				BADA2F952AF6372200C56025 /* Sports */,
-				BADA2F942AF6371500C56025 /* Performing Arts */,
-				BADA2F932AF6370C00C56025 /* Enrichment */,
-				BADA2F922AF636FF00C56025 /* Parents Association */,
-				BADA2F912AF636DF00C56025 /* Parents Meeting */,
-				BADA2F902AF636CF00C56025 /* NAE Programmes */,
-				BADA2F8F2AF636A900C56025 /* Reports */,
-				BADA2F712AF6355E00C56025 /* Permission Forms */,
-				BADA2F702AF6355200C56025 /* Gallery */,
-				BADA2F6E2AF634E900C56025 /* About us */,
-				BADA2F6D2AF634DC00C56025 /* Contact Us */,
-				BADA2F6C2AF634CF00C56025 /* Settings */,
-				BADA2F6B2AF634C500C56025 /* Data Collection */,
-				BADA2F6A2AF634B000C56025 /* Survey */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BADA2F692AF6348A00C56025 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BA97D0902B3081E500B7CC8E /* Login */,
-				BADA2F8E2AF6369A00C56025 /* Home */,
-				BADA2F8D2AF6369500C56025 /* Calendar */,
-				BADA2F8C2AF6368C00C56025 /* Communications */,
-				BADA2F8B2AF6367F00C56025 /* Absence */,
-				BADA2F8A2AF6367900C56025 /* Payments */,
-				BADA2F892AF6366E00C56025 /* Re-Enrolment */,
-				BADA2F882AF6366700C56025 /* Lunch Box */,
-				BADA2F872AF6365C00C56025 /* Music Academy */,
-				BADA2F862AF6364700C56025 /* Parents Essentials */,
-				BADA2F852AF6363F00C56025 /* Early Years */,
-				BADA2F842AF6363900C56025 /* Primary */,
-				BADA2F832AF6362F00C56025 /* Secondary */,
-				BADA2F812AF6360E00C56025 /* Sixth form */,
-				BADA2F802AF6360400C56025 /* University Guidance */,
-				BADA2F7F2AF635FE00C56025 /* Sports */,
-				BADA2F7E2AF635F300C56025 /* Performing Arts */,
-				BADA2F7D2AF635EA00C56025 /* Enrichment */,
-				BADA2F7C2AF635DE00C56025 /* Parents Association */,
-				BADA2F7B2AF635D100C56025 /* Parent Meetings */,
-				BADA2F7A2AF635C900C56025 /* NAE Programmes */,
-				BADA2F792AF635C200C56025 /* Reports */,
-				BADA2F782AF635A200C56025 /* Permission Forms */,
-				BADA2F772AF6359800C56025 /* Gallery */,
-				BADA2F762AF6358D00C56025 /* About Us */,
-				BADA2F752AF6358500C56025 /* Contact us */,
-				BADA2F742AF6357D00C56025 /* Settings */,
-				BADA2F732AF6357200C56025 /* Data Collection */,
-				BADA2F722AF6356A00C56025 /* Survey */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BADA2F6A2AF634B000C56025 /* Survey */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Survey;
-			sourceTree = "<group>";
-		};
-		BADA2F6B2AF634C500C56025 /* Data Collection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Data Collection";
-			sourceTree = "<group>";
-		};
-		BADA2F6C2AF634CF00C56025 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		BADA2F6D2AF634DC00C56025 /* Contact Us */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Contact Us";
-			sourceTree = "<group>";
-		};
-		BADA2F6E2AF634E900C56025 /* About us */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "About us";
-			sourceTree = "<group>";
-		};
-		BADA2F702AF6355200C56025 /* Gallery */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Gallery;
-			sourceTree = "<group>";
-		};
-		BADA2F712AF6355E00C56025 /* Permission Forms */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Permission Forms";
-			sourceTree = "<group>";
-		};
-		BADA2F722AF6356A00C56025 /* Survey */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Survey;
-			sourceTree = "<group>";
-		};
-		BADA2F732AF6357200C56025 /* Data Collection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Data Collection";
-			sourceTree = "<group>";
-		};
-		BADA2F742AF6357D00C56025 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		BADA2F752AF6358500C56025 /* Contact us */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Contact us";
-			sourceTree = "<group>";
-		};
-		BADA2F762AF6358D00C56025 /* About Us */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "About Us";
-			sourceTree = "<group>";
-		};
-		BADA2F772AF6359800C56025 /* Gallery */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Gallery;
-			sourceTree = "<group>";
-		};
-		BADA2F782AF635A200C56025 /* Permission Forms */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Permission Forms";
-			sourceTree = "<group>";
-		};
-		BADA2F792AF635C200C56025 /* Reports */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reports;
-			sourceTree = "<group>";
-		};
-		BADA2F7A2AF635C900C56025 /* NAE Programmes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "NAE Programmes";
-			sourceTree = "<group>";
-		};
-		BADA2F7B2AF635D100C56025 /* Parent Meetings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parent Meetings";
-			sourceTree = "<group>";
-		};
-		BADA2F7C2AF635DE00C56025 /* Parents Association */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parents Association";
-			sourceTree = "<group>";
-		};
-		BADA2F7D2AF635EA00C56025 /* Enrichment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enrichment;
-			sourceTree = "<group>";
-		};
-		BADA2F7E2AF635F300C56025 /* Performing Arts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Performing Arts";
-			sourceTree = "<group>";
-		};
-		BADA2F7F2AF635FE00C56025 /* Sports */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sports;
-			sourceTree = "<group>";
-		};
-		BADA2F802AF6360400C56025 /* University Guidance */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "University Guidance";
-			sourceTree = "<group>";
-		};
-		BADA2F812AF6360E00C56025 /* Sixth form */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Sixth form";
-			sourceTree = "<group>";
-		};
-		BADA2F832AF6362F00C56025 /* Secondary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Secondary;
-			sourceTree = "<group>";
-		};
-		BADA2F842AF6363900C56025 /* Primary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Primary;
-			sourceTree = "<group>";
-		};
-		BADA2F852AF6363F00C56025 /* Early Years */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Early Years";
-			sourceTree = "<group>";
-		};
-		BADA2F862AF6364700C56025 /* Parents Essentials */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parents Essentials";
-			sourceTree = "<group>";
-		};
-		BADA2F872AF6365C00C56025 /* Music Academy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Music Academy";
-			sourceTree = "<group>";
-		};
-		BADA2F882AF6366700C56025 /* Lunch Box */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Lunch Box";
-			sourceTree = "<group>";
-		};
-		BADA2F892AF6366E00C56025 /* Re-Enrolment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Re-Enrolment";
-			sourceTree = "<group>";
-		};
-		BADA2F8A2AF6367900C56025 /* Payments */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Payments;
-			sourceTree = "<group>";
-		};
-		BADA2F8B2AF6367F00C56025 /* Absence */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Absence;
-			sourceTree = "<group>";
-		};
-		BADA2F8C2AF6368C00C56025 /* Communications */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Communications;
-			sourceTree = "<group>";
-		};
-		BADA2F8D2AF6369500C56025 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		BADA2F8E2AF6369A00C56025 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		BADA2F8F2AF636A900C56025 /* Reports */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reports;
-			sourceTree = "<group>";
-		};
-		BADA2F902AF636CF00C56025 /* NAE Programmes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "NAE Programmes";
-			sourceTree = "<group>";
-		};
-		BADA2F912AF636DF00C56025 /* Parents Meeting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parents Meeting";
-			sourceTree = "<group>";
-		};
-		BADA2F922AF636FF00C56025 /* Parents Association */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parents Association";
-			sourceTree = "<group>";
-		};
-		BADA2F932AF6370C00C56025 /* Enrichment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enrichment;
-			sourceTree = "<group>";
-		};
-		BADA2F942AF6371500C56025 /* Performing Arts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Performing Arts";
-			sourceTree = "<group>";
-		};
-		BADA2F952AF6372200C56025 /* Sports */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sports;
-			sourceTree = "<group>";
-		};
-		BADA2F962AF6373200C56025 /* University Guidance */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "University Guidance";
-			sourceTree = "<group>";
-		};
-		BADA2F972AF6374B00C56025 /* Sixth Form */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Sixth Form";
-			sourceTree = "<group>";
-		};
-		BADA2F982AF6375700C56025 /* Secondary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Secondary;
-			sourceTree = "<group>";
-		};
-		BADA2F992AF6376200C56025 /* Primary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Primary;
-			sourceTree = "<group>";
-		};
-		BADA2F9A2AF6376800C56025 /* Early Years */ = {
-			isa = PBXGroup;
-			children = (
-				BA85D6B02B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard */,
-			);
-			path = "Early Years";
-			sourceTree = "<group>";
-		};
-		BADA2F9B2AF6377500C56025 /* Parents Essentials */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Parents Essentials";
-			sourceTree = "<group>";
-		};
-		BADA2F9C2AF6377E00C56025 /* Music Academy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Music Academy";
-			sourceTree = "<group>";
-		};
-		BADA2F9D2AF6378C00C56025 /* Lunch Box */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Lunch Box";
-			sourceTree = "<group>";
-		};
-		BADA2F9E2AF6379600C56025 /* Re-Enrolment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Re-Enrolment";
-			sourceTree = "<group>";
-		};
-		BADA2F9F2AF637A100C56025 /* Payments */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Payments;
-			sourceTree = "<group>";
-		};
-		BADA2FA02AF637AC00C56025 /* Absence */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Absence;
-			sourceTree = "<group>";
-		};
-		BADA2FA12AF637B400C56025 /* Communications */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Communications;
-			sourceTree = "<group>";
-		};
-		BADA2FA22AF637BD00C56025 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				BA79E2EE2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard */,
-			);
-			path = Notifications;
-			sourceTree = "<group>";
-		};
-		BADA2FA32AF637C700C56025 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		BADA2FA42AF637CF00C56025 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				BA79E2EC2AFA6AE300DBFA65 /* HomeStoryboard.storyboard */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		BADA2FA72AF63A8100C56025 /* Fonts */ = {
@@ -959,13 +268,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA79E2EF2AFA6B5700DBFA65 /* NotificationStoryboard.storyboard in Resources */,
 				BADA2F062AF625FC00C56025 /* LaunchScreen.storyboard in Resources */,
 				BAFA6BC82AFA06F700F895AA /* HeaderViewController.xib in Resources */,
 				BA445E492AF8C8D800F3E824 /* LoginStoryboard.storyboard in Resources */,
+				BA8A4D942B3C1A5F0084E00F /* HomeStoryboard.storyboard in Resources */,
 				BADA2FA92AF63C3B00C56025 /* DummyClickStoryBoard.storyboard in Resources */,
-				BA79E2ED2AFA6AE300DBFA65 /* HomeStoryboard.storyboard in Resources */,
-				BA85D6B12B0B39EB0035D500 /* EarlyYearsStoryboard.storyboard in Resources */,
 				BADA2F032AF625FC00C56025 /* Assets.xcassets in Resources */,
 				BADA2F012AF625F800C56025 /* Main.storyboard in Resources */,
 			);
@@ -980,10 +287,11 @@
 			files = (
 				FF1A292A2B31BE7F009DE750 /* Observable.swift in Sources */,
 				BAFA6BCE2AFA16F300F895AA /* UIViewController+Extension.swift in Sources */,
-				BA445E462AF8C88B00F3E824 /* LoginViewController.swift in Sources */,
+				BA8A4D912B3C16750084E00F /* LoginVC.swift in Sources */,
 				BAFA6BC72AFA06F700F895AA /* HeaderViewController.swift in Sources */,
 				BADA2EFE2AF625F800C56025 /* ViewController.swift in Sources */,
 				FF1A292E2B31C06A009DE750 /* K.swift in Sources */,
+				BA8A4D982B3C1AF50084E00F /* HomeVC.swift in Sources */,
 				BA97D0922B3081F700B7CC8E /* LoginModel.swift in Sources */,
 				BADA2EFA2AF625F800C56025 /* AppDelegate.swift in Sources */,
 				FF1A29302B31C09C009DE750 /* ApiServices.swift in Sources */,
