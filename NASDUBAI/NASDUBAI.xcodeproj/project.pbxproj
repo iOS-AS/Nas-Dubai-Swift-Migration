@@ -16,6 +16,11 @@
 		BA8A4D912B3C16750084E00F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A4D902B3C16750084E00F /* LoginVC.swift */; };
 		BA8A4D942B3C1A5F0084E00F /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8A4D932B3C1A5F0084E00F /* HomeStoryboard.storyboard */; };
 		BA8A4D982B3C1AF50084E00F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A4D972B3C1AF50084E00F /* HomeVC.swift */; };
+		BA8D8DF82B3EA2FB0028C80E /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8D8DF72B3EA2FB0028C80E /* SignUpStoryboard.storyboard */; };
+		BA8D8DFA2B3EA3D00028C80E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D8DF92B3EA3D00028C80E /* SignUpVC.swift */; };
+		BA8D8DFE2B3EA6D90028C80E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D8DFD2B3EA6D90028C80E /* UIView+Extension.swift */; };
+		BA8D8E002B3ED2B10028C80E /* Zoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D8DFF2B3ED2B10028C80E /* Zoom.swift */; };
+		BA8D8E022B3EEA510028C80E /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D8E012B3EEA510028C80E /* SignUpModel.swift */; };
 		BA97D0922B3081F700B7CC8E /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97D0912B3081F700B7CC8E /* LoginModel.swift */; };
 		BA97D0962B3084AB00B7CC8E /* DefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97D0952B3084AB00B7CC8E /* DefaultsWrapper.swift */; };
 		BADA2EFA2AF625F800C56025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2EF92AF625F800C56025 /* AppDelegate.swift */; };
@@ -42,6 +47,11 @@
 		BA8A4D902B3C16750084E00F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BA8A4D932B3C1A5F0084E00F /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		BA8A4D972B3C1AF50084E00F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BA8D8DF72B3EA2FB0028C80E /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		BA8D8DF92B3EA3D00028C80E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		BA8D8DFD2B3EA6D90028C80E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		BA8D8DFF2B3ED2B10028C80E /* Zoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zoom.swift; sourceTree = "<group>"; };
+		BA8D8E012B3EEA510028C80E /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		BA97D0912B3081F700B7CC8E /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		BA97D0952B3084AB00B7CC8E /* DefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsWrapper.swift; sourceTree = "<group>"; };
 		BADA2EF62AF625F800C56025 /* NASDUBAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASDUBAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +142,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BA8D8DF42B3EA2B70028C80E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BA8D8DF62B3EA2C80028C80E /* Controller */,
+				BA8D8DF52B3EA2C00028C80E /* Model */,
+				BA8D8DF72B3EA2FB0028C80E /* SignUpStoryboard.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		BA8D8DF52B3EA2C00028C80E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA8D8E012B3EEA510028C80E /* SignUpModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA8D8DF62B3EA2C80028C80E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA8D8DF92B3EA3D00028C80E /* SignUpVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BADA2EED2AF625F800C56025 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +187,7 @@
 		BADA2EF82AF625F800C56025 /* NASDUBAI */ = {
 			isa = PBXGroup;
 			children = (
+				BA8D8DF42B3EA2B70028C80E /* SignUp */,
 				BA8A4D922B3C1A410084E00F /* Home */,
 				BA8A4D8D2B3BEA030084E00F /* Login */,
 				BAFA6BC92AFA0E7E00F895AA /* Extensions */,
@@ -196,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				BAFA6BCD2AFA16F300F895AA /* UIViewController+Extension.swift */,
+				BA8D8DFD2B3EA6D90028C80E /* UIView+Extension.swift */,
+				BA8D8DFF2B3ED2B10028C80E /* Zoom.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADA2F062AF625FC00C56025 /* LaunchScreen.storyboard in Resources */,
+				BA8D8DF82B3EA2FB0028C80E /* SignUpStoryboard.storyboard in Resources */,
 				BAFA6BC82AFA06F700F895AA /* HeaderViewController.xib in Resources */,
 				BA445E492AF8C8D800F3E824 /* LoginStoryboard.storyboard in Resources */,
 				BA8A4D942B3C1A5F0084E00F /* HomeStoryboard.storyboard in Resources */,
@@ -295,15 +335,19 @@
 				BADA2EFE2AF625F800C56025 /* ViewController.swift in Sources */,
 				FF1A292E2B31C06A009DE750 /* K.swift in Sources */,
 				BA8A4D982B3C1AF50084E00F /* HomeVC.swift in Sources */,
+				BA8D8E022B3EEA510028C80E /* SignUpModel.swift in Sources */,
+				BA8D8E002B3ED2B10028C80E /* Zoom.swift in Sources */,
 				BA97D0922B3081F700B7CC8E /* LoginModel.swift in Sources */,
 				BADA2EFA2AF625F800C56025 /* AppDelegate.swift in Sources */,
 				FF1A29302B31C09C009DE750 /* ApiServices.swift in Sources */,
 				BADA2FA62AF638C400C56025 /* HardCodedData.swift in Sources */,
 				BA97D0962B3084AB00B7CC8E /* DefaultsWrapper.swift in Sources */,
+				BA8D8DFE2B3EA6D90028C80E /* UIView+Extension.swift in Sources */,
 				FFA5145F2B3E97A9009FA298 /* AppRouter.swift in Sources */,
 				BADA2FAC2AF63EE800C56025 /* DummyViewController.swift in Sources */,
 				FF1A292C2B31C04C009DE750 /* Validation.swift in Sources */,
 				BADA2EFC2AF625F800C56025 /* SceneDelegate.swift in Sources */,
+				BA8D8DFA2B3EA3D00028C80E /* SignUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

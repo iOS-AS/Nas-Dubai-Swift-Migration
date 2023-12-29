@@ -132,6 +132,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYE-Rs-HSU">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="162.33333333333334"/>
                                                                 <state key="normal" image="signUpButton"/>
+                                                                <connections>
+                                                                    <action selector="SignUpPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="N6Q-ge-8Q5"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -184,6 +187,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvW-Wk-MJo">
                                                                         <rect key="frame" x="0.0" y="0.0" width="250.33333333333334" height="78.666666666666671"/>
                                                                         <state key="normal" image="forgotPasswordButtonBg"/>
+                                                                        <connections>
+                                                                            <action selector="ForgotPasswordPress:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nWm-kj-ZrG"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -28,8 +28,14 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func GuestPress(_ sender: UIButton) {
-        print("GUEST PRESS TEST")
         pushToHome()
+    }
+    
+    @IBAction func ForgotPasswordPress(_ sender: UIButton) {
+    }
+    
+    @IBAction func SignUpPress(_ sender: UIButton) {
+        
     }
     
     @IBAction func LoginPress(_ sender: UIButton) {
