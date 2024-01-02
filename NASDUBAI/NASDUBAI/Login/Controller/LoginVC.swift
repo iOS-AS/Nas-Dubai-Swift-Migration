@@ -32,10 +32,12 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func ForgotPasswordPress(_ sender: UIButton) {
+        
+        showForgetPassword()
     }
     
     @IBAction func SignUpPress(_ sender: UIButton) {
-        
+        showSignUp()
     }
     
     @IBAction func LoginPress(_ sender: UIButton) {

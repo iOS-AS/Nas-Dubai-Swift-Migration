@@ -40,18 +40,22 @@ extension UIViewController {
         }
     }
     
-//    func presentSignUp() {
-//        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboardMain.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-//        vc.modalPresentationStyle = .overCurrentContext
-//        present(vc, animated: false)
-//    }
+    func showSignUp() {
+        
+//        let vc = UIStoryboard.init(name: "SignUpStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC
+//        self.navigationController?.pushViewController(vc!, animated: false)
+        
+        let storyboardMain = UIStoryboard(name: "SignUpStoryboard", bundle: nil)
+        let vc = storyboardMain.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpVC
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: false)
+    }
 //
-//    func presentForgotPWVC() {
-//        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboardMain.instantiateViewController(withIdentifier: "ForgotPWViewController") as! ForgotPWViewController
-//        vc.modalPresentationStyle = .overCurrentContext
-//        present(vc, animated: false)
-//    }
+    func showForgetPassword() {
+        let storyboardMain = UIStoryboard(name: "ForgotPasswordVC", bundle: nil)
+        let vc = storyboardMain.instantiateViewController(withIdentifier: "ForgotPasswordVC") as! ForgotPasswordVC
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: false)
+    }
     
 }

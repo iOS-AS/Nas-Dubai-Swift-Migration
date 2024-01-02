@@ -17,6 +17,9 @@
 		BA8A4D912B3C16750084E00F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A4D902B3C16750084E00F /* LoginVC.swift */; };
 		BA8A4D942B3C1A5F0084E00F /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8A4D932B3C1A5F0084E00F /* HomeStoryboard.storyboard */; };
 		BA8A4D982B3C1AF50084E00F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A4D972B3C1AF50084E00F /* HomeVC.swift */; };
+		BA8BBE7A2B43DC1A008C0FB6 /* ForgetPasswordStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8BBE792B43DC1A008C0FB6 /* ForgetPasswordStoryboard.storyboard */; };
+		BA8BBE7E2B43DF05008C0FB6 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BBE7D2B43DF05008C0FB6 /* ForgotPasswordVC.swift */; };
+		BA8BBE802B43DFF6008C0FB6 /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BBE7F2B43DFF6008C0FB6 /* ForgotPasswordModel.swift */; };
 		BA8D8DF82B3EA2FB0028C80E /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8D8DF72B3EA2FB0028C80E /* SignUpStoryboard.storyboard */; };
 		BA8D8DFA2B3EA3D00028C80E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D8DF92B3EA3D00028C80E /* SignUpVC.swift */; };
 		BA8D8DFE2B3EA6D90028C80E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D8DFD2B3EA6D90028C80E /* UIView+Extension.swift */; };
@@ -33,6 +36,8 @@
 		BADA2FA62AF638C400C56025 /* HardCodedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2FA52AF638C400C56025 /* HardCodedData.swift */; };
 		BADA2FA92AF63C3B00C56025 /* DummyClickStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA2FA82AF63C3B00C56025 /* DummyClickStoryBoard.storyboard */; };
 		BADA2FAC2AF63EE800C56025 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2FAB2AF63EE800C56025 /* DummyViewController.swift */; };
+		BAE9A46A2B3FD114009E58E9 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9A4692B3FD114009E58E9 /* NetworkReachability.swift */; };
+		BAE9A46F2B3FD271009E58E9 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE9A46E2B3FD271009E58E9 /* UIApplication+Extension.swift */; };
 		BAFA6BC72AFA06F700F895AA /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFA6BC52AFA06F600F895AA /* HeaderViewController.swift */; };
 		BAFA6BC82AFA06F700F895AA /* HeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFA6BC62AFA06F700F895AA /* HeaderViewController.xib */; };
 		BAFA6BCE2AFA16F300F895AA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFA6BCD2AFA16F300F895AA /* UIViewController+Extension.swift */; };
@@ -51,6 +56,9 @@
 		BA8A4D902B3C16750084E00F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BA8A4D932B3C1A5F0084E00F /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		BA8A4D972B3C1AF50084E00F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BA8BBE792B43DC1A008C0FB6 /* ForgetPasswordStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgetPasswordStoryboard.storyboard; sourceTree = "<group>"; };
+		BA8BBE7D2B43DF05008C0FB6 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		BA8BBE7F2B43DFF6008C0FB6 /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
 		BA8D8DF72B3EA2FB0028C80E /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		BA8D8DF92B3EA3D00028C80E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		BA8D8DFD2B3EA6D90028C80E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -69,6 +77,8 @@
 		BADA2FA52AF638C400C56025 /* HardCodedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodedData.swift; sourceTree = "<group>"; };
 		BADA2FA82AF63C3B00C56025 /* DummyClickStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DummyClickStoryBoard.storyboard; sourceTree = "<group>"; };
 		BADA2FAB2AF63EE800C56025 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		BAE9A4692B3FD114009E58E9 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		BAE9A46E2B3FD271009E58E9 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		BAFA6BC52AFA06F600F895AA /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
 		BAFA6BC62AFA06F700F895AA /* HeaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewController.xib; sourceTree = "<group>"; };
 		BAFA6BCD2AFA16F300F895AA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -102,7 +112,6 @@
 				780B8115FDBCEDA4FAAFAC5C /* Pods-NASDUBAI.debug.xcconfig */,
 				8020268320C6F3FA43C50DAC /* Pods-NASDUBAI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -165,6 +174,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BA8BBE762B43DBE1008C0FB6 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				BA8BBE782B43DBFA008C0FB6 /* Model */,
+				BA8BBE772B43DBED008C0FB6 /* Controller */,
+				BA8BBE792B43DC1A008C0FB6 /* ForgetPasswordStoryboard.storyboard */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		BA8BBE772B43DBED008C0FB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA8BBE7D2B43DF05008C0FB6 /* ForgotPasswordVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA8BBE782B43DBFA008C0FB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA8BBE7F2B43DFF6008C0FB6 /* ForgotPasswordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BA8D8DF42B3EA2B70028C80E /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,8 +247,9 @@
 		BADA2EF82AF625F800C56025 /* NASDUBAI */ = {
 			isa = PBXGroup;
 			children = (
-				BA8D8DF42B3EA2B70028C80E /* SignUp */,
+				BA8BBE762B43DBE1008C0FB6 /* ForgotPassword */,
 				BA8A4D922B3C1A410084E00F /* Home */,
+				BA8D8DF42B3EA2B70028C80E /* SignUp */,
 				BA8A4D8D2B3BEA030084E00F /* Login */,
 				BAFA6BC92AFA0E7E00F895AA /* Extensions */,
 				BADA2FA72AF63A8100C56025 /* Fonts */,
@@ -243,6 +279,7 @@
 				FF1A292D2B31C06A009DE750 /* K.swift */,
 				FF1A292F2B31C09C009DE750 /* ApiServices.swift */,
 				FFA5145E2B3E97A9009FA298 /* AppRouter.swift */,
+				BAE9A4692B3FD114009E58E9 /* NetworkReachability.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -260,6 +297,7 @@
 				BAFA6BCD2AFA16F300F895AA /* UIViewController+Extension.swift */,
 				BA8D8DFD2B3EA6D90028C80E /* UIView+Extension.swift */,
 				BA8D8DFF2B3ED2B10028C80E /* Zoom.swift */,
+				BAE9A46E2B3FD271009E58E9 /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,9 +357,9 @@
 			mainGroup = BADA2EED2AF625F800C56025;
 			packageReferences = (
 				669E30592B3358E100003062 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage.git" */,
+				669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				669E305F2B33593500003062 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
+				669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = BADA2EF72AF625F800C56025 /* Products */;
 			projectDirPath = "";
@@ -338,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADA2F062AF625FC00C56025 /* LaunchScreen.storyboard in Resources */,
+				BA8BBE7A2B43DC1A008C0FB6 /* ForgetPasswordStoryboard.storyboard in Resources */,
 				BA8D8DF82B3EA2FB0028C80E /* SignUpStoryboard.storyboard in Resources */,
 				BAFA6BC82AFA06F700F895AA /* HeaderViewController.xib in Resources */,
 				BA445E492AF8C8D800F3E824 /* LoginStoryboard.storyboard in Resources */,
@@ -398,12 +437,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF1A292A2B31BE7F009DE750 /* Observable.swift in Sources */,
+				BA8BBE802B43DFF6008C0FB6 /* ForgotPasswordModel.swift in Sources */,
 				BAFA6BCE2AFA16F300F895AA /* UIViewController+Extension.swift in Sources */,
+				BAE9A46A2B3FD114009E58E9 /* NetworkReachability.swift in Sources */,
 				BA8A4D912B3C16750084E00F /* LoginVC.swift in Sources */,
 				BAFA6BC72AFA06F700F895AA /* HeaderViewController.swift in Sources */,
 				BADA2EFE2AF625F800C56025 /* ViewController.swift in Sources */,
+				BA8BBE7E2B43DF05008C0FB6 /* ForgotPasswordVC.swift in Sources */,
 				FF1A292E2B31C06A009DE750 /* K.swift in Sources */,
 				BA8A4D982B3C1AF50084E00F /* HomeVC.swift in Sources */,
+				BAE9A46F2B3FD271009E58E9 /* UIApplication+Extension.swift in Sources */,
 				BA8D8E022B3EEA510028C80E /* SignUpModel.swift in Sources */,
 				BA8D8E002B3ED2B10028C80E /* Zoom.swift in Sources */,
 				BA97D0922B3081F700B7CC8E /* LoginModel.swift in Sources */,
@@ -651,7 +694,7 @@
 				version = 5.8.1;
 			};
 		};
-		669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage.git" */ = {
+		669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -667,7 +710,7 @@
 				version = 6.5.16;
 			};
 		};
-		669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+		669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -685,7 +728,7 @@
 		};
 		669E305D2B3358FA00003062 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage.git" */;
+			package = 669E305C2B3358FA00003062 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
 		669E30602B33593500003062 /* IQKeyboardManagerSwift */ = {
@@ -695,12 +738,12 @@
 		};
 		669E30632B3386E700003062 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
 		669E30652B3386E700003062 /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 669E30622B3386E700003062 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */

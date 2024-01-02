@@ -23,7 +23,7 @@
 		22DFF3D887D03A1870204F0FE912CFFB /* NISdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62748700226C2310BE23A0EC55DDC9C0 /* NISdk-dummy.m */; };
 		2381FE7CEA8265BBB8E76FC2B815F960 /* ExpiryInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC3D4E007320D4BAB24698CF7A605CF /* ExpiryInputVC.swift */; };
 		2628A4708E8512458E52BFD4B24A6A66 /* ExpiryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3533B23C7950D245D70FDAAB5D061799 /* ExpiryDate.swift */; };
-		29947018F55B8E45D3FA1E9FE24647A5 /* NISdk-NISdk in Resources */ = {isa = PBXBuildFile; fileRef = 404E62692AD96F9335C99DF766549F15 /* NISdk-NISdk */; };
+		29947018F55B8E45D3FA1E9FE24647A5 /* NISdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 404E62692AD96F9335C99DF766549F15 /* NISdk.bundle */; };
 		2DBA3EBF9138795BF487751527499F20 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777FF490BE6FD4211CAB8C96B9A4DF7 /* DateFormatterTransform.swift */; };
 		325CCDB295FFA016638075B5D2CEDD5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFD92DDFC1F3C5AB352205A7F362955 /* Foundation.framework */; };
 		32EFECE9AEEE3129FD0031FFCF5235FF /* UIFont+RegisterFromBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10636216976E592E1FEEA04FF185A6F1 /* UIFont+RegisterFromBundle.swift */; };
@@ -160,7 +160,7 @@
 		1505E3F0EFDAEEF32F0837BB86053F80 /* String+Localized.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Localized.swift"; path = "NISdk/Source/Extensions/String/String+Localized.swift"; sourceTree = "<group>"; };
 		1538A2856502CAE54026839B363E068B /* NISdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NISdk.release.xcconfig; sourceTree = "<group>"; };
 		15E10B7A2CCD56FFE92ED41EA14ED54E /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
-		1B07FE9D1FD51A1805BD6D08E459580D /* Localizations */ = {isa = PBXFileReference; includeInIndex = 1; name = Localizations; path = NISdk/Resources/Localizations; sourceTree = "<group>"; };
+		1B07FE9D1FD51A1805BD6D08E459580D /* Localizations */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Localizations; path = NISdk/Resources/Localizations; sourceTree = "<group>"; };
 		1B384ED8CD862F4EE38554F5BE290BF4 /* String+RemoveWhitespace.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+RemoveWhitespace.swift"; path = "NISdk/Source/Extensions/String/String+RemoveWhitespace.swift"; sourceTree = "<group>"; };
 		1ECD0079EE29C4C20FF6B008558695F4 /* BrowserInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrowserInfo.swift; path = NISdk/Source/Domain/ThreeDSTwo/BrowserInfo.swift; sourceTree = "<group>"; };
 		1F7056AB19CDCEA82D8F4665EB485889 /* ThreeDSTwoAuthenticationsResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSTwoAuthenticationsResponse.swift; path = NISdk/Source/Domain/ThreeDSTwo/ThreeDSTwoAuthenticationsResponse.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		3FEC72781D3ECBE87A3D7A0CEE96FC57 /* CodableTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableTransform.swift; path = Sources/CodableTransform.swift; sourceTree = "<group>"; };
 		40157FAC6FFA647A784A3ABFA84CB4EC /* ThreeDSViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSViewController.swift; path = "NISdk/Source/UI Components/ThreeDSViewController.swift"; sourceTree = "<group>"; };
 		4030EF87F4601B43384381CD5917F352 /* NISdk-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NISdk-Info.plist"; sourceTree = "<group>"; };
-		404E62692AD96F9335C99DF766549F15 /* NISdk-NISdk */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "NISdk-NISdk"; path = NISdk.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		404E62692AD96F9335C99DF766549F15 /* NISdk.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NISdk.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CB57FD901BB5DEA831220D3502F9A7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		41F80C346DB8B98E487358E057FBC61C /* Pods-NASDUBAI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NASDUBAI-Info.plist"; sourceTree = "<group>"; };
 		458BA922DEBD7279DAEE723D59CE205E /* CvvInputVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CvvInputVC.swift; path = "NISdk/Source/UI Components/Card Input Components/CvvInputVC.swift"; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		6777FF490BE6FD4211CAB8C96B9A4DF7 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Sources/DateFormatterTransform.swift; sourceTree = "<group>"; };
 		6D141A2CB94CEECF28709900E3DB3C0F /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
 		6DA45FA39B93590D340FC3A227C0044C /* Pods-NASDUBAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NASDUBAI.release.xcconfig"; sourceTree = "<group>"; };
-		7055E7C6DA242F8BFD72BBECF923B96E /* NISdk */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NISdk; path = NISdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7055E7C6DA242F8BFD72BBECF923B96E /* NISdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NISdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7241926F6B5B08EA68149BE3E71982EA /* Pan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pan.swift; path = "NISdk/Source/Domain/Payment Fields/Pan.swift"; sourceTree = "<group>"; };
 		7369C7A9CA46C4A286E042BAF095E38A /* Pods-NASDUBAI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NASDUBAI-acknowledgements.plist"; sourceTree = "<group>"; };
 		73E44EE189FC0799EDBEACBF1CB2E3DB /* ObjectMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectMapper-dummy.m"; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 		98A324FC8EEC936A67220DD199B630D4 /* ChallengeConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChallengeConstants.swift; path = NISdk/Source/Constants/ChallengeConstants.swift; sourceTree = "<group>"; };
 		9A817F594481197020F27DF6E54EB0F9 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
 		9CA67C3C4C4475E7BE54C8FB40F9507C /* OrderLinks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrderLinks.swift; path = "NISdk/Source/Domain/Transaction Service Responses/OrderLinks.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E1804B78C464AA0EB2B2980C66CBB4D /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		9F236AE049644BBEB5A70FA378641ECE /* UIView+InterfaceLayoutDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+InterfaceLayoutDirection.swift"; path = "NISdk/Source/Extensions/UIView+InterfaceLayoutDirection.swift"; sourceTree = "<group>"; };
 		A4BB43CE9AF4427081737F28F0ADE9B1 /* ImmutableMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmutableMappable.swift; path = Sources/ImmutableMappable.swift; sourceTree = "<group>"; };
@@ -251,12 +251,12 @@
 		B5EB51078E7B217B74B2D962D8B81AEF /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		B749727BB5B358E8D79E35AB33AF2C54 /* Pods-NASDUBAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NASDUBAI.debug.xcconfig"; sourceTree = "<group>"; };
 		B8261B3D9A06E59B264B997245953EBB /* NISdk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NISdk.swift; path = NISdk/Source/NISdk.swift; sourceTree = "<group>"; };
-		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB34E1DFC8493225D2046864F1672738 /* URL+QueryParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+QueryParams.swift"; path = "NISdk/Source/Extensions/URL+QueryParams.swift"; sourceTree = "<group>"; };
 		BFFE0AB106B4F31CE56C1C6F72172A5A /* String+Insert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Insert.swift"; path = "NISdk/Source/Extensions/String/String+Insert.swift"; sourceTree = "<group>"; };
 		C023678804EAF7581DCBC101A379B3F6 /* Pods-NASDUBAI-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NASDUBAI-frameworks.sh"; sourceTree = "<group>"; };
 		C1DF0EBF98C6CF46C46163D1BD734E53 /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
-		C40EF16BEA75A292E136C2968FC37784 /* Fonts */ = {isa = PBXFileReference; includeInIndex = 1; name = Fonts; path = NISdk/Resources/Fonts; sourceTree = "<group>"; };
+		C40EF16BEA75A292E136C2968FC37784 /* Fonts */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Fonts; path = NISdk/Resources/Fonts; sourceTree = "<group>"; };
 		C70C7686E456670A6C83A24E0EB09A0F /* Pods-NASDUBAI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NASDUBAI-umbrella.h"; sourceTree = "<group>"; };
 		C9F93622A3BD4871EE2A000D2B1D2A63 /* ThreeDSAuthenticationsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreeDSAuthenticationsRequest.swift; path = NISdk/Source/Domain/ThreeDSTwo/ThreeDSAuthenticationsRequest.swift; sourceTree = "<group>"; };
 		CC5D43CB4DE090719219B03255301566 /* TransformOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOperators.swift; path = Sources/TransformOperators.swift; sourceTree = "<group>"; };
@@ -271,8 +271,8 @@
 		D8AFE83172E3914B0208CC46180AB585 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D98400017A3F4181B6E8DA873FB81D76 /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = Sources/Mappable.swift; sourceTree = "<group>"; };
 		DEEB2FACC85D1EE93262DF1990394576 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = "NISdk/Source/UI Components/AuthorizationViewController.swift"; sourceTree = "<group>"; };
-		E072284097384F192971A8407B8ECF19 /* OCRA.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = OCRA.otf; path = NISdk/Resources/Fonts/OCRA.otf; sourceTree = "<group>"; };
-		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E072284097384F192971A8407B8ECF19 /* OCRA.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = OCRA.otf; path = NISdk/Resources/Fonts/OCRA.otf; sourceTree = "<group>"; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA589154A55AAA86B8F69B282FF288CA /* Collection+Pairs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Pairs.swift"; path = "NISdk/Source/Extensions/Collection+Pairs.swift"; sourceTree = "<group>"; };
 		EAC719F969C96727B2DB85AC40B4FC02 /* UIScreen+Bounds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScreen+Bounds.swift"; path = "NISdk/Source/Extensions/UIScreen+Bounds.swift"; sourceTree = "<group>"; };
 		EBA6514775B8B659ADD2B89C4A4055E0 /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = Sources/ISO8601DateTransform.swift; sourceTree = "<group>"; };
@@ -362,7 +362,6 @@
 				82EAF54E3A108810A1968E5F375648B2 /* URLTransform.swift */,
 				AB681E16366107EF008E15E8D2F1AB6B /* Support Files */,
 			);
-			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -384,7 +383,6 @@
 				96AE4F719DF1FEB17508207D9AA62F99 /* SwiftyJSON.swift */,
 				C0BA820346A2429794BE649D8ADFC555 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -484,7 +482,6 @@
 				49CB3612DFEC3854E6336D0416011E18 /* Resources */,
 				EB22B45C46A02776D66582E9EEAC14F5 /* Support Files */,
 			);
-			name = NISdk;
 			path = NISdk;
 			sourceTree = "<group>";
 		};
@@ -559,11 +556,11 @@
 		E8CEB214B7807CBAFBA27B7C661AA655 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7055E7C6DA242F8BFD72BBECF923B96E /* NISdk */,
-				404E62692AD96F9335C99DF766549F15 /* NISdk-NISdk */,
-				B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper */,
+				7055E7C6DA242F8BFD72BBECF923B96E /* NISdk.framework */,
+				404E62692AD96F9335C99DF766549F15 /* NISdk.bundle */,
+				B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */,
 				4CB773632FCB28A50E81F613B1198616 /* Pods-NASDUBAI */,
-				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -637,7 +634,7 @@
 			);
 			name = ObjectMapper;
 			productName = ObjectMapper;
-			productReference = B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper */;
+			productReference = B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3D3DD62DA3DDA62D7CB10BA130538C54 /* Pods-NASDUBAI */ = {
@@ -675,7 +672,7 @@
 			);
 			name = "NISdk-NISdk";
 			productName = NISdk;
-			productReference = 404E62692AD96F9335C99DF766549F15 /* NISdk-NISdk */;
+			productReference = 404E62692AD96F9335C99DF766549F15 /* NISdk.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		C0A1A0A409F4332AA8B7DAD9EB34B200 /* NISdk */ = {
@@ -694,7 +691,7 @@
 			);
 			name = NISdk;
 			productName = NISdk;
-			productReference = 7055E7C6DA242F8BFD72BBECF923B96E /* NISdk */;
+			productReference = 7055E7C6DA242F8BFD72BBECF923B96E /* NISdk.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
@@ -712,7 +709,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */;
+			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -759,7 +756,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29947018F55B8E45D3FA1E9FE24647A5 /* NISdk-NISdk in Resources */,
+				29947018F55B8E45D3FA1E9FE24647A5 /* NISdk.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,7 +974,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1004,7 +1001,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/NISdk";
 				IBSC_MODULE = NISdk;
 				INFOPLIST_FILE = "Target Support Files/NISdk/ResourceBundle-NISdk-NISdk-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = NISdk;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1095,7 +1092,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/NISdk/NISdk-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/NISdk/NISdk-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1129,7 +1126,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ObjectMapper/ObjectMapper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1217,7 +1214,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/NISdk";
 				IBSC_MODULE = NISdk;
 				INFOPLIST_FILE = "Target Support Files/NISdk/ResourceBundle-NISdk-NISdk-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = NISdk;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1241,7 +1238,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1275,7 +1272,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ObjectMapper/ObjectMapper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1311,7 +1308,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/NISdk/NISdk-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/NISdk/NISdk-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
