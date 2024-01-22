@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PTMReviewCellDelegate {
+protocol PTAMReviewCellDelegate {
     //func ptMReviewCellActions(_ typeOfAction: TypeOfAction?, _ item: TimeSlotModel?)
 }
 
@@ -56,7 +56,7 @@ class PTMReviewCell: UITableViewCell {
     @IBOutlet weak var bottomViewHt: NSLayoutConstraint!
     //private var data: TimeSlotModel?
 
-    var delegate: PTMReviewCellDelegate?
+    var delegate: PTAMReviewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()

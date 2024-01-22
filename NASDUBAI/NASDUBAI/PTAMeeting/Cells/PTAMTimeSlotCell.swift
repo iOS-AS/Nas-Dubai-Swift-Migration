@@ -1,5 +1,5 @@
 //
-//  PTMTimeSlotCell.swift
+//  PTAMTimeSlotCell.swift
 //  BISAD
 //
 //  Created by Amritha on 28/11/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PTMTimeSlotCell: UICollectionViewCell {
+class PTAMTimeSlotCell: UICollectionViewCell {
     @IBOutlet weak var fromTimeLbl: UILabel!
     @IBOutlet weak var fromAmPMLbl: UILabel!
     @IBOutlet weak var toTimeLbl: UILabel!

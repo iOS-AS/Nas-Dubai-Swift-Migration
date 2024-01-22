@@ -1,5 +1,5 @@
 //
-//  PTMeetingAllotVC.swift
+//  PTAMeetingAllotVC.swift
 //  BISAD
 //
 //  Created by Amritha on 25/11/22.
@@ -12,7 +12,7 @@ import SDWebImage
 import EventKit
 import EventKitUI
 
-class PTMeetingAllotVC: UIViewController {
+class PTAMeetingAllotVC: UIViewController {
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -49,7 +49,7 @@ class PTMeetingAllotVC: UIViewController {
     
     var ptaTimeSlotModel = PtaTimeSlotModel()
     var dataArray = [PtaTimeSlotResponseDataArray]()
-    var ptaAllotModel = PTMeetingAllotModel()
+    var ptaAllotModel = PTAMeetingAllotModel()
     var ptaTimeSlot: PtaTimeSlot?
     
     var slotBookedArray: [PtaTimeSlotResponseDataArray] = []
@@ -224,7 +224,7 @@ class PTMeetingAllotVC: UIViewController {
     
 }
 
-extension PTMeetingAllotVC: UICollectionViewDelegate, UICollectionViewDataSource {
+extension PTAMeetingAllotVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -342,7 +342,7 @@ extension PTMeetingAllotVC: UICollectionViewDelegate, UICollectionViewDataSource
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PTMTimeSlotCell", for: indexPath) as? PTMTimeSlotCell {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PTAMTimeSlotCell", for: indexPath) as? PTAMTimeSlotCell {
                 cell.layer.masksToBounds = true
                 cell.layer.cornerRadius = 5
                 let item = dataArray[indexPath.row]
@@ -404,7 +404,7 @@ extension PTMeetingAllotVC: UICollectionViewDelegate, UICollectionViewDataSource
     }
 
 
-extension PTMeetingAllotVC : UICollectionViewDelegateFlowLayout {
+extension PTAMeetingAllotVC : UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -437,7 +437,7 @@ extension PTMeetingAllotVC : UICollectionViewDelegateFlowLayout {
 }
 
 
-extension PTMeetingAllotVC: DoubleBtnAlertDelegate {
+extension PTAMeetingAllotVC: DoubleBtnAlertDelegate {
     
     func okPressed(tag: Int) {
         

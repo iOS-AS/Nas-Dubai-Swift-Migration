@@ -1,5 +1,5 @@
 //
-//  PTMeetingReviewVC.swift
+//  PTAMeetingReviewVC.swift
 //  BISAD
 //
 //  Created by Amritha on 25/11/22.
@@ -14,7 +14,7 @@ import EventKitUI
 import SafariServices
 
 
-class PTMeetingReviewVC: UIViewController {
+class PTAMeetingReviewVC: UIViewController {
   
     var dataArray = [PTAReviewListArray]()
     var ptaReviewModel = PtaReviewModel()
@@ -205,14 +205,14 @@ class PTMeetingReviewVC: UIViewController {
 }
 
 
-extension PTMeetingReviewVC : UITableViewDelegate, UITableViewDataSource  {
+extension PTAMeetingReviewVC : UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewFinalCell", for: indexPath) as! ReviewFinalCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PTAReviewFinalCell", for: indexPath) as! PTAReviewFinalCell
         cell.name.text = "Student :" +  (dataArray[indexPath.row].student ?? "")
         cell.sclass.text = "Class :" + (dataArray[indexPath.row].studentClass ?? "")
         cell.staff.text = "Staff :" + (dataArray[indexPath.row].staff ?? "")
@@ -429,7 +429,7 @@ extension PTMeetingReviewVC : UITableViewDelegate, UITableViewDataSource  {
 }
 
 //MARK: - Action
-extension PTMeetingReviewVC {
+extension PTAMeetingReviewVC {
     @IBAction func backButtonAction(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -441,13 +441,13 @@ extension PTMeetingReviewVC {
 }
 
 
-extension PTMeetingReviewVC: DCBaseDelegate {
+extension PTAMeetingReviewVC: DCBaseDelegate {
     func showAlerts(message: String) {
         presentSingleBtnAlert(message: message)
     }
 }
 
-extension PTMeetingReviewVC: DoubleBtnAlertDelegate {
+extension PTAMeetingReviewVC: DoubleBtnAlertDelegate {
     func submitAllToConfirm() {
         guard dataSubmitArrayTwo.count > 0 else { return }
         var passValue = "["
@@ -524,7 +524,7 @@ extension PTMeetingReviewVC: DoubleBtnAlertDelegate {
 }
 
 
-extension PTMeetingReviewVC: EKEventEditViewDelegate {
+extension PTAMeetingReviewVC: EKEventEditViewDelegate {
 
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
         controller.dismiss(animated: true, completion: nil)

@@ -48,9 +48,7 @@ class LoginVC: UIViewController {
             view.isUserInteractionEnabled = true
             if completed {
                 DefaultsWrapper().setUserEmailID(Username.text ?? "")
-                loginModel.getStudentList {
-                    pushToHome()
-                }
+                pushToHome()
             } else {
                 alertMessage.value = message
             }

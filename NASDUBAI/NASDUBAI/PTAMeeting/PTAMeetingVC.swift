@@ -1,5 +1,5 @@
 //
-//  ParentsMeetingVC.swift
+//  PTAMeetingVC.swift
 //  BISAD
 //
 //  Created by Amritha on 24/11/22.
@@ -9,7 +9,7 @@ import SDWebImage
 import Alamofire
 import SwiftyJSON
 
-class ParentsMeetingVC: UIViewController {
+class PTAMeetingVC: UIViewController {
     
     
     @IBOutlet weak var staffTitleLbl: UILabel!
@@ -151,7 +151,7 @@ class ParentsMeetingVC: UIViewController {
     
     
 }
-extension ParentsMeetingVC {
+extension PTAMeetingVC {
 
     func setupUI() {
        
@@ -184,7 +184,7 @@ extension ParentsMeetingVC {
 }
 
 //MARK:- StudentDelegate
-extension ParentsMeetingVC: StudentDelegate {
+extension PTAMeetingVC: StudentDelegate {
     fileprivate func resetStaff() {
 
         // staffAddBtn.setBackgroundImage(UIImage(named: "addIconLarge"), for: .normal)
@@ -227,7 +227,7 @@ extension ParentsMeetingVC: StudentDelegate {
 }
 
 //MARK:- StaffDelegate
-extension ParentsMeetingVC: StaffDelegate {
+extension PTAMeetingVC: StaffDelegate {
 
     func selectedStaff(with data: StaffList) {
 

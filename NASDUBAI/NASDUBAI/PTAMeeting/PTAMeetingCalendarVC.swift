@@ -1,17 +1,17 @@
 //
-//  PTMeetingCalendarVC.swift
+//  PTAMeetingCalendarVC.swift
 //  BISAD
 //
 //  Created by Amritha on 24/11/22.
 //
 
 import UIKit
-import FSCalendar
+//import FSCalendar
 import Alamofire
 import SwiftyJSON
 
 
-class PTMeetingCalendarVC: UIViewController,FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance  {
+class PTAMeetingCalendarVC: UIViewController,FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance  {
 
     @IBOutlet weak var calendarView: FSCalendar!
     @IBOutlet weak var calendarTitleLbl: UILabel!

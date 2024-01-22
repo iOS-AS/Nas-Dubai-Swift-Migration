@@ -10,6 +10,60 @@ import UIKit
 var alertMessage: Observable<String> = Observable("")
 extension UIViewController {
     
+    func addRevealToSelf<T: UIViewController>(_ parent: T? = nil) {
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controller:RevealVC = mainStoryBoard.instantiateViewController(withIdentifier: "RevealVC") as! RevealVC
+        controller.delegate = parent as? RevealDelegate
+        let width = UIScreen.main.bounds.width
+        print("widthValue: \(width)")
+        controller.view.frame = CGRect(x: -width, y: 0, width: width, height: view.frame.height)
+        self.view.addSubview(controller.view)
+        self.addChild(controller)
+        controller.didMove(toParent: self)
+
+//        let gesture = UISwipeGestureRecognizer(target: self, action: #selector(showReveal))
+//        gesture.direction = .right
+//        self.view.addGestureRecognizer(gesture)
+
+        // Side Menu Gestures
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        view.addGestureRecognizer(panGestureRecognizer)
+
+        hideRevealBool.bind { (completed) in
+            if completed {
+                self.hideReveal()
+                hideRevealBool.value = false
+            }
+        }
+    }
+
+    @objc func showReveal() {
+
+        if children.count > 0 {
+            //Here we are add the WebPdfViewController as childView. So we are checking that one also..
+            if children[0] is RevealVC {
+                let width = UIScreen.main.bounds.width
+                UIView.animate(withDuration: 0.3) { [self] in
+                    children[0].view.frame = CGRect(x: 0, y: 0, width: width, height: view.frame.height)
+//                    print(children[0].view.frame.origin.x)
+                }
+            }
+        }
+    }
+
+    @objc func hideReveal() {
+
+        if children.count > 0 {
+            //Here we are add the WebPdfViewController as childView. So we are checking that one also..
+            if children[0] is RevealVC {
+                let width = UIScreen.main.bounds.width
+                UIView.animate(withDuration: 0.3) { [self] in
+                    children[0].view.frame = CGRect(x: -width, y: 0, width: width, height: view.frame.height)
+                }
+            }
+        }
+    }
+
     
     func pushToVC(name:String)
     {

@@ -1,5 +1,5 @@
 //
-//  ReviewFinalCell.swift
+//  PTAReviewFinalCell.swift
 //  BISAD
 //
 //  Created by MOB-IOS-05 on 29/12/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReviewFinalCell: UITableViewCell {
+class PTAReviewFinalCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var confirmCancelButton: UIButton!
@@ -54,7 +54,7 @@ class ReviewFinalCell: UITableViewCell {
 }
 
 
-extension ReviewFinalCell {
+extension PTAReviewFinalCell {
     @IBAction func submitAction(_ sender: Any) {
         
         self.onSubmitAction(indexValue)
@@ -62,7 +62,7 @@ extension ReviewFinalCell {
 }
 
 
-extension ReviewFinalCell {
+extension PTAReviewFinalCell {
     @IBAction func CancelAction(_ sender: Any) {
         self.onCancelAction(indexValue)
     }
@@ -70,7 +70,7 @@ extension ReviewFinalCell {
 }
 
 
-extension ReviewFinalCell {
+extension PTAReviewFinalCell {
     @IBAction func onVpmlAction(_ sender: Any) {
         self.onVpmlAction(indexValue)
     }

@@ -7,23 +7,41 @@
 
 import UIKit
 
+protocol RevealDelegate {
+    func createDragableCell(frame: CGRect, title: String)
+    func moveDragableCell(point: CGPoint)
+    func dropDragableCell(sender: UIGestureRecognizer)
+}
+
+var hideRevealBool: Observable<Bool> = Observable(false)
+
 class RevealVC: UIViewController {
+
+    var inDrag = false
+    var delegate: RevealDelegate?
+
+    var revealArray = ["Home",
+                       "Notifications",
+                       "Calendar",
+                       "Payments", "Lunch Box", "Parent Essentials" ,
+                       "Absence & Early Pickup", "Early Years",
+                       "Primary", "Secondary",
+                       "Permission Forms", "Enrichment",
+                       "Parents Meeting", "Gallery",
+//                       "Term Dates",
+//                       "Curriculum",
+                       //"Staff Directory",
+                       "Contact Us", "About Us" ]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(self.longPressAction(_:)))
+        tableView.addGestureRecognizer(gesture)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }
+
+
