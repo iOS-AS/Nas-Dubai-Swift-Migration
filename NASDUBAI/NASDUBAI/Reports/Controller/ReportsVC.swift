@@ -10,7 +10,15 @@ import Alamofire
 import SwiftyJSON
 
 class ReportsVC: UIViewController {
-
+    
+    
+    @IBOutlet weak var studentIconImageView: UIImageView!
+    
+    
+    @IBOutlet weak var studentNameField: UITextField!
+    
+    @IBOutlet weak var studentNameOuterView: UIView!
+    
     @IBOutlet weak var studentImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     let studentSelectionModel = StudentSelectionModel()
@@ -50,7 +58,7 @@ class ReportsVC: UIViewController {
         if !ApiServices().checkReachability() {
             return
         }
-        let url = BASE_URL + "progressreport"
+        let url = ApiServices().BASE_URL + "progressreport"
         let parameters: Parameters = ["student_id": studentID]
         let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         UIApplication.topMostViewController?.view.startActivityIndicator()
@@ -80,11 +88,11 @@ class ReportsVC: UIViewController {
     }
     
     @IBAction func settingsPressed(_ sender: UIButton) {
-        pushToSettings()
+       // pushToSettings()
     }
     
     @IBAction func revealPressed(_ sender: UIButton) {
-        
+        showReveal()
     }
 }
 extension ReportsVC: StudentDelegate {
@@ -100,7 +108,7 @@ extension ReportsVC: StudentDelegate {
 }
 
 
-extension ReportsViewController: UITableViewDelegate, UITableViewDataSource {
+extension ReportsVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataArray.count
     }
@@ -125,7 +133,7 @@ extension ReportsViewController: UITableViewDelegate, UITableViewDataSource {
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommonCell", for: indexPath) as! CommonCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommonCells", for: indexPath) as! CommonCells
         cell.selectionStyle = .none
         cell.itemLbl.text = "   \(dataArray[indexPath.section].data?[indexPath.row].reportCycle ?? "")"
         return cell

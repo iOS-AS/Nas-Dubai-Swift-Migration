@@ -9,6 +9,12 @@ import UIKit
 
 class SecondaryVC: UIViewController {
 
+    
+    
+    @IBOutlet weak var bannerImageView: UIImageView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     var contanctEmailString = ""
     var imageURLString = ""
     var dataArray: [EarlyListValueDataItem] = []
@@ -87,14 +93,14 @@ extension SecondaryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let nextVc = EarlyYearsComingUpViewController(nibName: "EarlyYearsComingUpViewController", bundle: nil)
+            let nextVc = EarlyYearsComingUpVC(nibName: "EarlyYearsComingUpVC", bundle: nil)
             nextVc.isFromWholeSchool = false
             nextVc.titleString = "Coming Up"
             nextVc.sourcePageOfComingUp = .primary
             navigationController?.pushViewController(nextVc, animated: true)
         }else {
             guard indexPath.row - 1 >= 0, self.dataArray.count > indexPath.row - 1 else { return }
-            let nextVc = PrimaryNewsListViewController(nibName: "PrimaryNewsListViewController", bundle: nil)
+            let nextVc = PrimaryNewsListVC(nibName: "PrimaryNewsListVC", bundle: nil)
             let obj = self.dataArray[indexPath.row - 1]
             nextVc.dataArray = obj.file ?? []
             nextVc.titleString = obj.name ?? "Primary"
@@ -106,12 +112,12 @@ extension SecondaryVC: UITableViewDelegate, UITableViewDataSource {
 //MARK: - API Call
 extension SecondaryVC {
     func getDepartmentPrimaryListData() {
-        ApiServices().getDepartmentPrimaryListFromAPI() { responseData in
-            DispatchQueue.main.async {
-                self.dataArray = responseData.responseArray?.data ?? []
-                self.imageURLString = responseData.responseArray?.bannerImage?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-                self.setUpUI()
-            }
-        }
+//        ApiServices().getDepartmentPrimaryListFromAPI() { responseData in
+//            DispatchQueue.main.async {
+//                self.dataArray = responseData.responseArray?.data ?? []
+//                self.imageURLString = responseData.responseArray?.bannerImage?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+//                self.setUpUI()
+//            }
+//        }
     }
 }

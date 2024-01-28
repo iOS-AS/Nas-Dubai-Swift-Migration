@@ -11,15 +11,15 @@ struct PtaTimeSlotModel {
     
     func getData(studentId: String, staffId: String, date: String, completion: @escaping (PtaCalendar?) -> ()) {
 
-        ApiServices().getPtaTimeSlot(studentID: studentId, staffID: staffId, date: date) { (data) in
-            
-            completion(data)
-//            if let a = data.response  {
-//                completion(a)
-//            } else {
-//                completion(nil)
-//            }
-        }
+//        ApiServices().getPtaTimeSlot(studentID: studentId, staffID: staffId, date: date) { (data) in
+//            
+//            completion(data)
+////            if let a = data.response  {
+////                completion(a)
+////            } else {
+////                completion(nil)
+////            }
+//        }
     }
     func processData(data: PtaTimeSlot?) -> (PtaTimeSlot?, APIError?) {
         if data?.status == 101 || data?.status == 102 {

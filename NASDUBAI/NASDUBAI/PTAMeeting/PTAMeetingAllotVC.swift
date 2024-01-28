@@ -49,7 +49,7 @@ class PTAMeetingAllotVC: UIViewController {
     
     var ptaTimeSlotModel = PtaTimeSlotModel()
     var dataArray = [PtaTimeSlotResponseDataArray]()
-    var ptaAllotModel = PTAMeetingAllotModel()
+    var ptaAllotModel = PTMeetingAllotModel()
     var ptaTimeSlot: PtaTimeSlot?
     
     var slotBookedArray: [PtaTimeSlotResponseDataArray] = []
@@ -108,14 +108,14 @@ class PTAMeetingAllotVC: UIViewController {
         }else if sender?.view == reviewConfirmLbl {
             
             let stryBrd = UIStoryboard(name: "ParentsMeetingStoryboard", bundle: nil)
-            let vc = stryBrd.instantiateViewController(withIdentifier: "PTMeetingReviewVC") as! PTMeetingReviewVC
+            let vc = stryBrd.instantiateViewController(withIdentifier: "PTAMeetingReviewVC") as! PTAMeetingReviewVC
             navigationController?.pushViewController(vc, animated: true)
         }else if sender?.view == infoIconObj {
             
             print("informationIcon")
             showAlerts()
             
-            presentPTAIbuttonTableView(message: "",dataArray: dataArray)
+          //  presentPTAIbuttonTableView(message: "",dataArray: dataArray)
             //            let vc = storyboard?.instantiateViewController(withIdentifier: "PtaMeetingIButton") as! PtaMeetingIButton
             //            navigationController?.pushViewController(vc, animated: true)
             
@@ -128,7 +128,7 @@ class PTAMeetingAllotVC: UIViewController {
     func cancelData(){
         
         flag = 0
-        presentDoubleBtnAlert(self, message: "Do you want to cancel this appointment ?")
+     //   presentDoubleBtnAlert(self, message: "Do you want to cancel this appointment ?")
     }
     
     func getDataa(){
@@ -138,7 +138,7 @@ class PTAMeetingAllotVC: UIViewController {
         if !ApiServices().checkReachability() {
             return
         }
-        let url = baseUrl + "pta-list"
+        let url = ApiServices().BASE_URL + "pta-list"
         let parameters: Parameters = ["student_id": studentId, "staff_id": staffId, "date": date]
         let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         UIApplication.topMostViewController?.view.startActivityIndicator()

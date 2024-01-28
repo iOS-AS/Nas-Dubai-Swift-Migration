@@ -12,15 +12,15 @@ struct PtaCalendarModel {
     
     func getData(studentId: String, staffId: String, completion: @escaping (PtaCalendar?) -> ()) {
 
-        ApiServices().getPtaCalendar(studentID: studentId, staffID: staffId) { (data) in
-            
-            completion(data)
-//            if let a = data  {
-//                completion(a)
-//            } else {
-//                completion(nil)
-//            }
-        }
+//        ApiServices().getPtaCalendar(studentID: studentId, staffID: staffId) { (data) in
+//            
+//            completion(data)
+////            if let a = data  {
+////                completion(a)
+////            } else {
+////                completion(nil)
+////            }
+//        }
     }
     
     func processData(data: PtaCalendar?) -> (PtaCalendar?, APIError?) {

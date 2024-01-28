@@ -7,7 +7,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import SDWebImage
 import EventKit
 import EventKitUI
@@ -143,7 +142,7 @@ class PTAMeetingReviewVC: UIViewController {
         if !ApiServices().checkReachability() {
             return
         }
-        let url = baseUrl + "pta-review-list"
+        let url = ApiServices().BASE_URL + "pta-review-list"
         let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         UIApplication.topMostViewController?.view.startActivityIndicator()
         AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
@@ -175,7 +174,7 @@ class PTAMeetingReviewVC: UIViewController {
                 
                 if dataArray.count == 0{
                     
-                    showAlerts(message: "No Appointments Available")
+                  //  showAlerts(message: "No Appointments Available")
                 }
                 
                 tableView.reloadData()
@@ -390,11 +389,11 @@ extension PTAMeetingReviewVC : UITableViewDelegate, UITableViewDataSource  {
                 UIApplication.shared.open(url)
             } else {
                 // Handle the case where the URL cannot be opened.
-                showAlerts(message: "Cannot open the link")
+                //showAlerts(message: "Cannot open the link")
             }
         } else {
             // Handle the case where the URL is not valid.
-            showAlerts(message: "Invalid link format")
+            //showAlerts(message: "Invalid link format")
         }
     }
     
@@ -441,11 +440,7 @@ extension PTAMeetingReviewVC {
 }
 
 
-extension PTAMeetingReviewVC: DCBaseDelegate {
-    func showAlerts(message: String) {
-        presentSingleBtnAlert(message: message)
-    }
-}
+
 
 extension PTAMeetingReviewVC: DoubleBtnAlertDelegate {
     func submitAllToConfirm() {

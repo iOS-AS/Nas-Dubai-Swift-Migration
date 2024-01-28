@@ -40,7 +40,7 @@ class EarlyYearsListVC: UIViewController {
                 dataArray = try JSONDecoder().decode([EarlyListValueFile].self, from: jsonData)
             }catch { }
         }
-        self.titleLabel.text = titleString
+        self.titleView.text = titleString
         self.tableView.reloadData()
     }
 }
@@ -114,22 +114,7 @@ extension EarlyYearsListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let fileName = self.dataArray[indexPath.row].file {
-            let nextVc = PrimaryDetailViewController(nibName: "PrimaryDetailViewController", bundle: nil)
-            
-            nextVc.urlString = fileName
-            nextVc.titleString = self.dataArray[indexPath.row].title ?? ""
-            navigationController?.pushViewController(nextVc, animated: true)
-            
-        }
-        if let fileName = self.dataArray[indexPath.row].url {
-            let nextVc = PrimaryDetailViewController(nibName: "PrimaryDetailViewController", bundle: nil)
-            if self.titleString == "Accreditations & Examinations" {
-                nextVc.urlString = fileName
-                nextVc.titleString = self.dataArray[indexPath.row].title ?? ""
-                navigationController?.pushViewController(nextVc, animated: true)
-            }
-        }
+        
 //        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
 //        let vc = storyboardMain.instantiateViewController(withIdentifier: "CommonWebViewController") as! CommonWebViewController
 //        vc.url = self.dataArray[indexPath.row].image ?? ""

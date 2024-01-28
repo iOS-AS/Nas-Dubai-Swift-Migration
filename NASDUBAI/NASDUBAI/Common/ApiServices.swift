@@ -55,6 +55,80 @@ enum APIError: Error {
             return ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         }
     }
+    var statValue : Int?
+    //let reEnrollmnt = ReEnrollmentTableView()
+    func performOperation(status: Int) {
+        UIApplication.topMostViewController?.view.stopActivityIndicator()
+        switch status {
+        case 100:
+            print("Success")
+        case 101:
+            print("Some error occured")
+        case 102:
+            print("Internal server error")
+        case 103:
+            print("validation error")
+        case 110:
+            alertMessage.value = "Invalid username or password"
+            print("Invalid username or password")
+        case 113:
+            alertMessage.value = "Invalid username or password"
+            print("Verification code not match")
+        case 114:
+            alertMessage.value = "Invalid username or password"
+            print("User not found in our database")
+        case 116:
+            print("Token expired")
+            UIApplication.topMostViewController?.view.startActivityIndicator()
+        case 123:
+            print("Invalid file access")
+        case 124:
+            print("Route Not Found")
+        case 125:
+            print("Student not found in our database")
+        case 130:
+            print("DecryptException Error")
+        case 131:
+            print("URL or Method Not found")
+        case 132:
+            //            alertMessage.value = "Invalid username or password"
+            print("No records found")
+        case 133:
+            print("Restricted access")
+        case 134:
+            print("Method Not Allowed")
+        case 104:
+            print("field required")
+        case 105:
+            print("exists")
+        case 106:
+            print("not a valid email")
+        case 107:
+            print("not a valid number")
+        case 108:
+            print("password and confirm password not same")
+        case 109:
+            print("Old passord doesn't match!")
+        case 111:
+            print("No student are linking with that users")
+        case 115:
+            print("Invalid file type")
+        case 117:
+            print("not a valid date")
+        case 120:
+            print("Please enter a valid email address.")
+        case 121:
+            
+            print("The e-mail has already registered.")
+        case 122:
+            print("Not a valid JSON")
+        case 126:
+            print("File size too large( maxsize:2Mb )")
+        default:
+            break
+        }
+    }
+   
     private var tokenCallCount = 0
     private var tokenTime = 300 // seconds
     private var timer: Timer?
@@ -477,77 +551,6 @@ enum APIError: Error {
         }
     }
     
-    func performOperation(status: Int) {
-        UIApplication.topMostViewController?.view.stopActivityIndicator()
-        switch status {
-        case 100:
-            print("Success")
-        case 101:
-            print("Some error occured")
-        case 102:
-            print("Internal server error")
-        case 103:
-            print("validation error")
-        case 110:
-            alertMessage.value = "Invalid username or password"
-            print("Invalid username or password")
-        case 113:
-            alertMessage.value = "Invalid username or password"
-            print("Verification code not match")
-        case 114:
-            alertMessage.value = "Invalid username or password"
-            print("User not found in our database")
-        case 116:
-            print("Token expired")
-            UIApplication.topMostViewController?.view.startActivityIndicator()
-        case 123:
-            print("Invalid file access")
-        case 124:
-            print("Route Not Found")
-        case 125:
-            print("Student not found in our database")
-        case 130:
-            print("DecryptException Error")
-        case 131:
-            print("URL or Method Not found")
-        case 132:
-            //            alertMessage.value = "Invalid username or password"
-            print("No records found")
-        case 133:
-            print("Restricted access")
-        case 134:
-            print("Method Not Allowed")
-        case 104:
-            print("field required")
-        case 105:
-            print("exists")
-        case 106:
-            print("not a valid email")
-        case 107:
-            print("not a valid number")
-        case 108:
-            print("password and confirm password not same")
-        case 109:
-            print("Old passord doesn't match!")
-        case 111:
-            print("No student are linking with that users")
-        case 115:
-            print("Invalid file type")
-        case 117:
-            print("not a valid date")
-        case 120:
-            print("Please enter a valid email address.")
-        case 121:
-            
-            print("The e-mail has already registered.")
-        case 122:
-            print("Not a valid JSON")
-        case 126:
-            print("File size too large( maxsize:2Mb )")
-        default:
-            break
-        }
-    }
    
     func getAccessToken(completion: @escaping () -> ()) {
         let val = checkTokenCount()
@@ -583,4 +586,716 @@ enum APIError: Error {
             }
         }
     }
+    // Submit ReEnrollment Data
+    
+    func sumitReEnrollment(dataValue: String, completion: @escaping (ReEnrollment) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        
+        let jsonData = dataValue.data(using: .utf8, allowLossyConversion: false)!
+        let apiToken = "Bearer \(DefaultsWrapper().getAccessToken())"
+        
+        let headers = [
+            "Authorization": apiToken,
+            "content-type": "application/json"
+        ]
+        
+        let urlMain = URL(string: BASE_URL + "save_re_enrollment")! //PUT Your URL
+        var request = URLRequest(url: urlMain)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? NSDictionary {
+                
+                //  print(responseJSON) //Code after Successfull POST Request
+                
+                let sstatValue = responseJSON.object(forKey: "status") as! Int
+                let msgValue = responseJSON.object(forKey: "message")
+                
+                
+                if sstatValue as! Int == 100{
+                    
+                    
+                    DefaultsWrapper().setStatusType(sstatValue)
+                    
+                    // self.reEnrollmnt.SubmitDone()
+                    
+                }
+                
+            }
+        }
+        
+        task.resume()
+        
+        
+    }
+    func getProgressReport(studentID: String, completion: @escaping (ProgressReport) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "progress-reports"
+        let parameters: Parameters = ["student_id": studentID]
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        print("parameter\(parameters)")
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(ProgressReport.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    if res.status == 100 || res.status == 103{
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+            
+        }
+    }
+    //MARK: - Get Canteen Banner Data
+    func getCanteenBannerData(completion: @escaping (PaymentBannerData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "canteen_banner"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(PaymentBannerData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+//                        getAccessToken { [weak self] in
+//                            self?.getPaymentBannerData() { (completed) in
+//
+//                            }
+//                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+            
+        }
+    }
+    //MARK: - Get Canteen Information
+    func getCanteenInformationData(completion: @escaping (InformationData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "canteen_information"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(InformationData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+//                        getAccessToken { [weak self] in
+//                            self?.getPaymentInformationData() { (completed) in
+//
+//                            }
+//                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+            
+        }
+    }
+    
+    //MARK: - Edit Preorder Individual Item
+    func editPreorderIndividualItem(studentID: String, canteen_preorder_id: String, qunatity: String, completion: @escaping (StatusData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "edit_canteen_preorder_item"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = ["studentId": studentID, "quantity": qunatity, "canteen_preorder_item_id": canteen_preorder_id]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(StatusData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.editPreorderIndividualItem(studentID: studentID, canteen_preorder_id: canteen_preorder_id, qunatity: qunatity) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+            
+        }
+    }
+    
+    //MARK: - Cancel Preorder Individual Item
+    func cancelPreorderIndividualItem(studentID: String, canteen_preorder_id: String, completion: @escaping (StatusData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "cancel_canteen_preorder_item"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = ["studentId": studentID, "canteen_preorder_item_id": canteen_preorder_id]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(StatusData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.cancelPreorderIndividualItem(studentID: studentID, canteen_preorder_id: canteen_preorder_id) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    //MARK: - Cancel Preorder Data
+    func cancelPreorderData(studentID: String, canteen_preorder_id: String, completion: @escaping (StatusData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "cancel_canteen_preorder"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = ["studentId": studentID, "canteen_preorder_id": canteen_preorder_id]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(StatusData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.cancelPreorderData(studentID: studentID, canteen_preorder_id: canteen_preorder_id) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    //MARK: - Update Preorder Data
+    func updatePreorderData(dataStr: [String: Any], completion: @escaping (StatusData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "canteen_preorder"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = dataStr
+        print(dataStr)
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(StatusData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.updatePreorderData(dataStr: dataStr) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    //MARK: - Get Preorder History Info
+    func getPreorderHistoryInfo(studentID: String, completion: @escaping (PreorderData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "get_canteen_preorder_history"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = ["studentId": studentID, "limit": "100", "start": "0"]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(PreorderData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.getPreorderHistoryInfo(studentID: studentID) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    //MARK: - Get Preorder Info
+    func getPreorderInfo(studentID: String, completion: @escaping (PreorderData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "get_canteen_preorder"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = ["studentId": studentID, "limit": "100", "start": "0"]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(PreorderData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.getPreorderInfo(studentID: studentID) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    //MARK: - Get Food Categories
+    func getFoddCategories(completion: @escaping (FoodItemsCategoriesResponse) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "get_canteen_categories"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    guard let dictResponse =  try JSONSerialization.jsonObject(with: response.data!, options: []) as? [String: Any], let status = dictResponse["status"] as? Int
+                    else {
+                        return
+                    }
+                    performOperation(status: status)
+                    if status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.getFoddCategories() { (completed) in
+                                
+                            }
+                        }
+                    } else if status != 101 || status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            let obj = FoodItemsCategoriesResponse(dictResponse)
+                            completion(obj)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if status == 130 || status == 101 || status == 102 || status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+            
+        }
+    }
+    
+    //MARK: - Get Preorder Info
+    func callFoodItems(studentID: String, category_id: Int, order_date: String, andLimit: String, andSkip: String, completion: @escaping (ItemsAPIResponce) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "get_canteen_items"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = ["studentId": studentID, "limit": andLimit,
+                                      "start": andSkip, "category_id":category_id,
+                                      "order_date": order_date]
+        if andSkip == "0" {
+            UIApplication.topMostViewController?.view.startActivityIndicator()
+        }
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    guard let dictResponse =  try JSONSerialization.jsonObject(with: response.data!, options: []) as? [String: Any], let status = dictResponse["status"] as? Int
+                    else {
+                        return
+                    }
+                    performOperation(status: status)
+                    if status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.callFoodItems(studentID: studentID, category_id: category_id, order_date: order_date, andLimit: andLimit, andSkip: andSkip) { (completed) in
+                                
+                            }
+                        }
+                    } else if status != 101 || status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            let obj = ItemsAPIResponce(dictResponse)
+                            completion(obj)
+                            if andSkip == "0" {
+                                UIApplication.topMostViewController?.view.stopActivityIndicator()
+                            }
+                        }
+                    }
+                    if status == 130 || status == 101 || status == 102 || status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    
+    //MARK: - Call Add Cart
+    func callAdd(dataDict: [String:Any], completion: @escaping (StatusData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "add_to_canteen_cart"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = dataDict
+        print(dataDict)
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(StatusData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.callAdd(dataDict: dataDict) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    //MARK: - Call Delete Cart Items
+    func callDeleteCartItemsAPI(studentId: String, canteen_cart_id: String, completion: @escaping (StatusData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "remove_canteen_cart"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = ["studentId": studentId, "canteen_cart_id": canteen_cart_id]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(StatusData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.callDeleteCartItemsAPI(studentId: studentId, canteen_cart_id: canteen_cart_id) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    //MARK: - Call Update Cart
+    func callUpdateCart(dataDict: [String:Any], completion: @escaping (StatusData) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "update_canteen_cart"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = dataDict
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(StatusData.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.callUpdateCart(dataDict: dataDict) { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
+    
+    //MARK: - Canteen Cart List API
+    func getCanteenCartListAPI(studentID: String, completion: @escaping (CartListResponse) -> ()) {
+        if !checkReachability() {
+            return
+        }
+        let url = BASE_URL + "get_canteen_cart"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        let parameters: Parameters = ["studentId": studentID]
+        UIApplication.topMostViewController?.view.startActivityIndicator()
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    guard let dictResponse =  try JSONSerialization.jsonObject(with: response.data!, options: []) as? [String: Any], let status = dictResponse["status"] as? Int
+                    else {
+                        return
+                    }
+                    performOperation(status: status)
+                    if status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.getCanteenCartListAPI(studentID: studentID, completion: { completed in
+                                
+                            })
+                        }
+                    } else if status != 101 || status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            let obj = CartListResponse(dictResponse)
+                            completion(obj)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if status == 130 || status == 101 || status == 102 || status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+            
+        }
+    }
+    
+    
 }

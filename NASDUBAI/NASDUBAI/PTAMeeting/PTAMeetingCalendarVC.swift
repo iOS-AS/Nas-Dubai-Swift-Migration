@@ -6,9 +6,9 @@
 //
 
 import UIKit
-//import FSCalendar
+import FSCalendar
 import Alamofire
-import SwiftyJSON
+
 
 
 class PTAMeetingCalendarVC: UIViewController,FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance  {
@@ -228,7 +228,7 @@ func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance,  fillDef
         print(newYearString)
         
         let stryBrd = UIStoryboard(name: "ParentsMeetingStoryboard", bundle: nil)
-        let vc = stryBrd.instantiateViewController(withIdentifier: "PTMeetingAllotVC") as! PTMeetingAllotVC
+        let vc = stryBrd.instantiateViewController(withIdentifier: "PTAMeetingAllotVC") as! PTAMeetingAllotVC
         vc.studentId = studentId
         vc.staffId = staffId
         vc.date = yearString

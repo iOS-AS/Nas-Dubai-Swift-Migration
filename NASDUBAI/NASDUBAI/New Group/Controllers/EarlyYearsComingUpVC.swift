@@ -147,7 +147,7 @@ extension EarlyYearsComingUpVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !self.isFromWholeSchool {
             let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboardMain.instantiateViewController(withIdentifier: "CommonWebViewController") as! CommonWebViewController
+            let vc = storyboardMain.instantiateViewController(withIdentifier: "CommonWebView") as! CommonWebView
             vc.url = self.dataArray[indexPath.row].image ?? ""
             vc.fromSocialMedia = false
             vc.titleStr = "Coming Up"

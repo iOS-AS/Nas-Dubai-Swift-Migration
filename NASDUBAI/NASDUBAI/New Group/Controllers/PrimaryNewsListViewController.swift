@@ -1,0 +1,147 @@
+//
+//  PrimaryNewsListVC.swift
+//  BISAD
+//
+//  Created by Joel Leo on 26/03/23.
+//
+
+import UIKit
+
+class PrimaryNewsListVC: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @objc var titleString: String = "Coming Up"
+    var dataArray: [EarlyListValueFile] = []
+    @objc var dataArrayDict: [[String: Any]] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpUI()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    func setUpUI() {
+        if dataArrayDict.count > 0 {
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: dataArrayDict, options: .prettyPrinted)
+                dataArray = try JSONDecoder().decode([EarlyListValueFile].self, from: jsonData)
+            }catch { }
+        }
+        self.titleLabel.text = titleString
+        self.tableView.reloadData()
+    }
+}
+
+//MARK: - Action
+extension PrimaryNewsListVC {
+    @IBAction func settingsPressed(_ sender: UIButton) {
+       // pushToSettings()
+    }
+    
+    
+    @IBAction func revealBtnPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func homeBtnPressed(_ sender: UIButton) {
+        pushToHome()
+    }
+}
+
+//MARK: - UITableView Delegate, DataSource
+extension PrimaryNewsListVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        var cell: UITableViewCell?
+        var cellBgVIew: UIView?
+        var titleLabel: UILabel?
+
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+            
+            cellBgVIew = UIView(frame: CGRect(x: 10, y: 0, width: tableView.frame.size.width-20, height: 40))
+            cellBgVIew!.backgroundColor = .white
+            
+            let smallPortionVIew = UIView(frame: CGRect(x: 5, y: 2, width: 5, height: 40))
+            smallPortionVIew.backgroundColor = UIColor(red: 077.0/255, green:196.0/255.0, blue:207.0/255.0, alpha:1.0)
+            
+            let separatorVIew = UIView(frame: CGRect(x: 10, y: 39, width: tableView.frame.size.width-20, height: 1))
+            separatorVIew.backgroundColor = UIColor(red: 077.0/255, green:196.0/255.0, blue:207.0/255.0, alpha:1.0)
+            
+            var disclosureArrow = UIImageView(frame: CGRect(x: cellBgVIew!.bounds.size.width-20, y: 10, width: 20, height: 20))
+            disclosureArrow.image = UIImage(named: "rightarrow")
+            disclosureArrow.backgroundColor = .clear
+            
+            titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: cellBgVIew!.bounds.size.width-35, height: 40))
+            titleLabel!.font = UIFont(name: "SourceSansPro-Regular", size: 14) ?? .systemFont(ofSize: 14)
+            titleLabel!.backgroundColor = .clear
+            titleLabel!.textColor = .black
+            if self.titleString == "Accreditations & Examinations" {
+                cellBgVIew = UIView(frame: CGRect(x: 5, y: 2, width: tableView.frame.size.width-10, height: 40))
+                cellBgVIew!.backgroundColor = UIColor(red: 0.0/255, green:45.0/255.0, blue:74.0/255.0, alpha:1.0)
+                
+                disclosureArrow = UIImageView(frame: CGRect(x: cellBgVIew!.bounds.size.width-25, y: 10, width: 20, height: 20))
+                disclosureArrow.image = UIImage(named: "arrow_list")
+                disclosureArrow.backgroundColor = .clear
+                
+                titleLabel = UILabel(frame: CGRect(x: 10, y: 0, width: cellBgVIew!.bounds.size.width-45, height: 40))
+                titleLabel!.font = UIFont(name: "SourceSansPro-Regular", size: 14) ?? .systemFont(ofSize: 14)
+                titleLabel!.backgroundColor = .clear
+                titleLabel!.textColor = .white
+
+            }
+            cell?.contentView.addSubview(cellBgVIew!)
+            if self.titleString == "Accreditations & Examinations" {
+                cell?.contentView.addSubview(smallPortionVIew)
+            }else {
+                cell?.contentView.addSubview(separatorVIew)
+            }
+            cellBgVIew!.addSubview(disclosureArrow)
+            cellBgVIew!.addSubview(titleLabel!)
+            
+        }
+        let objData = self.dataArray[indexPath.row]
+        titleLabel?.text = objData.title ?? ""
+        
+        cell?.selectionStyle = .none
+        cell?.backgroundColor = .white
+        cell?.clipsToBounds = true
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let fileName = self.dataArray[indexPath.row].file {
+            let nextVc = PrimaryDetailVC(nibName: "PrimaryDetailVC", bundle: nil)
+            
+            //nextVc.urlString = fileName
+//            nextVc.titleString = self.dataArray[indexPath.row].title ?? ""
+            navigationController?.pushViewController(nextVc, animated: true)
+            
+        }
+        if let fileName = self.dataArray[indexPath.row].url {
+            let nextVc = PrimaryDetailVC(nibName: "PrimaryDetailVC", bundle: nil)
+            if self.titleString == "Accreditations & Examinations" {
+                //nextVc.urlString = fileName
+                //nextVc.titleString = self.dataArray[indexPath.row].title ?? ""
+                navigationController?.pushViewController(nextVc, animated: true)
+            }
+        }
+//        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboardMain.instantiateViewController(withIdentifier: "CommonWebViewController") as! CommonWebViewController
+//        vc.url = self.dataArray[indexPath.row].image ?? ""
+//        vc.fromSocialMedia = false
+//        vc.titleStr = "Coming Up"
+//        vc.isTermsService = false
+//        navigationController?.pushViewController(vc, animated: true)
+    }
+}

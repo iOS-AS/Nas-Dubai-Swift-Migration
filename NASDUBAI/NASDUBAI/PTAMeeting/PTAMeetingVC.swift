@@ -81,8 +81,8 @@ class PTAMeetingVC: UIViewController {
         
         print("Hello")
         
-        let stryBrd = UIStoryboard(name: "ParentsMeetingStoryboard", bundle: nil)
-        let vc = stryBrd.instantiateViewController(withIdentifier: "PTMeetingReviewVC") as! PTMeetingReviewVC
+        let stryBrd = UIStoryboard(name: "PTAMeetingReviewVC", bundle: nil)
+        let vc = stryBrd.instantiateViewController(withIdentifier: "PTAMeetingReviewVC") as! PTAMeetingReviewVC
         navigationController?.pushViewController(vc, animated: true)
         
         
@@ -92,11 +92,11 @@ class PTAMeetingVC: UIViewController {
     
     @IBAction func infotutorialButton(_ sender: Any) {
 //        pushToPTATutorial()
-        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboardMain.instantiateViewController(withIdentifier: "TutorialViewControllerPTA") as! TutorialViewControllerPTA
-        vc.modalPresentationStyle = .currentContext
-        vc.isFromInfoBtnA = true
-        self.present(vc, animated: true)
+//        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboardMain.instantiateViewController(withIdentifier: "TutorialViewControllerPTA") as! TutorialViewControllerPTA
+//        vc.modalPresentationStyle = .currentContext
+//        vc.isFromInfoBtnA = true
+//        self.present(vc, animated: true)
     }
     
     
@@ -107,7 +107,7 @@ class PTAMeetingVC: UIViewController {
         if !ApiServices().checkReachability() {
             return
         }
-        let url = baseUrl + "pta-allotted-dates"
+        let url = ApiServices().BASE_URL + "pta-allotted-dates"
         let parameters: Parameters = ["student_id": studentID, "staff_id": Int(staffId)!]
         let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         UIApplication.topMostViewController?.view.startActivityIndicator()
@@ -126,8 +126,8 @@ class PTAMeetingVC: UIViewController {
                 fetchedAllData = v.data?.count ?? 0 < limit
                 dataArray.append(contentsOf: v.data ?? [])
                 
-                let stryBrd = UIStoryboard(name: "ParentsMeetingStoryboard", bundle: nil)
-                let vc = stryBrd.instantiateViewController(withIdentifier: "PTMeetingCalendarVC") as! PTMeetingCalendarVC
+                let stryBrd = UIStoryboard(name: "PTAMeetingCalendarVC", bundle: nil)
+                let vc = stryBrd.instantiateViewController(withIdentifier: "PTAMeetingCalendarVC") as! PTAMeetingCalendarVC
                     vc.presentdays = dataArray
                 vc.studentId = studentID
                 vc.staffId = staffId
@@ -146,7 +146,7 @@ class PTAMeetingVC: UIViewController {
     
     
     @IBAction func settingsButtonPressef(_ sender: Any) {
-        pushToSettings()
+      //  pushToSettings()
     }
     
     
@@ -158,8 +158,8 @@ extension PTAMeetingVC {
 
         staffImgView.image = UIImage(named: "addIconLarge")
         studentImgView.image = UIImage(named: "addIconLarge")
-        staffImgView.roundshape()
-        studentImgView.roundshape()
+//        staffImgView.roundshape()
+//        studentImgView.roundshape()
 
         //Creating tap gesture
         let staffTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.staffImagePressed(_ :)))
@@ -173,12 +173,12 @@ extension PTAMeetingVC {
 
     @objc func staffImagePressed(_ sender: UITapGestureRecognizer) {
         print("staffImagePressed")
-        presentStaffSelection(self, studenID: studentID)
+        //presentStaffSelection(self, studenID: studentID)
     }
 
     @objc func studentImagePressed(_ sender: UITapGestureRecognizer) {
         print("studentImagePressed")
-        presentStudentSelection(self)
+       // presentStudentSelection(self)
       
     }
 }

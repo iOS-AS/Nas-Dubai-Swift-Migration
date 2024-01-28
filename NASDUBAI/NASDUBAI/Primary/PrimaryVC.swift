@@ -8,7 +8,12 @@
 import UIKit
 
 class PrimaryVC: UIViewController {
-
+    @IBOutlet weak var bannerImageView: UIImageView!
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     var contanctEmailString = ""
     var imageURLString = ""
     var dataArray: [EarlyListValueDataItem] = []
@@ -16,7 +21,7 @@ class PrimaryVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+       setUpUI()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
@@ -33,6 +38,18 @@ class PrimaryVC: UIViewController {
             self.isRevealedAdded = true
             self.addRevealToSelf()
         }
+    }
+    
+    @IBAction func settings(_ sender: Any) {
+    
+    }
+    
+    @IBAction func revealBtn(_ sender: Any) {
+        showReveal()
+    }
+    
+    @IBAction func homeBtn(_ sender: Any) {
+        pushToHome()
     }
 }
 extension PrimaryVC: UITableViewDelegate, UITableViewDataSource {
@@ -87,14 +104,14 @@ extension PrimaryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let nextVc = EarlyYearsComingUpViewController(nibName: "EarlyYearsComingUpViewController", bundle: nil)
+            let nextVc = EarlyYearsComingUpVC(nibName: "EarlyYearsComingUpVC", bundle: nil)
             nextVc.isFromWholeSchool = false
             nextVc.titleString = "Coming Up"
             nextVc.sourcePageOfComingUp = .primary
             navigationController?.pushViewController(nextVc, animated: true)
         }else {
             guard indexPath.row - 1 >= 0, self.dataArray.count > indexPath.row - 1 else { return }
-            let nextVc = PrimaryNewsListViewController(nibName: "PrimaryNewsListViewController", bundle: nil)
+            let nextVc = PrimaryNewsListVC(nibName: "PrimaryNewsListVC", bundle: nil)
             let obj = self.dataArray[indexPath.row - 1]
             nextVc.dataArray = obj.file ?? []
             nextVc.titleString = obj.name ?? "Primary"
@@ -106,13 +123,13 @@ extension PrimaryVC: UITableViewDelegate, UITableViewDataSource {
 //MARK: - API Call
 extension PrimaryVC {
     func getDepartmentPrimaryListData() {
-        ApiServices().getDepartmentPrimaryListFromAPI() { responseData in
-            DispatchQueue.main.async {
-                self.dataArray = responseData.responseArray?.data ?? []
-                self.imageURLString = responseData.responseArray?.bannerImage?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-                self.setUpUI()
-            }
-        }
+//        ApiServices().getDepartmentPrimaryListFromAPI() { responseData in
+//            DispatchQueue.main.async {
+//                self.dataArray = responseData.responseArray?.data ?? []
+//                self.imageURLString = responseData.responseArray?.bannerImage?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+//                self.setUpUI()
+//            }
+//        }
     }
 }
 
