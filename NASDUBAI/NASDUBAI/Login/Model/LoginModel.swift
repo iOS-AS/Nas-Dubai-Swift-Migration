@@ -28,9 +28,7 @@ class LoginModel {
             ApiServices().callLoginAPI(email: email, password: password) { completed in
                 print(completed)
                 if completed.responsecode == "200" {
-//                    DefaultsWrapper().setUserCode(completed.userCode ?? "")
                     DefaultsWrapper().setAccessToken(completed.responseArray?.token ?? "")
-                    //DefaultsWrapper().setUserID(completed.responseArray?.userid ?? "")
                     DefaultsWrapper().setLoginStatus(true)
                     completion(true, "")
                 } else if completed.responsecode == "132" {

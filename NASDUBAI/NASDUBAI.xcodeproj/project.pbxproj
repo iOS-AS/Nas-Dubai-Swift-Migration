@@ -133,6 +133,12 @@
 		FF6645AE2B67948900F039E7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645AD2B67948900F039E7 /* SDWebImage */; };
 		FF6645B02B67948900F039E7 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645AF2B67948900F039E7 /* SDWebImageMapKit */; };
 		FF6645B32B6794DC00F039E7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645B22B6794DC00F039E7 /* SwiftyJSON */; };
+		FF6645C52B67A53C00F039E7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645C42B67A53C00F039E7 /* FirebaseAnalytics */; };
+		FF6645C72B67A53C00F039E7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645C62B67A53C00F039E7 /* FirebaseMessaging */; };
+		FF6645CA2B67A63E00F039E7 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645C92B67A63E00F039E7 /* IQKeyboardManagerSwift */; };
+		FF6645CD2B67A6D400F039E7 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645CC2B67A6D400F039E7 /* FSCalendar */; };
+		FF6645D02B67A74000F039E7 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645CF2B67A74000F039E7 /* iOSDropDown */; };
+		FF6645D32B67A75800F039E7 /* EzPopup in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645D22B67A75800F039E7 /* EzPopup */; };
 		FF89A0172B5F984400E78538 /* ContactUsFstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0152B5F984400E78538 /* ContactUsFstCell.swift */; };
 		FF89A0182B5F984400E78538 /* ContactUsSndCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0162B5F984400E78538 /* ContactUsSndCell.swift */; };
 		FF89A01A2B5F9B0400E78538 /* RevealVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0192B5F9B0400E78538 /* RevealVC+Extension.swift */; };
@@ -398,9 +404,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6645C72B67A53C00F039E7 /* FirebaseMessaging in Frameworks */,
+				FF6645C52B67A53C00F039E7 /* FirebaseAnalytics in Frameworks */,
 				FF6645B32B6794DC00F039E7 /* SwiftyJSON in Frameworks */,
+				FF6645CD2B67A6D400F039E7 /* FSCalendar in Frameworks */,
+				FF6645D02B67A74000F039E7 /* iOSDropDown in Frameworks */,
 				669E305B2B3358E100003062 /* Alamofire in Frameworks */,
+				FF6645D32B67A75800F039E7 /* EzPopup in Frameworks */,
 				FF6645B02B67948900F039E7 /* SDWebImageMapKit in Frameworks */,
+				FF6645CA2B67A63E00F039E7 /* IQKeyboardManagerSwift in Frameworks */,
 				575F5902F79AF60E375B3630 /* Pods_NASDUBAI.framework in Frameworks */,
 				FF6645AE2B67948900F039E7 /* SDWebImage in Frameworks */,
 				FF44C8572B5ECC5C00E0C0E2 /* SwiftDate in Frameworks */,
@@ -1183,6 +1195,12 @@
 				FF6645AD2B67948900F039E7 /* SDWebImage */,
 				FF6645AF2B67948900F039E7 /* SDWebImageMapKit */,
 				FF6645B22B6794DC00F039E7 /* SwiftyJSON */,
+				FF6645C42B67A53C00F039E7 /* FirebaseAnalytics */,
+				FF6645C62B67A53C00F039E7 /* FirebaseMessaging */,
+				FF6645C92B67A63E00F039E7 /* IQKeyboardManagerSwift */,
+				FF6645CC2B67A6D400F039E7 /* FSCalendar */,
+				FF6645CF2B67A74000F039E7 /* iOSDropDown */,
+				FF6645D22B67A75800F039E7 /* EzPopup */,
 			);
 			productName = NASDUBAI;
 			productReference = BADA2EF62AF625F800C56025 /* NASDUBAI.app */;
@@ -1217,6 +1235,11 @@
 				FF44C8552B5ECC5C00E0C0E2 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				FF6645AC2B67948900F039E7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				FF6645B12B6794DC00F039E7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				FF6645C32B67A53C00F039E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FF6645C82B67A63E00F039E7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				FF6645CB2B67A6D400F039E7 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				FF6645CE2B67A74000F039E7 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
+				FF6645D12B67A75800F039E7 /* XCRemoteSwiftPackageReference "EzPopup" */,
 			);
 			productRefGroup = BADA2EF72AF625F800C56025 /* Products */;
 			projectDirPath = "";
@@ -1727,6 +1750,46 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		FF6645C32B67A53C00F039E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		FF6645C82B67A63E00F039E7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		FF6645CB2B67A6D400F039E7 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		FF6645CE2B67A74000F039E7 /* XCRemoteSwiftPackageReference "iOSDropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jriosdev/iOSDropDown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		FF6645D12B67A75800F039E7 /* XCRemoteSwiftPackageReference "EzPopup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huynguyencong/EzPopup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1754,6 +1817,36 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF6645B12B6794DC00F039E7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		FF6645C42B67A53C00F039E7 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645C32B67A53C00F039E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FF6645C62B67A53C00F039E7 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645C32B67A53C00F039E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		FF6645C92B67A63E00F039E7 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645C82B67A63E00F039E7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		FF6645CC2B67A6D400F039E7 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645CB2B67A6D400F039E7 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		FF6645CF2B67A74000F039E7 /* iOSDropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645CE2B67A74000F039E7 /* XCRemoteSwiftPackageReference "iOSDropDown" */;
+			productName = iOSDropDown;
+		};
+		FF6645D22B67A75800F039E7 /* EzPopup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645D12B67A75800F039E7 /* XCRemoteSwiftPackageReference "EzPopup" */;
+			productName = EzPopup;
 		};
 /* End XCSwiftPackageProductDependency section */
 
