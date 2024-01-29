@@ -130,6 +130,9 @@
 		FF5010682B60305E00055495 /* CanteenPaymentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF50105C2B60305D00055495 /* CanteenPaymentVC.xib */; };
 		FF5010692B60305E00055495 /* CanteenPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50105D2B60305E00055495 /* CanteenPaymentVC.swift */; };
 		FF50106E2B60314600055495 /* PaymentOrderingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50106D2B60314600055495 /* PaymentOrderingVC.swift */; };
+		FF6645AE2B67948900F039E7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645AD2B67948900F039E7 /* SDWebImage */; };
+		FF6645B02B67948900F039E7 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645AF2B67948900F039E7 /* SDWebImageMapKit */; };
+		FF6645B32B6794DC00F039E7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645B22B6794DC00F039E7 /* SwiftyJSON */; };
 		FF89A0172B5F984400E78538 /* ContactUsFstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0152B5F984400E78538 /* ContactUsFstCell.swift */; };
 		FF89A0182B5F984400E78538 /* ContactUsSndCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0162B5F984400E78538 /* ContactUsSndCell.swift */; };
 		FF89A01A2B5F9B0400E78538 /* RevealVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0192B5F9B0400E78538 /* RevealVC+Extension.swift */; };
@@ -395,8 +398,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6645B32B6794DC00F039E7 /* SwiftyJSON in Frameworks */,
 				669E305B2B3358E100003062 /* Alamofire in Frameworks */,
+				FF6645B02B67948900F039E7 /* SDWebImageMapKit in Frameworks */,
 				575F5902F79AF60E375B3630 /* Pods_NASDUBAI.framework in Frameworks */,
+				FF6645AE2B67948900F039E7 /* SDWebImage in Frameworks */,
 				FF44C8572B5ECC5C00E0C0E2 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1174,6 +1180,9 @@
 			packageProductDependencies = (
 				669E305A2B3358E100003062 /* Alamofire */,
 				FF44C8562B5ECC5C00E0C0E2 /* SwiftDate */,
+				FF6645AD2B67948900F039E7 /* SDWebImage */,
+				FF6645AF2B67948900F039E7 /* SDWebImageMapKit */,
+				FF6645B22B6794DC00F039E7 /* SwiftyJSON */,
 			);
 			productName = NASDUBAI;
 			productReference = BADA2EF62AF625F800C56025 /* NASDUBAI.app */;
@@ -1206,6 +1215,8 @@
 			packageReferences = (
 				669E30592B3358E100003062 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				FF44C8552B5ECC5C00E0C0E2 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				FF6645AC2B67948900F039E7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				FF6645B12B6794DC00F039E7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = BADA2EF72AF625F800C56025 /* Products */;
 			projectDirPath = "";
@@ -1617,7 +1628,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1646,7 +1657,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1700,6 +1711,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		FF6645AC2B67948900F039E7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FF6645B12B6794DC00F039E7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1712,6 +1739,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF44C8552B5ECC5C00E0C0E2 /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
+		};
+		FF6645AD2B67948900F039E7 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645AC2B67948900F039E7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		FF6645AF2B67948900F039E7 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645AC2B67948900F039E7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		FF6645B22B6794DC00F039E7 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645B12B6794DC00F039E7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 

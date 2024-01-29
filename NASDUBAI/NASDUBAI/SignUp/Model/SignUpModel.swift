@@ -18,14 +18,14 @@ struct SignUpModel {
 
         if Validation.isValidEmail(email) {
             ApiServices().callSignupAPI(email: email) { completed in
-                if completed.status == 100 {
-                    DefaultsWrapper().setUserCode(completed.userCode ?? "")
-                    DefaultsWrapper().setAccessToken(completed.token ?? "")
+                if completed.responsecode == "100" {
+//                    DefaultsWrapper().setUserCode(completed.userCode ?? "")
+//                    DefaultsWrapper().setAccessToken(completed.token ?? "")
                     completion(true, "Successfully registered. Please check your email for further details.")
-                } else if completed.status == 132 {
+                } else if completed.responsecode == "132" {
 //                    alertMessage.value = "Invalid username or password"
                     completion(false, "Invalid username or password")
-                } else if completed.status == 121 {
+                } else if completed.responsecode == "121" {
 //                    alertMessage.value = "The e-mail has already registered."
                     completion(false, "The e-mail has already registered.")
                 }

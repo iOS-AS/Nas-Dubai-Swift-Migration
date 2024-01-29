@@ -206,7 +206,7 @@ extension PTAMeetingVC: StudentDelegate {
         stdName = data.name ?? ""
         if let photo = data.photo {
             if photo != "" {
-                SDWebImageManager.shared().loadImage(
+                SDWebImageManager.shared.loadImage(
                     with: URL(string: photo),
                     options: .highPriority,
                     progress: nil) { [self] (image, data, error, cacheType, isFinished, imageUrl) in
@@ -236,7 +236,7 @@ extension PTAMeetingVC: StaffDelegate {
 
         if let photo = data.imageURL {
             if photo != "" {
-                SDWebImageManager.shared().loadImage(
+                SDWebImageManager.shared.loadImage(
                     with: URL(string: photo),
                     options: .highPriority,
                     progress: nil) { [self] (image, data, error, cacheType, isFinished, imageUrl) in

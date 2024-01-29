@@ -27,16 +27,16 @@ class LoginModel {
         if Validation.isValidEmail(email) {
             ApiServices().callLoginAPI(email: email, password: password) { completed in
                 print(completed)
-                if completed.status == 100 {
-                    DefaultsWrapper().setUserCode(completed.userCode ?? "")
-                    DefaultsWrapper().setAccessToken(completed.token ?? "")
-                    DefaultsWrapper().setUserID(completed.responseArray?.userid ?? "")
+                if completed.responsecode == "200" {
+//                    DefaultsWrapper().setUserCode(completed.userCode ?? "")
+                    DefaultsWrapper().setAccessToken(completed.responseArray?.token ?? "")
+                    //DefaultsWrapper().setUserID(completed.responseArray?.userid ?? "")
                     DefaultsWrapper().setLoginStatus(true)
                     completion(true, "")
-                } else if completed.status == 132 {
+                } else if completed.responsecode == "132" {
 //                    alertMessage.value = "Invalid username or password"
                     completion(false, "Invalid username or password")
-                } else if completed.status == 111 {
+                } else if completed.responsecode == "111" {
 //                    alertMessage.value = "No students available."
                     completion(false, "No students available.")
                 }
@@ -54,21 +54,19 @@ class LoginModel {
 
 
 struct Login: Codable {
-    var status: Int?
-    var userCode: String?
+    var responsecode: String?
     var responseArray: ResponseArray?
-    var token: String?
 
     enum CodingKeys: String, CodingKey {
-        case status
-        case userCode = "user_code"
-        case responseArray, token
+        case responsecode
+        case responseArray
     }
 }
 
 // MARK: - ResponseArray
 struct ResponseArray: Codable {
-    var userid: String?
+    var token: String?
+   
 }
 
 

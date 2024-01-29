@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import EzPopup
+//import EzPopup
 
 let SCREEN_WIDTH = UIScreen.main.bounds.width
 var alertMessage: Observable<String> = Observable("")
@@ -191,12 +191,14 @@ extension UIViewController {
         }
     }
     
-    @objc func pushToHome() {
-        
-        let vc = UIStoryboard.init(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
-        self.navigationController?.pushViewController(vc!, animated: true)
-    }
     
+    func pushToHome(updateUserDetails: Bool = false) {
+        currentVC = "Home"
+        let storyboardMain = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        let vc = storyboardMain.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+       // vc.updateUserDetails = updateUserDetails
+        navigationController?.pushViewController(vc, animated: !updateUserDetails)
+    }
     func presentSingleBtnAlert<T: UIViewController>(_ parent: T? = nil, message: String) {
         let storyboardMain = UIStoryboard(name: "SingleButtonAlertVC", bundle: nil)
         let vc = storyboardMain.instantiateViewController(withIdentifier: "SingleButtonAlertVC") as! SingleButtonAlertVC

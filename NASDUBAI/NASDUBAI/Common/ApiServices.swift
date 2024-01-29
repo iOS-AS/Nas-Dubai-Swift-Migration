@@ -14,7 +14,7 @@ import ObjectMapper
 
 
 struct BasicModel: Codable {
-    var status: Int
+    var responsecode: String
 }
 
 
@@ -187,6 +187,37 @@ enum APIError: Error {
         timer?.invalidate()
         timer = nil
     }
+    func registerApp() {
+        if let token = Messaging.messaging().fcmToken {
+            print("token   \(token)")
+            DefaultsWrapper().setFCM(token)
+        }
+        let url = BASE_URL + "deviceregistration"
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let parameters: Parameters = ["devicetype": 1,
+                                      "app_version": appVersion ?? "", "deviceid": UUID().uuidString, "fcm_id": DefaultsWrapper().getFCM()]
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            //UIApplication.topMostViewController?.view.stopLoader()
+            print("Register App \(JSON(response.data ?? Data()))")
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(BasicModel.self, from: response.data!)
+                   /// getStatusMessage(status: res.responsecode ?? "")
+                    if res.responsecode == "130" || res.responsecode == "101" || res.responsecode == "102" || res.responsecode == "103" {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+        }
+    }
     
     
     // SignUp
@@ -207,11 +238,11 @@ enum APIError: Error {
                 let decoder = JSONDecoder()
                 do {
                     let res = try decoder.decode(Login.self, from: response.data!)
-                    performOperation(status: res.status!)
-                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                   // performOperation(status: res.status!)
+                    if res.responsecode == "130" || res.responsecode == "101" || res.responsecode == "102" || res.responsecode == "103" {
                         print("Function: \(#function), line: \(#line)")
                     }
-                    if res.status == 100 || res.status == 121{
+                    if res.responsecode == "100" || res.responsecode == "121"{
                         DispatchQueue.main.async {
                             print("Function: \(#function), line: \(#line)")
                             completion(res)
@@ -510,12 +541,15 @@ enum APIError: Error {
             tokenValue = "ahsgdjkasgdkghajksdhkashdkjhk"
         }
         #endif
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let deviceName = UIDevice().getDeviceName()
         let url = BASE_URL + "login"
         let parameters: Parameters = ["email": email,
                                       "password": password,
-                                      "device_type": 1,
-                                      "device_identifier": UUID().uuidString,
-                                      "device_id": tokenValue]
+                                      "devicetype": "1",
+                                      "device_name":deviceName,
+                                      "deviceid": tokenValue,"app_version":appVersion]
+                
         print(parameters)
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { [self] (response) in
             DispatchQueue.main.async {
@@ -527,12 +561,12 @@ enum APIError: Error {
                 let decoder = JSONDecoder()
                 do {
                     let res = try decoder.decode(Login.self, from: response.data!)
-                    performOperation(status: res.status!)
-                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                   // performOperation(status: res.status!)
+                    if res.responsecode == "130" || res.responsecode == "101" || res.responsecode == "102" || res.responsecode == "103" {
                         print("Function: \(#function), line: \(#line)")
                         UIApplication.topMostViewController?.view.stopActivityIndicator()
                     }
-                    if res.status == 100 || res.status == 111 {
+                    if res.responsecode == "100" || res.responsecode == "111" {
                         DispatchQueue.main.async {
                             print("Function: \(#function), line: \(#line)")
                             completion(res)
@@ -540,10 +574,12 @@ enum APIError: Error {
                         }
                     }
                 } catch {
+                    debugPrint(error)
                     print(error.localizedDescription)
                     UIApplication.topMostViewController?.view.stopActivityIndicator()
                 }
             case .failure(_):
+               
                 print("error getting data")
                 UIApplication.topMostViewController?.view.stopActivityIndicator()
             }

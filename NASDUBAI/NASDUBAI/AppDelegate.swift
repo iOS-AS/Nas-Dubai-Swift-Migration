@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         sleep(UInt32(1.5))
-        self.jumpTo()
+       setRootVC()
         return true
     }
 
@@ -45,6 +45,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootVC = mainVC.instantiateViewController(withIdentifier: "LoginVC")
         self.window?.rootViewController = rootVC
         self.window?.makeKeyAndVisible()
+    }
+    fileprivate func setRootVC() {
+
+        if DefaultsWrapper().getLoginStatus() {
+            ApiServices().registerApp()
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            let nav = UINavigationController(rootViewController: initialViewController)
+            nav.isNavigationBarHidden = true
+            nav.isToolbarHidden = true
+            self.window?.rootViewController = nav
+            self.window?.makeKeyAndVisible()
+        } else {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            let nav = UINavigationController(rootViewController: initialViewController)
+            nav.isNavigationBarHidden = true
+            nav.isToolbarHidden = true
+            self.window?.rootViewController = nav
+            self.window?.makeKeyAndVisible()
+        }
     }
 
     // MARK: - Core Data stack

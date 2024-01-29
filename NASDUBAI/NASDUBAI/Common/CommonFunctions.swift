@@ -13,7 +13,7 @@ import SwiftyJSON
 struct CF {
     static func setStudentImage(_ url: String?, completion: @escaping (UIImage) -> ()) -> UIImage{
         if url != "" {
-            SDWebImageManager.shared().loadImage(with: URL(string: url ?? ""), options: .highPriority, progress: nil) { (image, data, err, type, status, url) in
+            SDWebImageManager.shared.loadImage(with: URL(string: url ?? ""), options: .highPriority, progress: nil) { (image, data, err, type, status, url) in
                 if err == nil {
                     if let img = image {
                         completion(img)
