@@ -6,15 +6,8 @@ target 'NASDUBAI' do
   use_frameworks!
 
   # Pods for NASDUBAI
-   pod 'SwiftyJSON', '~> 4.0'
-   pod 'IQKeyboardManagerSwift'
-   pod 'SDWebImage', '~> 4.0'
-   pod 'EzPopup'
-   pod 'Firebase/Analytics'
-   pod 'Firebase/Messaging'
-   pod 'FSCalendar'
-   pod 'iOSDropDown', '~> 0.4.0'
+   
    pod 'NISdk', '~> 5.0.1'
-   pod 'ObjectMapper', '~> 3.5'
+  
 
 end
