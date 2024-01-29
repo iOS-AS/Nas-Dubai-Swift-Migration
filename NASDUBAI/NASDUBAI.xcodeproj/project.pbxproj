@@ -139,6 +139,7 @@
 		FF6645CD2B67A6D400F039E7 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645CC2B67A6D400F039E7 /* FSCalendar */; };
 		FF6645D02B67A74000F039E7 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645CF2B67A74000F039E7 /* iOSDropDown */; };
 		FF6645D32B67A75800F039E7 /* EzPopup in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645D22B67A75800F039E7 /* EzPopup */; };
+		FF6645D62B67C25500F039E7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = FF6645D52B67C25500F039E7 /* ObjectMapper */; };
 		FF89A0172B5F984400E78538 /* ContactUsFstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0152B5F984400E78538 /* ContactUsFstCell.swift */; };
 		FF89A0182B5F984400E78538 /* ContactUsSndCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0162B5F984400E78538 /* ContactUsSndCell.swift */; };
 		FF89A01A2B5F9B0400E78538 /* RevealVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89A0192B5F9B0400E78538 /* RevealVC+Extension.swift */; };
@@ -406,6 +407,7 @@
 			files = (
 				FF6645C72B67A53C00F039E7 /* FirebaseMessaging in Frameworks */,
 				FF6645C52B67A53C00F039E7 /* FirebaseAnalytics in Frameworks */,
+				FF6645D62B67C25500F039E7 /* ObjectMapper in Frameworks */,
 				FF6645B32B6794DC00F039E7 /* SwiftyJSON in Frameworks */,
 				FF6645CD2B67A6D400F039E7 /* FSCalendar in Frameworks */,
 				FF6645D02B67A74000F039E7 /* iOSDropDown in Frameworks */,
@@ -1201,6 +1203,7 @@
 				FF6645CC2B67A6D400F039E7 /* FSCalendar */,
 				FF6645CF2B67A74000F039E7 /* iOSDropDown */,
 				FF6645D22B67A75800F039E7 /* EzPopup */,
+				FF6645D52B67C25500F039E7 /* ObjectMapper */,
 			);
 			productName = NASDUBAI;
 			productReference = BADA2EF62AF625F800C56025 /* NASDUBAI.app */;
@@ -1240,6 +1243,7 @@
 				FF6645CB2B67A6D400F039E7 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				FF6645CE2B67A74000F039E7 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
 				FF6645D12B67A75800F039E7 /* XCRemoteSwiftPackageReference "EzPopup" */,
+				FF6645D42B67C25500F039E7 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 			);
 			productRefGroup = BADA2EF72AF625F800C56025 /* Products */;
 			projectDirPath = "";
@@ -1790,6 +1794,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		FF6645D42B67C25500F039E7 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Hearst-DD/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1847,6 +1859,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF6645D12B67A75800F039E7 /* XCRemoteSwiftPackageReference "EzPopup" */;
 			productName = EzPopup;
+		};
+		FF6645D52B67C25500F039E7 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6645D42B67C25500F039E7 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 
