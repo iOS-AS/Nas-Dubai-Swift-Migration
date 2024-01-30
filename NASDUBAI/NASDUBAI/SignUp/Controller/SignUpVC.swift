@@ -48,7 +48,8 @@ class SignUpVC: UIViewController {
 
             view.isUserInteractionEnabled = true
 
-            if completed {
+            if completed
+            {
                 view.zoomOut(BgBtn ) {
                     self.dismiss(animated: false) {
                         alertMessage.value = message

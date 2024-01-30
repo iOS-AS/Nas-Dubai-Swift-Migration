@@ -225,8 +225,26 @@ enum APIError: Error {
         if !checkReachability() {
             return
         }
+        if let token = Messaging.messaging().fcmToken {
+            print("token   \(token)")
+            DefaultsWrapper().setFCM(token)
+        }
+        var tokenValue = DefaultsWrapper().getFCM()
+        #if DEBUG
+        ///Token is the FCM token, used for push notification.
+        ///For simulators sometimes we won't get token value so setting a dummy value.
+        if tokenValue == "" {
+            tokenValue = "ahsgdjkasgdkghajksdhkashdkjhk"
+        }
+        #endif
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let deviceName = UIDevice().getDeviceName()
         let url = BASE_URL + "parent_signup"
-        let parameters: Parameters = ["email": email]
+    //    let parameters: Parameters = ["email": email]
+        let parameters: Parameters = ["email": email,
+                                      "devicetype": "1",
+                                      "device_name":deviceName,
+                                      "deviceid": tokenValue,]
         UIApplication.topMostViewController?.view.startActivityIndicator()
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { [self] (response) in
             DispatchQueue.main.async {
@@ -278,11 +296,11 @@ enum APIError: Error {
                 let decoder = JSONDecoder()
                 do {
                     let res = try decoder.decode(ForgotPassword.self, from: response.data!)
-                    performOperation(status: res.status)
-                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                   // performOperation(status: res.responsecode)
+                    if res.responsecode == "130" || res.responsecode == "101" || res.responsecode == "102" || res.responsecode == "103" {
                         print("Function: \(#function), line: \(#line)")
                     }
-                    if res.status == 100 {
+                    if res.responsecode == "100" {
                         DispatchQueue.main.async {
                             print("Function: \(#function), line: \(#line)")
                             completion(res)

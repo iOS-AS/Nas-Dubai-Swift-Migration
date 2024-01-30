@@ -24,36 +24,69 @@ class ForgotPasswordVC: UIViewController {
         view.zoomIn(bgBtn) {}
     }
 
-    @IBAction func cancelPressed(_ sender: UIButton) {
-        view.zoomOut(bgBtn) {
-            self.dismiss(animated: false, completion: nil)
-        }
-
-    }
-    @IBAction func submitPressed(_ sender: UIButton) {
-
-        view.isUserInteractionEnabled = false
-
-        forgotPwModel.callForgotPwApi(email: emailIDTxt.text ?? "") { [self] (completed, message)  in
-
-            view.isUserInteractionEnabled = true
-
-            if completed {
+    @IBAction func cancelBtn(_ sender: UIButton) {
+        
                 view.zoomOut(bgBtn) {
-                    self.dismiss(animated: false) {
+                    self.dismiss(animated: false, completion: nil)
+                }
+    }
+    
+    @IBAction func submitBtn(_ sender: UIButton) {
+        
+                view.isUserInteractionEnabled = false
+        
+                forgotPwModel.callForgotPwApi(email: emailIDTxt.text ?? "") { [self] (completed, message)  in
+        
+                    view.isUserInteractionEnabled = true
+        
+                    if completed {
+                        view.zoomOut(bgBtn) {
+                            self.dismiss(animated: false) {
+                                alertMessage.value = message
+                            }
+                        }
+                    } else {
                         alertMessage.value = message
                     }
+
+                    view.zoomOut(bgBtn) {
+                        self.dismiss(animated: false) {
+                            alertMessage.value = "Password successfully sent to your email. Please check."
+                        }
+                    }
                 }
-            } else {
-                alertMessage.value = message
-            }
+    }
+    
+    //    @IBAction func cancelPressed(_ sender: UIButton) {
+//        view.zoomOut(bgBtn) {
+//            self.dismiss(animated: false, completion: nil)
+//        }
+//
+//    }
+//    @IBAction func submitPressed(_ sender: UIButton) {
+//
+//        view.isUserInteractionEnabled = false
+//
+//        forgotPwModel.callForgotPwApi(email: emailIDTxt.text ?? "") { [self] (completed, message)  in
+//
+//            view.isUserInteractionEnabled = true
+//
+//            if completed {
+//                view.zoomOut(bgBtn) {
+//                    self.dismiss(animated: false) {
+//                        alertMessage.value = message
+//                    }
+//                }
+//            } else {
+//                alertMessage.value = message
+//            }
 
 //            view.zoomOut(bgBtn) {
 //                self.dismiss(animated: false) {
 //                    alertMessage.value = "Password successfully sent to your email. Please check."
 //                }
 //            }
-        }
-    }
+//        }
+//    }
 
 }

@@ -18,7 +18,7 @@ struct ForgotPasswordModel {
 
         if Validation.isValidEmail(email) {
             ApiServices().callForgotPwAPI(email: email) { completed in
-                if completed.status == 132 {
+                if completed.responsecode == "132" {
 //                    alertMessage.value = "Invalid username or password"
                     completion(false, "Invalid username or password")
                 } else {
@@ -35,6 +35,6 @@ struct ForgotPasswordModel {
 
 
 struct ForgotPassword: Codable {
-    let status: Int
+    let responsecode: String
     let pass: String?
 }
