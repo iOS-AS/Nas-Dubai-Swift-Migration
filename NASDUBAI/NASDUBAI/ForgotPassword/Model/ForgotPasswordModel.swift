@@ -18,12 +18,12 @@ struct ForgotPasswordModel {
 
         if Validation.isValidEmail(email) {
             ApiServices().callForgotPwAPI(email: email) { completed in
-                if completed.responsecode == "132" {
-//                    alertMessage.value = "Invalid username or password"
-                    completion(false, "Invalid username or password")
-                } else {
-                    completion(true, "Password successfully sent to your email. Please check.")
-                }
+//                if completed.responsecode == "200" {
+////                    alertMessage.value = "Invalid username or password"
+//                    completion(false, "Invalid username or password")
+//                } else {
+//                    completion(true, "Password successfully sent to your email. Please check.")
+//                }
             }
         } else {
             completion(false, "Please enter the valid Email")

@@ -349,7 +349,7 @@ enum APIError: Error {
             return
         }
         let url = BASE_URL + "forgotpassword"
-        let parameters: Parameters = ["email": email]
+        let parameters: Parameters = ["email": email,"deviceid":UUID().uuidString,"devicetype": "1"]
         UIApplication.topMostViewController?.view.startActivityIndicator()
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { [self] (response) in
             DispatchQueue.main.async {

@@ -229,7 +229,7 @@ extension UIViewController {
     }
 //
     func showForgetPassword() {
-        let storyboardMain = UIStoryboard(name: "ForgotPasswordVC", bundle: nil)
+        let storyboardMain = UIStoryboard(name: "ForgetPasswordStoryboard", bundle: nil)
         let vc = storyboardMain.instantiateViewController(withIdentifier: "ForgotPasswordVC") as! ForgotPasswordVC
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: false)

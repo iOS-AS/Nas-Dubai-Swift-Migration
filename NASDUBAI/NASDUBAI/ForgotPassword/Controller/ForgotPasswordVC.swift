@@ -49,11 +49,11 @@ class ForgotPasswordVC: UIViewController {
                         alertMessage.value = message
                     }
 
-                    view.zoomOut(bgBtn) {
-                        self.dismiss(animated: false) {
-                            alertMessage.value = "Password successfully sent to your email. Please check."
-                        }
-                    }
+//                    view.zoomOut(bgBtn) {
+//                        self.dismiss(animated: false) {
+//                            alertMessage.value = "Password successfully sent to your email. Please check."
+//                        }
+//                    }
                 }
     }
     
