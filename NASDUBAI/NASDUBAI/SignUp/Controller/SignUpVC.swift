@@ -25,13 +25,20 @@ class SignUpVC: UIViewController {
             super.viewWillAppear(animated)
         view.zoomIn(BgBtn) {}
     }
-
-    @IBAction func MayBeLaterBtn(_ sender: UIButton) {
-        view.zoomOut(BgBtn) {
-            self.dismiss(animated: false, completion: nil)
-        }
-    }
+//
+//    @IBAction func MayBeLaterBtn(_ sender: UIButton) {
+//        view.zoomOut(BgBtn) {
+//            self.dismiss(animated: false, completion: nil)
+//        }
+//    }
+ 
     
+    @IBAction func MayBeLater(_ sender: UIButton) {
+        
+                view.zoomOut(BgBtn) {
+                    self.dismiss(animated: false, completion: nil)
+                }
+    }
     
     @IBAction func SignUpBtn(_ sender: UIButton) {
         
