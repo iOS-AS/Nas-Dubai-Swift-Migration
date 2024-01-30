@@ -41,7 +41,7 @@ class RevealViewCV: UIViewController {
         super.viewDidLoad()
 
         let gesture = UILongPressGestureRecognizer(target: self, action: #selector(self.longPressAction(_:)))
-        tableView.addGestureRecognizer(gesture)
+       // tableView.addGestureRecognizer(gesture)
     }
     @IBAction func bgBtnPressed(_ sender: UIButton) {
         hideRevealBool.value = true

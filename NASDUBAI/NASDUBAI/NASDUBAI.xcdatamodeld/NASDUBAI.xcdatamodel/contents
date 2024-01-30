@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="22G74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="GuestTiles" representedClassName="GuestTiles" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="StudentList" representedClassName="StudentList" syncable="YES" codeGenerationType="class">
-        <attribute name="confirmed" optional="YES" attributeType="String"/>
+        <attribute name="confirmed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="house" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="photo" optional="YES" attributeType="String"/>
         <attribute name="sclass" optional="YES" attributeType="String"/>
         <attribute name="section" optional="YES" attributeType="String"/>
-        <attribute name="unique_id" optional="YES" attributeType="String"/>
+        <attribute name="wallet" optional="YES" attributeType="String"/>
     </entity>
     <entity name="UserTiles" representedClassName="UserTiles" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>

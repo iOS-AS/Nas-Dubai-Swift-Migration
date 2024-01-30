@@ -13,7 +13,7 @@ var alertMessage: Observable<String> = Observable("")
 extension UIViewController {
     
     func addRevealToSelf<T: UIViewController>(_ parent: T? = nil) {
-        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let mainStoryBoard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         let controller:RevealViewCV = mainStoryBoard.instantiateViewController(withIdentifier: "RevealViewCV") as! RevealViewCV
         controller.delegate = parent as? RevealDelegate
         let width = UIScreen.main.bounds.width
@@ -196,7 +196,7 @@ extension UIViewController {
         currentVC = "Home"
         let storyboardMain = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         let vc = storyboardMain.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-       // vc.updateUserDetails = updateUserDetails
+        vc.updateUserDetails = updateUserDetails
         navigationController?.pushViewController(vc, animated: !updateUserDetails)
     }
     func presentSingleBtnAlert<T: UIViewController>(_ parent: T? = nil, message: String) {

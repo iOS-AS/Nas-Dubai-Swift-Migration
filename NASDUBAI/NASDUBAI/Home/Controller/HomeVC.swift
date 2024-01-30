@@ -24,26 +24,8 @@ class HomeVC: UIViewController {
     @IBOutlet var tileViews: [UIView]!
     @IBOutlet var tileBtns: [UIButton]!
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var scrollImageView: UIImageView!
-    override func viewDidAppear(_ animated: Bool) {
-
-    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        setup()
-    }
-    
-    func showAlert() {
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let nextVc = storyBoard.instantiateViewController(withIdentifier: "Advertisement")as! Advertisement
-//        nextVc.modalTransitionStyle = .crossDissolve
-//        nextVc.modalPresentationStyle = .overFullScreen
-//        nextVc.closeButtonCallBack = { [weak self] in
-//            self?.makeNetworkCallForHomeSurveys()
-//        }
-//        self.present(nextVc, animated: true)
-    }
     let imgArray = ["otherModulesSampleBanner", "otherModulesSampleBanner"]
     var index = 0
     let draggableView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
@@ -73,24 +55,25 @@ class HomeVC: UIViewController {
     private var revealSideMenuOnTop: Bool = true
 
     var gestureEnabled: Bool = true
-
+    var updateUserDetails = false {
+        didSet {
+            if updateUserDetails {
+//                showDataCollection = true
+//                getSettingsUserDetails()
+            }
+        }
+    }
 //    var homeSurveyDataArray: [DataArray]  = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        setup()
     }
-    */
+
+    
 
 }
 extension HomeVC{
@@ -106,7 +89,7 @@ extension HomeVC{
             banner = completed
             if let notice = banner?.responseArray?.notice, notice != "" {
                 if !HomeVC.alertShown {
-                    showAlert()
+                    showAlerts()
                     HomeVC.alertShown = true
                 }
             }

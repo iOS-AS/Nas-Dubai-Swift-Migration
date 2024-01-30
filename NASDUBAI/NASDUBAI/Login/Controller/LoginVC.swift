@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        showAlerts()
         // Do any additional setup after loading the view.
     }
     
@@ -48,7 +48,9 @@ class LoginVC: UIViewController {
             view.isUserInteractionEnabled = true
             if completed {
                 DefaultsWrapper().setUserEmailID(Username.text ?? "")
-                pushToHome()
+                loginModel.getStudentList {
+                    self.pushToHome()
+                }
             } else {
                 alertMessage.value = message
             }

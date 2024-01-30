@@ -57,6 +57,71 @@ enum APIError: Error {
     }
     var statValue : Int?
     //let reEnrollmnt = ReEnrollmentTableView()
+    func getStatusMessage(status: String) -> String {
+        switch status {
+        case "100":
+            return "Success"
+        case "101":
+            return "Some error occured"
+        case "102":
+            return "Internal server error"
+        case "103":
+            return "validation error"
+        case "110":
+            return "Invalid username or password"
+        case "113":
+            return "Verification code not match"
+        case "114":
+            return "User not found in our database"
+        case "116":
+            return "Token expired"
+        case "123":
+            return "Invalid file access"
+        case "124":
+            return "Route Not Found"
+        case "125":
+            return "Student not found in our database"
+        case "130":
+            return "DecryptException Error"
+        case "131":
+            return "URL or Method Not found"
+        case "132":
+            return "No records found"
+        case "133":
+            return "Restricted access"
+        case "134":
+            return "Method Not Allowed"
+        case "104":
+            return "field required"
+        case "105":
+            return "exists"
+        case "106":
+            return "not a valid email"
+        case "107":
+            return "not a valid number"
+        case "108":
+            return "password and confirm password not same"
+        case "109":
+            return "Old passord doesn't match!"
+        case "111":
+            return "No student are linking with that users"
+        case "115":
+            return "Invalid file type"
+        case "117":
+            return "not a valid date"
+        case "120":
+            return "Please enter a valid email address."
+        case "121":
+            return "The e-mail has already registered."
+        case "122":
+            return "Not a valid JSON"
+        case "126":
+            return "File size too large( maxsize:2Mb )"
+        default:
+            break
+        }
+        return ""
+    }
     func performOperation(status: Int) {
         UIApplication.topMostViewController?.view.stopActivityIndicator()
         switch status {
@@ -568,7 +633,7 @@ enum APIError: Error {
                                       "device_name":deviceName,
                                       "deviceid": tokenValue,"app_version":appVersion]
                 
-        print(parameters)
+       // print(parameters)
         AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { [self] (response) in
             DispatchQueue.main.async {
                 UIApplication.topMostViewController?.view.stopActivityIndicator()
@@ -580,11 +645,11 @@ enum APIError: Error {
                 do {
                     let res = try decoder.decode(Login.self, from: response.data!)
                    // performOperation(status: res.status!)
-                    if res.responsecode == "130" || res.responsecode == "101" || res.responsecode == "102" || res.responsecode == "103" {
+                    if res.response?.statuscode == "305" || res.response?.statuscode == "101" || res.response?.statuscode == "102" || res.response?.statuscode == "103" {
                         print("Function: \(#function), line: \(#line)")
                         UIApplication.topMostViewController?.view.stopActivityIndicator()
                     }
-                    if res.responsecode == "100" || res.responsecode == "111" {
+                    if res.response?.statuscode == "303" {
                         DispatchQueue.main.async {
                             print("Function: \(#function), line: \(#line)")
                             completion(res)
@@ -592,7 +657,6 @@ enum APIError: Error {
                         }
                     }
                 } catch {
-                    debugPrint(error)
                     print(error.localizedDescription)
                     UIApplication.topMostViewController?.view.stopActivityIndicator()
                 }
@@ -1363,7 +1427,7 @@ enum APIError: Error {
                 let decoder = JSONDecoder()
                 do {
                     let res = try decoder.decode(Banner.self, from: response.data!)
-                    performOperation(status: res.status!)
+                    performOperation(status: res.status ?? 0)
                     if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
                         print("Function: \(#function), line: \(#line)")
                     }
@@ -1388,7 +1452,7 @@ enum APIError: Error {
     
     func getStudentList(completion: @escaping (Student) -> ()) {
         
-        let url = BASE_URL + "student/list"
+        let url = BASE_URL + "studentlist"
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let parameters: Parameters = ["devicetype": 1,
                                       "app_version": appVersion ?? ""]
@@ -1398,36 +1462,34 @@ enum APIError: Error {
             DispatchQueue.main.async {
                 UIApplication.topMostViewController?.view.stopActivityIndicator()
             }
-            print(JSON(response.data ?? Data()))
+         //   print(JSON(response.data ?? Data()))
             switch response.result {
             case .success(_):
                 let decoder = JSONDecoder()
                 do {
                     let res = try decoder.decode(Student.self, from: response.data!)
-                    performOperation(status: res.status!)
-                    if res.status == 116 {
-                        getAccessToken { [weak self] in
-                            self?.getStudentList { (completed) in
-                                
-                            }
-                        }
-                    } else if res.status != 101 || res.status != 102 {
+                   
+                    getStatusMessage(status: res.responsecode ?? "")
+                    if res.responsecode == "200"{
                         DispatchQueue.main.async {
                             print("Function: \(#function), line: \(#line)")
                             completion(res)
                             UIApplication.topMostViewController?.view.stopActivityIndicator()
                         }
                     }
-                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                    if res.responsecode == "130" || res.responsecode == "101" || res.responsecode == "102" || res.responsecode == "103" {
                         print("Function: \(#function), line: \(#line)")
+                        UIApplication.topMostViewController?.view.stopActivityIndicator()
                     }
                 } catch {
                     print(error.localizedDescription)
+                    UIApplication.topMostViewController?.view.stopActivityIndicator()
                 }
             case .failure(_):
                 print("error getting data")
+                UIApplication.topMostViewController?.view.stopActivityIndicator()
             }
-            
+
         }
     }
 

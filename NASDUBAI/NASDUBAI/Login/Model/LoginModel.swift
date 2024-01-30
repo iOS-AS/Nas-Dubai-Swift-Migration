@@ -28,10 +28,10 @@ class LoginModel {
             ApiServices().callLoginAPI(email: email, password: password) { completed in
                 print(completed)
                 if completed.responsecode == "200" {
-                    DefaultsWrapper().setAccessToken(completed.responseArray?.token ?? "")
+                    DefaultsWrapper().setAccessToken(completed.response?.responseArray?.token ?? "")
                     DefaultsWrapper().setLoginStatus(true)
                     completion(true, "")
-                } else if completed.responsecode == "132" {
+                } else if completed.response?.statuscode == "305" {
 //                    alertMessage.value = "Invalid username or password"
                     completion(false, "Invalid username or password")
                 } else if completed.responsecode == "111" {
@@ -66,8 +66,8 @@ class LoginModel {
         calledTime = calledTime + 1
         print("Called\(calledTime)")
         ApiServices().getStudentList { (completed) in
-            if completed.status == 100 {
-                if let studentArray = completed.responseArray?.studentList {
+            if completed.responsecode == "200" {
+                if let studentArray = completed.response?.data {
                     self.deleteRecords()
                     for i in studentArray {
                         let newStudent = StudentList(context: K.context)
@@ -77,8 +77,8 @@ class LoginModel {
                         newStudent.photo = i.photo
                         newStudent.sclass = i.studentListClass
                         newStudent.section = i.section
-                        newStudent.unique_id = i.unique_id
-                        //newStudent.confirmed = false
+                        newStudent.wallet = i.wallet
+                        newStudent.confirmed = false
                         do {
                             try K.context.save()
                         } catch {
@@ -94,16 +94,25 @@ class LoginModel {
 }
 
 
-
-
-
-struct Login: Codable {
+struct Login: Codable{
     var responsecode: String?
+    var response: LoginReponse?
+    enum CodingKeys: String, CodingKey {
+        case responsecode
+        case response
+    }
+}
+
+
+struct LoginReponse: Codable {
+    var response: String?
+    var statuscode: String?
     var responseArray: ResponseArray?
 
     enum CodingKeys: String, CodingKey {
-        case responsecode
+        case response
         case responseArray
+        case statuscode
     }
 }
 
@@ -118,30 +127,37 @@ struct ResponseArray: Codable {
 
 
 struct Student: Codable {
-    var responseArray: StudentArray?
-    var status: Int?
-}
-
-// MARK: - ResponseArray
-struct StudentArray: Codable {
-    var studentList: [SList]?
-
+    var responsecode: String?
+    var response: StudentReponse?
     enum CodingKeys: String, CodingKey {
-        case studentList = "student_list"
+        case responsecode
+        case response
     }
 }
+struct StudentReponse: Codable {
+    var response: String?
+    var statuscode: String?
+    var data: [SList]?
+
+    enum CodingKeys: String, CodingKey {
+        case response
+        case statuscode
+        case data
+    }
+}
+
 
 // MARK: - StudentList
 struct SList: Codable {
     var name, id, house: String?
-    var photo, unique_id: String?
+    var photo, wallet: String?
     var studentListClass, section: String?
     var confirmed = false
     enum CodingKeys: String, CodingKey {
         case name, id, house, photo
         case studentListClass = "class"
         case section
-        case unique_id = "unique_id"
+        case wallet = "wallet"
     }
 }
 

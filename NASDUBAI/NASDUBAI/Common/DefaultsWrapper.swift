@@ -34,11 +34,11 @@ struct DefaultsWrapper {
 
 
     func setAccessToken(_ token: String) {
-        defaults.set(token, forKey: "AccessToken")
+        defaults.set(token, forKey: "token")
     }
 
     func getAccessToken() -> String {
-        return defaults.string(forKey: "AccessToken") ?? ""
+        return defaults.string(forKey: "token") ?? ""
     }
 
     func setUserID(_ UserID: String) {
