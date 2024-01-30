@@ -44,6 +44,52 @@ class LoginModel {
             completion(false, "Please enter valid Email.")
         }
     }
+    
+    func deleteRecords() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "StudentList")
+        let result = try? K.context.fetch(fetchRequest)
+            let resultData = result as! [StudentList]
+            for object in resultData {
+                K.context.delete(object)
+            }
+            do {
+                try K.context.save()
+                print("saved!")
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+            } catch {
+
+            }
+    }
+
+    func getStudentList(completion: @escaping () -> ()) {
+        calledTime = calledTime + 1
+        print("Called\(calledTime)")
+        ApiServices().getStudentList { (completed) in
+            if completed.status == 100 {
+                if let studentArray = completed.responseArray?.studentList {
+                    self.deleteRecords()
+                    for i in studentArray {
+                        let newStudent = StudentList(context: K.context)
+                        newStudent.house = i.house
+                        newStudent.id = i.id
+                        newStudent.name = i.name
+                        newStudent.photo = i.photo
+                        newStudent.sclass = i.studentListClass
+                        newStudent.section = i.section
+                        newStudent.unique_id = i.unique_id
+                        newStudent.confirmed = false
+                        do {
+                            try K.context.save()
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                    }
+                    completion()
+                }
+            }
+        }
+    }
 
 }
 

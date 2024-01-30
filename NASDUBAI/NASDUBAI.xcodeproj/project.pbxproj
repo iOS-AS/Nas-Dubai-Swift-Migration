@@ -69,6 +69,8 @@
 		BADA2FA62AF638C400C56025 /* HardCodedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2FA52AF638C400C56025 /* HardCodedData.swift */; };
 		BADA2FA92AF63C3B00C56025 /* DummyClickStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA2FA82AF63C3B00C56025 /* DummyClickStoryBoard.storyboard */; };
 		BADA2FAC2AF63EE800C56025 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA2FAB2AF63EE800C56025 /* DummyViewController.swift */; };
+		BADCE9F02B68BFEA0011220B /* HomeVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCE9EF2B68BFEA0011220B /* HomeVC+Extension.swift */; };
+		BADCE9F22B68C6F40011220B /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCE9F12B68C6F40011220B /* HomeModel.swift */; };
 		BAE6C67E2B4BD5D10001E044 /* NotificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE6C67D2B4BD5D10001E044 /* NotificationStoryboard.storyboard */; };
 		BAE6C6802B4BD9C00001E044 /* NotificatonDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE6C67F2B4BD9C00001E044 /* NotificatonDetailStoryboard.storyboard */; };
 		BAE6C6862B4BDAE70001E044 /* ParentsEssentialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE6C6852B4BDAE70001E044 /* ParentsEssentialStoryboard.storyboard */; };
@@ -273,6 +275,8 @@
 		BADA2FA52AF638C400C56025 /* HardCodedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodedData.swift; sourceTree = "<group>"; };
 		BADA2FA82AF63C3B00C56025 /* DummyClickStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DummyClickStoryBoard.storyboard; sourceTree = "<group>"; };
 		BADA2FAB2AF63EE800C56025 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		BADCE9EF2B68BFEA0011220B /* HomeVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extension.swift"; sourceTree = "<group>"; };
+		BADCE9F12B68C6F40011220B /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		BAE6C67D2B4BD5D10001E044 /* NotificationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationStoryboard.storyboard; sourceTree = "<group>"; };
 		BAE6C67F2B4BD9C00001E044 /* NotificatonDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificatonDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		BAE6C6852B4BDAE70001E044 /* ParentsEssentialStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentsEssentialStoryboard.storyboard; sourceTree = "<group>"; };
@@ -528,6 +532,7 @@
 		BA8A4D962B3C1ACF0084E00F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BADCE9F12B68C6F40011220B /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -914,6 +919,7 @@
 				BA8D8DFF2B3ED2B10028C80E /* Zoom.swift */,
 				BAE9A46E2B3FD271009E58E9 /* UIApplication+Extension.swift */,
 				FF89A0192B5F9B0400E78538 /* RevealVC+Extension.swift */,
+				BADCE9EF2B68BFEA0011220B /* HomeVC+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1376,6 +1382,7 @@
 				FF44C8492B5E91E600E0C0E2 /* SingleButtonAlertVC.swift in Sources */,
 				FFA8813E2B60F22B000C4289 /* SelectedDates.swift in Sources */,
 				FFA881282B60CC51000C4289 /* PaymentBannerModel.swift in Sources */,
+				BADCE9F02B68BFEA0011220B /* HomeVC+Extension.swift in Sources */,
 				FFA881162B60CACB000C4289 /* BasketModel.swift in Sources */,
 				FFA8811B2B60CACB000C4289 /* FoodModel.swift in Sources */,
 				FFA8812A2B60CC57000C4289 /* CartListModel.swift in Sources */,
@@ -1444,6 +1451,7 @@
 				FF50104E2B5FD28500055495 /* APIResponseModels.swift in Sources */,
 				FF27AA882B5ED79C00AA04F8 /* CommonWebView.swift in Sources */,
 				BAA7030A2B59441800ED5B47 /* EarlyYearsComingUpVC.swift in Sources */,
+				BADCE9F22B68C6F40011220B /* HomeModel.swift in Sources */,
 				BA2442B92B58ECE6007B3862 /* PTAMReviewCell.swift in Sources */,
 				BADA2EFA2AF625F800C56025 /* AppDelegate.swift in Sources */,
 				BA24429B2B58E963007B3862 /* PTAMeetingVC.swift in Sources */,

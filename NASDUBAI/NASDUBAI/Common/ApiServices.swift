@@ -1352,4 +1352,83 @@ enum APIError: Error {
     }
     
     
+    func getHomeBanners(completion: @escaping (Banner) -> ()) {
+        
+        let url = BASE_URL + "banner_images"
+        AF.request(url, method: .post, encoding: JSONEncoding.default).responseJSON { [self] (response) in
+            UIApplication.topMostViewController?.view.stopActivityIndicator()
+            print("banner_images api response: \(JSON(response.data ?? Data()))")
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(Banner.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                    if res.status == 100 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                    UIApplication.topMostViewController?.view.stopActivityIndicator()
+                }
+            case .failure(_):
+                print("error getting data")
+                UIApplication.topMostViewController?.view.stopActivityIndicator()
+            }
+            
+        }
+    }
+    
+    func getStudentList(completion: @escaping (Student) -> ()) {
+        
+        let url = baseUrl + "student/list"
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let parameters: Parameters = ["devicetype": 1,
+                                      "app_version": appVersion ?? ""]
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in
+            DispatchQueue.main.async {
+                UIApplication.topMostViewController?.view.stopActivityIndicator()
+            }
+            print(JSON(response.data ?? Data()))
+            switch response.result {
+            case .success(_):
+                let decoder = JSONDecoder()
+                do {
+                    let res = try decoder.decode(Student.self, from: response.data!)
+                    performOperation(status: res.status!)
+                    if res.status == 116 {
+                        getAccessToken { [weak self] in
+                            self?.getStudentList { (completed) in
+                                
+                            }
+                        }
+                    } else if res.status != 101 || res.status != 102 {
+                        DispatchQueue.main.async {
+                            print("Function: \(#function), line: \(#line)")
+                            completion(res)
+                            UIApplication.topMostViewController?.view.stopActivityIndicator()
+                        }
+                    }
+                    if res.status == 130 || res.status == 101 || res.status == 102 || res.status == 103 {
+                        print("Function: \(#function), line: \(#line)")
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(_):
+                print("error getting data")
+            }
+            
+        }
+    }
+
 }
