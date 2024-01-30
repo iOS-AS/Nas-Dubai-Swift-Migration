@@ -78,7 +78,7 @@ class LoginModel {
                         newStudent.sclass = i.studentListClass
                         newStudent.section = i.section
                         newStudent.unique_id = i.unique_id
-                        newStudent.confirmed = false
+                        //newStudent.confirmed = false
                         do {
                             try K.context.save()
                         } catch {

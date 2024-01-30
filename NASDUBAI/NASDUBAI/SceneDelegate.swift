@@ -17,10 +17,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        self.window = window
-        AppRouter.landOnSutableVC()
-        window.makeKeyAndVisible()
+
+               window = UIWindow(windowScene: windowScene)
+               setRootVC()
+    }
+    fileprivate func setRootVC() {
+
+        if DefaultsWrapper().getLoginStatus() {
+            ApiServices().registerApp()
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            let nav = UINavigationController(rootViewController: initialViewController)
+            nav.isNavigationBarHidden = true
+            nav.isToolbarHidden = true
+            self.window?.rootViewController = nav
+            self.window?.makeKeyAndVisible()
+        } else {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            let nav = UINavigationController(rootViewController: initialViewController)
+            nav.isNavigationBarHidden = true
+            nav.isToolbarHidden = true
+            self.window?.rootViewController = nav
+            self.window?.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

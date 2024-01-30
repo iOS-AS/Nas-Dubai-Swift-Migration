@@ -1388,7 +1388,7 @@ enum APIError: Error {
     
     func getStudentList(completion: @escaping (Student) -> ()) {
         
-        let url = baseUrl + "student/list"
+        let url = BASE_URL + "student/list"
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let parameters: Parameters = ["devicetype": 1,
                                       "app_version": appVersion ?? ""]

@@ -18,6 +18,11 @@ class HomeVC: UIViewController {
 
     static var alertShown: Bool = false
     
+    @IBOutlet var tileImageViews: [UIImageView]!
+    
+    @IBOutlet var tileLbls: [UILabel]!
+    @IBOutlet var tileViews: [UIView]!
+    @IBOutlet var tileBtns: [UIButton]!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var scrollImageView: UIImageView!
@@ -45,8 +50,8 @@ class HomeVC: UIViewController {
     var draggableLbl = UILabel()
     var draggableImageView = UIImageView()
 
-    var tileGuestArray = [GuestTiles]()
-    var tileUserArray = [UserTiles]()
+//    var tileGuestArray = [GuestTiles]
+//    var tileUserArray = [UserTiles]
     var loginModel = LoginModel()
     var homeModel = HomeModel()
     var banner: Banner?
