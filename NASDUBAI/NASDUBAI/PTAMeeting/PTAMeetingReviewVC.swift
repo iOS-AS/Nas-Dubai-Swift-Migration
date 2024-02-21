@@ -142,7 +142,7 @@ class PTAMeetingReviewVC: UIViewController {
         if !ApiServices().checkReachability() {
             return
         }
-        let url = ApiServices().BASE_URL + "pta-review-list"
+        let url = BASE_URL + "pta-review-list"
         let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         UIApplication.topMostViewController?.view.startActivityIndicator()
         AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in

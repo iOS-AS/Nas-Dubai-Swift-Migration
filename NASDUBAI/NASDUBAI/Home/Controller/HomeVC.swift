@@ -32,8 +32,8 @@ class HomeVC: UIViewController {
     var draggableLbl = UILabel()
     var draggableImageView = UIImageView()
 
-//    var tileGuestArray = [GuestTiles]
-//    var tileUserArray = [UserTiles]
+    var tileGuestArray = [GuestTiles]()
+    var tileUserArray = [UserTiles]()
     var loginModel = LoginModel()
     var homeModel = HomeModel()
     var banner: Banner?

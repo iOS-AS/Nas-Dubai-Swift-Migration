@@ -47,8 +47,13 @@ enum APIError: Error {
         }
     }
 }
+let BASE_URL = "http://gama.mobatia.in:8080/NasDubai2023/public/Api-V1/"
+let baseUrl = "http://gama.mobatia.in:8080/NasDubai2023/public/Api-V1/"
+
+let URL_NOTIFICATION = baseUrl+"notifications_V1"
 
 @objc class ApiServices: NSObject {
+    
     
     var headers: HTTPHeaders {
         get {
@@ -199,7 +204,10 @@ enum APIError: Error {
     private var timer: Timer?
 
     
-    let BASE_URL = "http://gama.mobatia.in:8080/NasDubai2023/public/Api-V1/"
+  
+    
+
+    
     @objc static func checkReachability() -> Bool {
         if !NetworkManager.shared.reachabilityManager!.isReachable {
             alertMessage.value = "Network not available."

@@ -12,10 +12,10 @@ import PassKit
 import Alamofire
 class APICalls {
     
-    let accessTokenUrlString =  ApiServices().BASE_URL + "network_payment_gateway_access_token"
-    let creatingOrderUrlString = ApiServices().BASE_URL + "canteen_wallet_order"
-    let accessTokenUrlString_Fee_Payment = ApiServices().BASE_URL + "network_payment_gateway_access_token_for_fee_payment"
-    let creatingOrderUrlString_Fee_Payment =  ApiServices().BASE_URL + "network_payment_gateway_creating_an_order_for_fee_payment"
+    let accessTokenUrlString =  BASE_URL + "network_payment_gateway_access_token"
+    let creatingOrderUrlString = BASE_URL + "canteen_wallet_order"
+    let accessTokenUrlString_Fee_Payment = BASE_URL + "network_payment_gateway_access_token_for_fee_payment"
+    let creatingOrderUrlString_Fee_Payment =  BASE_URL + "network_payment_gateway_creating_an_order_for_fee_payment"
     
 //    // Dev https url
 //    let accessTokenUrlString =  "https://beta.mobatia.in:8888/naisV4.1/api/network_payment_gateway_access_token"

@@ -44,7 +44,7 @@ class CommonWebView: UIViewController {
         if !ApiServices().checkReachability() {
             return
         }
-        let url = ApiServices().BASE_URL + "terms_of_service"
+        let url = BASE_URL + "terms_of_service"
         let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         UIApplication.topMostViewController?.view.startActivityIndicator()
         AF.request(url, method: .post, encoding: JSONEncoding.default, headers: headers).responseJSON { [self] (response) in

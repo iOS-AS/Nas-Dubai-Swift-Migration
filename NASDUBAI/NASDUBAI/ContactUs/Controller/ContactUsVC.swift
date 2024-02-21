@@ -41,7 +41,7 @@ class ContactUsVC:  UIViewController, CLLocationManagerDelegate{
         if !ApiServices.checkReachability() {
             return
         }
-        let url = ApiServices().BASE_URL + "contact_us"
+        let url = BASE_URL + "contact_us"
         UIApplication.topMostViewController?.view.startActivityIndicator()
         AF.request(url, method: .post , encoding: JSONEncoding.default).responseJSON { [self] (response) in
             let (val, err) = contactUsModel.processData(data: CF.processResponse(response, decodingType: ContactUs.self))

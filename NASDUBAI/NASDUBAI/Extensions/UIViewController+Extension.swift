@@ -88,7 +88,7 @@ extension UIViewController {
             pushToCalendar()
         case "Notifications":
             currentVC = "Notifications"
-            pushToMessageList()
+            pushToNotification()
         case "Communications":
             currentVC = "Communications"
             pushToCommunication()
@@ -278,6 +278,12 @@ extension UIViewController {
        
         let storyboardMain = UIStoryboard(name: "PTMeetingStoryboard", bundle: nil)
         let vc = storyboardMain.instantiateViewController(withIdentifier: "PTAMeetingVC") as! PTAMeetingVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func pushToNotification(){
+        let storyboardMain = UIStoryboard(name: "NotificationStoryboard", bundle: nil)
+        let vc = storyboardMain.instantiateViewController(withIdentifier: "NotificationVC") as! NotificationVC
         navigationController?.pushViewController(vc, animated: true)
     }
     func pushToAttendance() {

@@ -7,23 +7,26 @@
 
 import UIKit
 
-class MessageCell: UIViewController {
+class MessageCell: UITableViewCell {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var itemLbl: UILabel!
+    @IBOutlet weak var itemImageView: UIImageView!
+    var element: NotificationModel! {
+        didSet 
+        {
+            itemLbl.text = element.title
+            itemImageView.image = UIImage(named: "alertIcon_" + element.alertType!.lowercased())
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
-    */
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
 
 }
+

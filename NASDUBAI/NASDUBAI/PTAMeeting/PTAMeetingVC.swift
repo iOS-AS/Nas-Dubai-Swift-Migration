@@ -107,7 +107,7 @@ class PTAMeetingVC: UIViewController {
         if !ApiServices().checkReachability() {
             return
         }
-        let url = ApiServices().BASE_URL + "pta-allotted-dates"
+        let url = BASE_URL + "pta-allotted-dates"
         let parameters: Parameters = ["student_id": studentID, "staff_id": Int(staffId)!]
         let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         UIApplication.topMostViewController?.view.startActivityIndicator()

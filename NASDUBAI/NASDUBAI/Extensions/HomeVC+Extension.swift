@@ -56,83 +56,83 @@ extension HomeVC {
 
     func getTilesData() {
 
-//        if DefaultsWrapper().getLoginStatus() {
-//            let fetchRequest: NSFetchRequest<UserTiles> = UserTiles.fetchRequest()
-//            do {
-//                tileUserArray = try K.context.fetch(fetchRequest)
-//                setTiles()
-//            } catch let error as NSError {
-//                print("Could not fetch. \(error), \(error.userInfo)")
-//            }
-//        } else {
-//            let fetchRequest: NSFetchRequest<GuestTiles> = GuestTiles.fetchRequest()
-//            do {
-//                tileGuestArray = try K.context.fetch(fetchRequest)
-//                setTiles()
-//            } catch let error as NSError {
-//                print("Could not fetch. \(error), \(error.userInfo)")
-//            }
-//        }
+        if DefaultsWrapper().getLoginStatus() {
+            let fetchRequest: NSFetchRequest<UserTiles> = UserTiles.fetchRequest()
+            do {
+                tileUserArray = try K.context.fetch(fetchRequest)
+                setTiles()
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        } else {
+            let fetchRequest: NSFetchRequest<GuestTiles> = GuestTiles.fetchRequest()
+            do {
+                tileGuestArray = try K.context.fetch(fetchRequest)
+                setTiles()
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        }
 
     }
 
     func setTiles() {
 
-//        setDefaultTiles()
-//        if DefaultsWrapper().getLoginStatus() {
-//
-//            for i in 0..<tileUserArray.count {
-//                if (tileUserArray.count > 0){
-//                    let number = Int(tileUserArray[i].number)
-//                    tileLbls[number].text = tileUserArray[i].name?.uppercased()
-//                    tileImageViews[number].image = UIImage(named: "sideBar_\(tileUserArray[i].name?.capitalized ?? "").png")
-//                    print(tileLbls[number].text ?? "")
-//                }
-//            }
-//
-//
-//        } else {
-//            for i in 0..<tileGuestArray.count {
-//                if (tileGuestArray.count > 0){
-//                    let number = Int(tileGuestArray[i].number)
-//                    tileLbls[number].text = tileGuestArray[i].name?.uppercased()
-//                    tileImageViews[number].image = UIImage(named: "sideBar_\(tileGuestArray[i].name?.capitalized ?? "").png")
-//                    print(tileLbls[number].text ?? "")
-//                }
-//            }
-//        }
+        setDefaultTiles()
+        if DefaultsWrapper().getLoginStatus() {
+
+            for i in 0..<tileUserArray.count {
+                if (tileUserArray.count > 0){
+                    let number = Int(tileUserArray[i].number)
+                    tileLbls[number].text = tileUserArray[i].name?.uppercased()
+                    tileImageViews[number].image = UIImage(named: "sideBar_\(tileUserArray[i].name?.capitalized ?? "").png")
+                    print(tileLbls[number].text ?? "")
+                }
+            }
+
+
+        } else {
+            for i in 0..<tileGuestArray.count {
+                if (tileGuestArray.count > 0){
+                    let number = Int(tileGuestArray[i].number)
+                    tileLbls[number].text = tileGuestArray[i].name?.uppercased()
+                    tileImageViews[number].image = UIImage(named: "sideBar_\(tileGuestArray[i].name?.capitalized ?? "").png")
+                    print(tileLbls[number].text ?? "")
+                }
+            }
+        }
     }
 
     fileprivate func saveToCoreData(_ i: Int) {
-//        if DefaultsWrapper().getLoginStatus() {
-//            let newTile = UserTiles(context: K.context)
-//            newTile.name = tileLbls[i].text
-//            newTile.number = Int64(i)
-//            do {
-//                try K.context.save()
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }else {
-//            let newTile = GuestTiles(context: K.context)
-//            newTile.name = tileLbls[i].text
-//            newTile.number = Int64(i)
-//            do {
-//                try K.context.save()
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }
+        if DefaultsWrapper().getLoginStatus() {
+            let newTile = UserTiles(context: K.context)
+            newTile.name = tileLbls[i].text
+            newTile.number = Int64(i)
+            do {
+                try K.context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }else {
+            let newTile = GuestTiles(context: K.context)
+            newTile.name = tileLbls[i].text
+            newTile.number = Int64(i)
+            do {
+                try K.context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 
     func setDefaultTiles() {
 
-//        if (K.tileArray.count > 0){
-//            for i in 0..<K.tileArray.count {
-//                tileLbls[i].text = K.tileArray[i].uppercased()
-//                tileImageViews[i].image = UIImage(named: "sideBar_\(K.tileArray[i].capitalized).png")
-//            }
-//        }
+        if (K.tileArray.count > 0){
+            for i in 0..<K.tileArray.count {
+                tileLbls[i].text = K.tileArray[i].uppercased()
+                tileImageViews[i].image = UIImage(named: "sideBar_\(K.tileArray[i].capitalized).png")
+            }
+        }
     }
 }
 

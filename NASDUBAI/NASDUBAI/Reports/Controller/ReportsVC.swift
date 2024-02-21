@@ -58,7 +58,7 @@ class ReportsVC: UIViewController {
         if !ApiServices().checkReachability() {
             return
         }
-        let url = ApiServices().BASE_URL + "progressreport"
+        let url = BASE_URL + "progressreport"
         let parameters: Parameters = ["student_id": studentID]
         let headers: HTTPHeaders = ["Authorization": "Bearer \(DefaultsWrapper().getAccessToken())"]
         UIApplication.topMostViewController?.view.startActivityIndicator()
